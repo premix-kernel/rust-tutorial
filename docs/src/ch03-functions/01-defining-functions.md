@@ -81,7 +81,25 @@ fn outer() {
 }
 ```
 
-> **เคล็ดลับ:** ถ้าต้องการ nested function ใช้ **closure** แทน (จะเรียนในบทหลัง)
+> **เคล็ดลับ:** ถ้าต้องการ nested function ใช้ **closure** แทน:
+
+```rust
+fn main() {
+    // ✅ ใช้ closure แทน nested function
+    let greet = |name: &str| {
+        println!("Hello, {}!", name);
+    };
+
+    greet("Rust");
+    greet("World");
+
+    // closure ที่จับตัวแปรจากภายนอก
+    let multiplier = 3;
+    let multiply = |x: i32| x * multiplier;
+
+    println!("5 * 3 = {}", multiply(5)); // 15
+}
+```
 
 ---
 

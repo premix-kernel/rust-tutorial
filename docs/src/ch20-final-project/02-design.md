@@ -220,7 +220,7 @@ pub enum StorageError {
 [package]
 name = "todo-cli"
 version = "0.1.0"
-edition = "2021"
+edition = "2024"
 
 [dependencies]
 serde = { version = "1.0", features = ["derive"] }

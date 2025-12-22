@@ -43,7 +43,7 @@ cargo new my-lib --lib
 [package]
 name = "my-app"
 version = "0.1.0"
-edition = "2021"
+edition = "2024"
 
 [dependencies]
 rand = "0.8"

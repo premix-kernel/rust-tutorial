@@ -44,7 +44,10 @@
 ```rust
 // ✅ ดี - มี comments อธิบาย
 fn main() {
+    // สร้างตัวแปรเก็บข้อความที่ต้องการแสดง
     let message = "Hello, World!";
+    
+    // แสดงข้อความออกทางหน้าจอ
     println!("{}", message);
 }
 

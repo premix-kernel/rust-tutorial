@@ -143,6 +143,37 @@ fn main() {
 
 ---
 
+## FFI: เรียก C Code
+
+ตัวอย่างเรียก function จาก C library:
+
+```rust
+// ประกาศ external C function
+extern "C" {
+    fn abs(input: i32) -> i32;
+    fn sqrt(input: f64) -> f64;
+}
+
+fn main() {
+    unsafe {
+        println!("abs(-5) = {}", abs(-5));      // 5
+        println!("sqrt(9.0) = {}", sqrt(9.0));  // 3.0
+    }
+}
+```
+
+### สร้าง Rust function ที่ C เรียกได้
+
+```rust
+// export function สำหรับ C
+#[no_mangle]
+pub extern "C" fn rust_add(a: i32, b: i32) -> i32 {
+    a + b
+}
+```
+
+---
+
 ## Safe Abstractions
 
 วิธีที่ถูกต้อง: ห่อ unsafe ด้วย safe interface
