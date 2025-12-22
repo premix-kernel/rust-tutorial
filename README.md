@@ -1,13 +1,13 @@
 # 📚 เรียน Rust ฉบับสมบูรณ์
 
-[![Build mdBook](https://github.com/yourname/rust-tutorial/actions/workflows/mdbook.yml/badge.svg)](https://github.com/yourname/rust-tutorial/actions/workflows/mdbook.yml)
+[![Build mdBook](https://github.com/premix-kernel/rust-tutorial/actions/workflows/mdbook.yml/badge.svg)](https://github.com/premix-kernel/rust-tutorial/actions/workflows/mdbook.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 > 🦀 เอกสารสอนภาษา Rust สำหรับผู้เริ่มต้น | คำอธิบายภาษาไทย | โค้ดภาษาอังกฤษ
 
 ## 🌐 อ่านออนไลน์
 
-👉 **[อ่านหนังสือออนไลน์](https://yourname.github.io/rust-tutorial)**
+👉 **[อ่านหนังสือออนไลน์](https://premix-kernel.github.io/rust-tutorial)**
 
 ---
 
@@ -25,13 +25,13 @@
 
 ### วิธีที่ 1: อ่านออนไลน์ (แนะนำ)
 
-เปิด [https://yourname.github.io/rust-tutorial](https://yourname.github.io/rust-tutorial)
+เปิด [https://premix-kernel.github.io/rust-tutorial](https://premix-kernel.github.io/rust-tutorial)
 
 ### วิธีที่ 2: รันในเครื่อง
 
 ```bash
 # Clone repository
-git clone https://github.com/yourname/rust-tutorial.git
+git clone https://github.com/premix-kernel/rust-tutorial.git
 cd rust-tutorial
 
 # ติดตั้ง mdBook (ถ้ายังไม่มี)

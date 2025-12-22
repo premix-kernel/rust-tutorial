@@ -49,7 +49,7 @@ default-theme = "rust"
 preferred-dark-theme = "coal"
 
 # URL ไป GitHub repository (แสดงไอคอน GitHub)
-git-repository-url = "https://github.com/yourname/rust-tutorial"
+git-repository-url = "https://github.com/premix-kernel/rust-tutorial"
 
 # แปลง quotes และ dashes เป็นตัวสวยๆ ("..." → "...")
 smart-punctuation = true

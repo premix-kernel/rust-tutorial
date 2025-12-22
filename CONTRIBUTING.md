@@ -8,7 +8,7 @@
 
 หากพบข้อผิดพลาดในเนื้อหาหรือโค้ด:
 
-1. ตรวจสอบ [Issues](https://github.com/yourname/rust-tutorial/issues) ว่ามีคนรายงานแล้วหรือไม่
+1. ตรวจสอบ [Issues](https://github.com/premix-kernel/rust-tutorial/issues) ว่ามีคนรายงานแล้วหรือไม่
 2. สร้าง Issue ใหม่พร้อมรายละเอียด:
    - บทที่พบปัญหา
    - คำอธิบายปัญหา
