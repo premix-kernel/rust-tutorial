@@ -18,8 +18,8 @@ jobs:
       - name: Link Checker
         uses: lycheeverse/lychee-action@v1.9.0
         with:
-          # Check all markdown files
-          args: --verbose --no-progress './docs/src/**/*.md' './README.md' './CONTRIBUTING.md'
+          # Check all markdown files, but ignore localhost
+          args: --verbose --no-progress --exclude 'http://localhost' --exclude 'http://127.0.0.1' './docs/src/**/*.md' './README.md' './CONTRIBUTING.md'
           # Fail if broken links found
           fail: true
         env:
