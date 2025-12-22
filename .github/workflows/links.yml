@@ -1,0 +1,26 @@
+name: Links
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  schedule:
+    # Run daily at midnight to catch rotting links
+    - cron: '0 0 * * *'
+
+jobs:
+  link-checker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Link Checker
+        uses: lycheeverse/lychee-action@v1.9.0
+        with:
+          # Check all markdown files
+          args: --verbose --no-progress './docs/src/**/*.md' './README.md' './CONTRIBUTING.md'
+          # Fail if broken links found
+          fail: true
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}

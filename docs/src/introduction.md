@@ -17,19 +17,15 @@
 
 ### Rust เหมาะกับงานอะไร?
 
-```
-┌──────────────────────────────────────────────────────────┐
-│                    Rust Use Cases                        │
-├──────────────────────────────────────────────────────────┤
-│  🖥️  Systems Programming    │  OS, Drivers, Compilers    │
-│  🌐  Web Services           │  Backend APIs, Microservices│
-│  ⚡  WebAssembly           │  High-performance Web Apps  │
-│  🛠️  CLI Tools             │  Command-line Applications  │
-│  📱  Embedded              │  IoT, Robotics              │
-│  🎮  Game Engines          │  Game Development           │
-│  🔐  Blockchain            │  Crypto, Smart Contracts    │
-└──────────────────────────────────────────────────────────┘
-```
+| ประเภทงาน | ตัวอย่าง |
+|-----------|----------|
+| 🖥️ Systems Programming | OS, Drivers, Compilers |
+| 🌐 Web Services | Backend APIs, Microservices |
+| ⚡ WebAssembly | High-performance Web Apps |
+| 🛠️ CLI Tools | Command-line Applications |
+| 📱 Embedded | IoT, Robotics |
+| 🎮 Game Engines | Game Development |
+| 🔐 Blockchain | Crypto, Smart Contracts |
 
 ---
 

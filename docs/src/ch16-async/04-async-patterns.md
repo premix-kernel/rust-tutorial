@@ -113,18 +113,19 @@ async fn main() {
 ลองใหม่เมื่อ fail:
 
 ```rust
-use tokio::time::{sleep, Duration};
+use std::sync::atomic::{AtomicU32, Ordering};
 
 async fn fallible_operation() -> Result<String, &'static str> {
     // Simulate random failure
-    static mut ATTEMPT: u32 = 0;
-    unsafe {
-        ATTEMPT += 1;
-        if ATTEMPT < 3 {
-            Err("failed")
-        } else {
-            Ok("success!".to_string())
-        }
+    static ATTEMPT: AtomicU32 = AtomicU32::new(0);
+    
+    // fetch_add returns the previous value
+    let count = ATTEMPT.fetch_add(1, Ordering::SeqCst);
+    
+    if count < 3 {
+        Err("failed")
+    } else {
+        Ok("success!".to_string())
     }
 }
 
