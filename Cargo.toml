@@ -1,0 +1,70 @@
+# ===========================================
+# Cargo.toml - Rust Tutorial Examples
+# ===========================================
+
+[package]
+# ชื่อ package
+name = "rust-tutorial"
+
+# เวอร์ชัน
+version = "0.1.0"
+
+# Rust edition (2015, 2018, 2021, 2024)
+edition = "2024"
+
+# ผู้เขียน
+authors = ["Rust Tutorial"]
+
+# คำอธิบาย
+description = "ตัวอย่างโค้ดสำหรับ Rust Tutorial ภาษาไทย"
+
+# License
+license = "MIT"
+
+# ------------------------------------------
+# Dependencies - ไลบรารีที่ใช้
+# ------------------------------------------
+[dependencies]
+# Async runtime
+tokio = { version = "1", features = ["full"] }
+
+# Web framework
+axum = "0.7"
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Database
+sqlx = { version = "0.8", features = ["runtime-tokio", "sqlite"] }
+
+# Error handling
+thiserror = "2.0"
+anyhow = "1.0"
+
+# Date/Time
+chrono = { version = "0.4", features = ["serde"] }
+
+# ------------------------------------------
+# Dev Dependencies - สำหรับ testing
+# ------------------------------------------
+[dev-dependencies]
+# Testing utilities
+tokio-test = "0.4"
+
+# ------------------------------------------
+# Examples - ตัวอย่างโค้ด
+# ------------------------------------------
+# รัน: cargo run --example hello_world
+
+[[example]]
+name = "hello_world"
+path = "examples/hello_world.rs"
+
+[[example]]
+name = "ownership"
+path = "examples/ownership.rs"
+
+[[example]]
+name = "web_server"
+path = "examples/web_server.rs"

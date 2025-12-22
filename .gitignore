@@ -1,0 +1,67 @@
+# ===========================================
+# Rust Tutorial - .gitignore
+# ===========================================
+
+# ------------------------------------------
+# Rust / Cargo
+# ------------------------------------------
+# Build output directory
+/target/
+# Cargo.lock สำหรับ libraries (เก็บสำหรับ binaries)
+# Cargo.lock
+
+# ------------------------------------------
+# mdBook
+# ------------------------------------------
+# Build output
+/docs/book/
+
+# ------------------------------------------
+# IDE / Editor
+# ------------------------------------------
+# VS Code
+.vscode/
+*.code-workspace
+
+# JetBrains (RustRover, IntelliJ)
+.idea/
+*.iml
+
+# Vim
+*.swp
+*.swo
+*~
+
+# ------------------------------------------
+# OS Files
+# ------------------------------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# ------------------------------------------
+# Misc
+# ------------------------------------------
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Environment files (may contain secrets)
+.env
+.env.local
+.env.*.local
+
+# Node modules (if using any JS tools)
+node_modules/

@@ -1,0 +1,91 @@
+# ===========================================
+# mdBook Configuration - เรียน Rust ฉบับสมบูรณ์
+# ===========================================
+
+# ------------------------------------------
+# [book] - ข้อมูลพื้นฐานของหนังสือ
+# ------------------------------------------
+[book]
+# ชื่อหนังสือ (แสดงที่ title bar และ sidebar)
+title = "เรียน Rust ฉบับสมบูรณ์"
+
+# รายชื่อผู้เขียน
+authors = ["Rust Tutorial"]
+
+# คำอธิบายสั้นๆ (แสดงใน meta tag สำหรับ SEO)
+description = "Tutorial ภาษา Rust สำหรับผู้เริ่มต้น ภาษาไทย พร้อมตัวอย่างโค้ดและแบบฝึกหัด"
+
+# ภาษาหลักของหนังสือ (th = ไทย, en = อังกฤษ)
+language = "th"
+
+# โฟลเดอร์ที่เก็บ source files (.md)
+src = "src"
+
+# ------------------------------------------
+# [rust] - การตั้งค่าสำหรับ Rust code
+# ------------------------------------------
+[rust]
+# Rust edition ที่ใช้ใน code examples (2015, 2018, 2021, 2024)
+edition = "2024"
+
+# ------------------------------------------
+# [build] - การตั้งค่า Build
+# ------------------------------------------
+[build]
+# โฟลเดอร์ output ที่เก็บ HTML ที่ build แล้ว
+build-dir = "book"
+
+# สร้างไฟล์อัตโนมัติถ้ายังไม่มี (ตาม SUMMARY.md)
+create-missing = true
+
+# ------------------------------------------
+# [output.html] - การตั้งค่า HTML Output
+# ------------------------------------------
+[output.html]
+# Theme เริ่มต้น: light, rust, coal, navy, ayu
+default-theme = "rust"
+
+# Theme สำหรับ Dark Mode (ใช้เมื่อ system เป็น dark)
+preferred-dark-theme = "coal"
+
+# URL ไป GitHub repository (แสดงไอคอน GitHub)
+git-repository-url = "https://github.com/yourname/rust-tutorial"
+
+# แปลง quotes และ dashes เป็นตัวสวยๆ ("..." → "...")
+smart-punctuation = true
+
+# ซ่อนเลขบทใน sidebar (false = แสดง)
+no-section-label = false
+
+# ------------------------------------------
+# [output.html.playground] - Rust Playground
+# ------------------------------------------
+[output.html.playground]
+# อนุญาตให้แก้ไข code ในหนังสือได้
+editable = true
+
+# แสดงปุ่ม Copy code
+copyable = true
+
+# แสดงปุ่ม Run (รันผ่าน Rust Playground)
+runnable = true
+
+# ------------------------------------------
+# [output.html.search] - การค้นหา
+# ------------------------------------------
+[output.html.search]
+# เปิดใช้งานการค้นหา
+enable = true
+
+# จำนวนผลลัพธ์สูงสุดที่แสดง
+limit-results = 30
+
+# ------------------------------------------
+# [output.html.fold] - พับ Sidebar
+# ------------------------------------------
+[output.html.fold]
+# เปิดใช้งานการพับหัวข้อใน sidebar
+enable = true
+
+# พับถึง level ไหน (1 = พับทุกบท)
+level = 1
