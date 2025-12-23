@@ -157,6 +157,7 @@
   - [Rust Cheatsheet](./appendix/cheatsheet.md)
   - [Cargo Commands](./appendix/cargo-commands.md)
   - [Resources](./appendix/resources.md)
+  - [Example Code](./appendix/examples.md)
   - [แบบฝึกหัด](./appendix/exercises/README.md)
     - [บทที่ 1](./appendix/exercises/ch01-exercises.md)
     - [บทที่ 2](./appendix/exercises/ch02-exercises.md)

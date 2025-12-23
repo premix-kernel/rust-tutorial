@@ -52,6 +52,23 @@ mdbook build
 # ไฟล์อยู่ใน docs/book/
 ```
 
+### วิธีที่ 4: รัน Example Code
+
+```bash
+# รันตัวอย่างโค้ด
+cargo run --example hello_world      # บทที่ 1-4
+cargo run --example ownership        # บทที่ 5
+cargo run --example structs_enums    # บทที่ 6-7
+cargo run --example collections      # บทที่ 8
+cargo run --example error_handling   # บทที่ 9
+cargo run --example generics_traits  # บทที่ 10
+cargo run --example iterators        # บทที่ 13
+cargo run --example smart_pointers   # บทที่ 14
+cargo run --example concurrency      # บทที่ 15
+cargo run --example async_await      # บทที่ 16
+cargo run --example web_server       # บทที่ 19 (http://localhost:3000)
+```
+
 ---
 
 ## 📖 เนื้อหา (20 บท)

@@ -13,6 +13,7 @@
 | [Resources](./resources.md)           | แหล่งเรียนรู้เพิ่มเติม |
 | [แบบฝึกหัด](./exercises/README.md)    | 100+ ข้อพร้อมเฉลย      |
 | [Quiz](./quiz/README.md)              | ทดสอบความเข้าใจ        |
+| [Example Code](./examples.md)         | โค้ดตัวอย่างรันได้     |
 
 ---
 

@@ -55,7 +55,7 @@ tokio-test = "0.4"
 # ------------------------------------------
 # Examples - ตัวอย่างโค้ด
 # ------------------------------------------
-# รัน: cargo run --example hello_world
+# รัน: cargo run --example <name>
 
 [[example]]
 name = "hello_world"
@@ -64,6 +64,38 @@ path = "examples/hello_world.rs"
 [[example]]
 name = "ownership"
 path = "examples/ownership.rs"
+
+[[example]]
+name = "structs_enums"
+path = "examples/structs_enums.rs"
+
+[[example]]
+name = "collections"
+path = "examples/collections.rs"
+
+[[example]]
+name = "error_handling"
+path = "examples/error_handling.rs"
+
+[[example]]
+name = "generics_traits"
+path = "examples/generics_traits.rs"
+
+[[example]]
+name = "iterators"
+path = "examples/iterators.rs"
+
+[[example]]
+name = "smart_pointers"
+path = "examples/smart_pointers.rs"
+
+[[example]]
+name = "concurrency"
+path = "examples/concurrency.rs"
+
+[[example]]
+name = "async_await"
+path = "examples/async_await.rs"
 
 [[example]]
 name = "web_server"
