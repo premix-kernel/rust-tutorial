@@ -13,7 +13,10 @@ fn main() {
         age: 30,
         email: String::from("somchai@example.com"),
     };
-    println!("User: {}, Age: {}", user.name, user.age);
+    println!(
+        "User: {}, Age: {}, Email: {}",
+        user.name, user.age, user.email
+    );
 
     // 2. Methods
     println!("\n2️⃣ Methods:");
@@ -27,10 +30,17 @@ fn main() {
     let color = Color(255, 128, 0);
     println!("RGB: ({}, {}, {})", color.0, color.1, color.2);
 
-    // 4. Enum
+    // 4. Enum - all directions
     println!("\n4️⃣ Enum:");
-    let direction = Direction::North;
-    move_player(direction);
+    let directions = [
+        Direction::North,
+        Direction::South,
+        Direction::East,
+        Direction::West,
+    ];
+    for dir in directions {
+        move_player(dir);
+    }
 
     // 5. Enum with Data
     println!("\n5️⃣ Enum with Data:");
@@ -51,9 +61,9 @@ fn main() {
     print_option(some_number);
     print_option(no_number);
 
-    // 7. Match
+    // 7. Match - all coins
     println!("\n7️⃣ Match:");
-    for coin in [Coin::Penny, Coin::Quarter, Coin::Dime] {
+    for coin in [Coin::Penny, Coin::Nickel, Coin::Dime, Coin::Quarter] {
         println!("{:?} = {} cents", coin, value_in_cents(coin));
     }
 }
@@ -90,6 +100,7 @@ impl Rectangle {
 struct Color(u8, u8, u8);
 
 // Enum
+#[derive(Clone, Copy)]
 enum Direction {
     North,
     South,

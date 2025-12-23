@@ -9,7 +9,7 @@ use axum::{
     extract::{Json, Path, Query, State},
     http::StatusCode,
     response::IntoResponse,
-    routing::{get, post},
+    routing::get,
 };
 use serde::{Deserialize, Serialize};
 use std::sync::{Arc, Mutex};

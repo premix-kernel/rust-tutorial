@@ -3,6 +3,8 @@
 // รัน: cargo run --example generics_traits
 // ===========================================
 
+#![allow(dead_code)] // Allow unused fields for demo purposes
+
 use std::fmt::Display;
 
 fn main() {
@@ -20,8 +22,8 @@ fn main() {
 
     // 2. Generic Struct
     println!("\n2️⃣ Generic Struct:");
-    let int_point = Point { x: 5, y: 10 };
-    let float_point = Point { x: 1.5, y: 4.5 };
+    let int_point = Point::new(5, 10);
+    let float_point = Point::new(1.5, 4.5);
     println!("Int Point: {:?}", int_point);
     println!("Float Point: {:?}", float_point);
     println!(
@@ -32,7 +34,7 @@ fn main() {
     // 3. Multiple Type Parameters
     println!("\n3️⃣ Multiple Type Parameters:");
     let mixed = MixedPoint { x: 5, y: 4.5 };
-    println!("Mixed: {:?}", mixed);
+    println!("Mixed: ({}, {})", mixed.x, mixed.y);
 
     // 4. Traits
     println!("\n4️⃣ Traits:");
@@ -42,6 +44,7 @@ fn main() {
         content: String::from("Rust 2024 brings exciting new features..."),
     };
     println!("{}", article.summarize());
+    println!("Author: {}", article.summarize_author());
 
     let tweet = Tweet {
         username: String::from("rustacean"),
@@ -60,6 +63,10 @@ fn main() {
     println!("\n6️⃣ Return impl Trait:");
     let item = returns_summarizable();
     println!("{}", item.summarize());
+
+    // 7. Notify verbose demo
+    println!("\n7️⃣ Notify Verbose:");
+    notify_verbose(&tweet);
 }
 
 // Generic function
@@ -118,7 +125,12 @@ struct NewsArticle {
 
 impl Summary for NewsArticle {
     fn summarize(&self) -> String {
-        format!("{}, by {}", self.headline, self.author)
+        format!(
+            "{}, by {} - {}",
+            self.headline,
+            self.author,
+            &self.content[..30]
+        )
     }
 
     fn summarize_author(&self) -> String {
@@ -135,7 +147,10 @@ struct Tweet {
 
 impl Summary for Tweet {
     fn summarize(&self) -> String {
-        format!("{}: {}", self.username, self.content)
+        format!(
+            "{}: {} (reply: {}, retweet: {})",
+            self.username, self.content, self.reply, self.retweet
+        )
     }
 }
 
@@ -144,9 +159,9 @@ fn notify(item: &impl Summary) {
     println!("Breaking news! {}", item.summarize());
 }
 
-// Alternative syntax
+// Alternative syntax with Display
 fn notify_verbose<T: Summary + Display>(item: &T) {
-    println!("Breaking news! {}", item.summarize());
+    println!("Verbose: {} - {}", item, item.summarize());
 }
 
 // Return impl Trait

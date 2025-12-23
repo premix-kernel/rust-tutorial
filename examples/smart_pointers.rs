@@ -32,7 +32,7 @@ fn main() {
         let clone2 = Rc::clone(&data);
         println!("Count after clone2: {}", Rc::strong_count(&data));
 
-        println!("Data: {}", clone1);
+        println!("Data from clone1: {}, clone2: {}", clone1, clone2);
     }
 
     println!("Count after block: {}", Rc::strong_count(&data));
@@ -81,6 +81,7 @@ fn main() {
         println!("  Leaf strong: {}", Rc::strong_count(&leaf));
         println!("  Branch strong: {}", Rc::strong_count(&branch));
         println!("  Branch weak: {}", Rc::weak_count(&branch));
+        println!("  Branch children: {}", branch.children.borrow().len());
 
         // Access parent
         if let Some(parent) = leaf.parent.borrow().upgrade() {
