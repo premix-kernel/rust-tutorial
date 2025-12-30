@@ -174,7 +174,7 @@ utils::helper();
 
 ## ตัวอย่างจริง
 
-```rust
+```rust,ignore
 mod database {
     pub mod connection {
         pub fn connect() {

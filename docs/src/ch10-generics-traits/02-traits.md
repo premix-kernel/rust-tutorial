@@ -14,7 +14,7 @@ trait Summary {
 
 ## Implement Trait
 
-```rust
+```rust,ignore
 trait Summary {
     fn summarize(&self) -> String;
 }
@@ -57,7 +57,7 @@ fn main() {
 
 ## Default Implementation
 
-```rust
+```rust,ignore
 trait Summary {
     fn summarize(&self) -> String {
         String::from("(Read more...)")

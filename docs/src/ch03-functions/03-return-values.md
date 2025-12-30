@@ -39,7 +39,7 @@ fn five() -> i32 {
 | **Statement**  | ทำบางอย่าง ไม่ return ค่า | ❌     |
 | **Expression** | ประมวลผลและ return ค่า    | ✅     |
 
-```rust
+```rust,ignore
 fn main() {
     // Statement - ไม่มีค่า
     let x = 5; // let ... เป็น statement

@@ -65,7 +65,7 @@ fn main() {
 
 #### การคำนวณ
 
-```rust
+```rust,ignore
 fn main() {
     let sum = 5 + 10;           // บวก
     let difference = 95.5 - 4.3; // ลบ

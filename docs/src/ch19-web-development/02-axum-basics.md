@@ -221,7 +221,7 @@ async fn read_headers(headers: HeaderMap) -> String {
 
 แชร์ข้อมูลระหว่าง handlers:
 
-```rust
+```rust,ignore
 use axum::extract::State;
 use std::sync::Arc;
 

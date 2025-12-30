@@ -138,7 +138,7 @@ impl Drop for TestContext {
 
 ### ใช้ Shared Code
 
-```rust
+```rust,ignore
 // tests/integration_test.rs
 mod common;
 

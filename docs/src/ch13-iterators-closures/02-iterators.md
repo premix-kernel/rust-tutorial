@@ -4,7 +4,7 @@
 
 ## Iterator Trait
 
-```rust
+```rust,ignore
 pub trait Iterator {
     type Item;
 
@@ -123,7 +123,7 @@ fn main() {
 
 Iterator ไม่ทำอะไรจนกว่าจะ "consume":
 
-```rust
+```rust,ignore
 fn main() {
     let v = vec![1, 2, 3];
 

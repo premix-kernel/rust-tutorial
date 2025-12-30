@@ -19,7 +19,7 @@ fn print_summary2(item: &impl Summary) {
 
 ## Multiple Trait Bounds
 
-```rust
+```rust,ignore
 fn notify<T: Summary + Display>(item: &T) {
     println!("Summary: {}", item.summarize());
     println!("Display: {}", item);
@@ -37,7 +37,7 @@ fn notify2(item: &(impl Summary + Display)) {
 
 อ่านง่ายกว่าเมื่อมีหลาย bounds:
 
-```rust
+```rust,ignore
 fn some_function<T, U>(t: &T, u: &U) -> i32
 where
     T: Display + Clone,

@@ -36,7 +36,7 @@ fn main() {
 
 ## lib.rs
 
-```rust
+```rust,ignore
 mod todo;
 mod storage;
 

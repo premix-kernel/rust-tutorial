@@ -214,7 +214,7 @@ async fn main() {
 
 ## Tokio Time
 
-```rust
+```rust,ignore
 use tokio::time::{sleep, interval, Duration, Instant};
 
 #[tokio::main]

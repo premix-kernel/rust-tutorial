@@ -110,7 +110,7 @@ pub fn save_todos(todos: &[Todo]) -> std::io::Result<()> {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 // src/main.rs
 use clap::{Parser, Subcommand};
 
@@ -165,7 +165,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 // src/main.rs
 mod storage;
 mod todo;

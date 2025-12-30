@@ -229,7 +229,7 @@ fn main() {
 
 ## ตัวอย่างจริง: Command Processing
 
-```rust
+```rust,ignore
 enum Command {
     Start,
     Stop,

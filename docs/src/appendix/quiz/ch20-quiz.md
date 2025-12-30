@@ -40,7 +40,7 @@ D. Compression
 
 **B. Serialization/Deserialization**
 
-```rust
+```rust,ignore
 #[derive(Serialize, Deserialize)]
 struct Data { ... }
 ```

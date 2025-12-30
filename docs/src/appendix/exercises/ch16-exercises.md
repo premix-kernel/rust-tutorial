@@ -95,7 +95,7 @@ Spawn background task
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 #[tokio::main]
 async fn main() {
     let handle = tokio::spawn(async {

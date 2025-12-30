@@ -190,7 +190,7 @@ fn main() {
 
 หยุด thread ชั่วคราว:
 
-```rust
+```rust,ignore
 use std::thread;
 use std::time::Duration;
 

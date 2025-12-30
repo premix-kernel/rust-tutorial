@@ -178,7 +178,7 @@ fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
 
 Struct ที่มี references ต้องมี lifetime annotation:
 
-```rust
+```rust,ignore
 struct ImportantExcerpt<'a> {
     part: &'a str,
 }

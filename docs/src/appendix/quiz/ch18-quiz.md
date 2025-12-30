@@ -65,7 +65,7 @@ D. Reference
 
 **B. Zero or more repetitions**
 
-```rust
+```rust,ignore
 macro_rules! vec_like {
     ($($x:expr),*) => { ... };
 }

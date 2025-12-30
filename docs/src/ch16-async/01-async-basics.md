@@ -6,7 +6,7 @@ Asynchronous programming ใน Rust ช่วยจัดการ I/O-bound ta
 
 ### Synchronous (Blocking)
 
-```rust
+```rust,ignore
 fn main() {
     let data1 = fetch_data_1(); // รอ... 2 seconds
     let data2 = fetch_data_2(); // รอ... 2 seconds

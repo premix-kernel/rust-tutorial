@@ -47,7 +47,7 @@ my_project/
 
 ### src/lib.rs
 
-```rust
+```rust,ignore
 // ประกาศ modules
 pub mod config;
 pub mod database;
@@ -74,7 +74,7 @@ impl Config {
 
 ### src/database/mod.rs
 
-```rust
+```rust,ignore
 // ประกาศ submodules
 pub mod connection;
 pub mod queries;
@@ -129,7 +129,7 @@ impl Query {
 
 ### src/handlers/mod.rs
 
-```rust
+```rust,ignore
 pub mod users;
 pub mod posts;
 ```
@@ -158,7 +158,7 @@ Rust หา module ตามลำดับนี้:
 2. **File:** `src/name.rs`
 3. **Directory:** `src/name/mod.rs`
 
-```rust
+```rust,ignore
 // src/lib.rs
 mod foo;        // หา src/foo.rs หรือ src/foo/mod.rs
 mod bar;        // หา src/bar.rs หรือ src/bar/mod.rs
@@ -183,7 +183,7 @@ src/
     └── queries.rs
 ```
 
-```rust
+```rust,ignore
 // src/database.rs
 pub mod connection;
 pub mod queries;
@@ -193,7 +193,7 @@ pub mod queries;
 
 ## Private vs Public Files
 
-```rust
+```rust,ignore
 // src/lib.rs
 mod private_module;      // private - ใช้ได้ใน crate นี้เท่านั้น
 pub mod public_module;   // public - user ของ crate ใช้ได้

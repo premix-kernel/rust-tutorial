@@ -163,7 +163,7 @@ async fn main() {
 
 ปิดโปรแกรมอย่างสะอาด:
 
-```rust
+```rust,ignore
 use tokio::signal;
 use tokio::sync::broadcast;
 

@@ -164,7 +164,7 @@ cargo test -- --nocapture
 
 ### ตัวอย่าง
 
-```rust
+```rust,ignore
 #[test]
 fn test_with_output() {
     println!("Setting up test...");

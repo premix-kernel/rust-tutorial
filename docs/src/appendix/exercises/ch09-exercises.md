@@ -142,7 +142,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 fn parse_and_double(s: &str) -> Result<i32, std::num::ParseIntError> {
     s.parse::<i32>().map(|n| n * 2)
 }

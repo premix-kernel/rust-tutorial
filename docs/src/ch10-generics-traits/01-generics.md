@@ -54,7 +54,7 @@ fn main() {
 
 ### Syntax
 
-```rust
+```rust,ignore
 fn function_name<T>(param: T) -> T {
     // ...
 }
@@ -273,7 +273,7 @@ fn main() {
 
 ## Default Type Parameters
 
-```rust
+```rust,ignore
 use std::ops::Add;
 
 // Add trait มี default type parameter

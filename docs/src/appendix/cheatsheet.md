@@ -340,7 +340,7 @@ let data = RefCell::new(5);
 
 ## Traits
 
-```rust
+```rust,ignore
 // Define
 trait Summary {
     fn summarize(&self) -> String;
@@ -376,7 +376,7 @@ where
 
 ## Async
 
-```rust
+```rust,ignore
 // Async function
 async fn fetch_data() -> String {
     // ...

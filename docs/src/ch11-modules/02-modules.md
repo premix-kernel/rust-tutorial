@@ -201,7 +201,7 @@ fn main() {
 
 ## ตัวอย่างจริง: Library Structure
 
-```rust
+```rust,ignore
 // lib.rs
 mod authentication;
 mod database;

@@ -84,7 +84,7 @@ fn divide(a: i32, b: i32) -> i32 {
 
 4. **Invalid state** - ข้อมูลอยู่ในสถานะที่ไม่ถูกต้อง
 
-```rust
+```rust,ignore
 fn process_age(age: i32) {
     if age < 0 || age > 150 {
         panic!("Invalid age: {}", age);
