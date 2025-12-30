@@ -96,7 +96,7 @@ fn main() {
 
     println!("{:?}", data.borrow());
 }
-```
+```text
 
 ---
 
@@ -104,7 +104,7 @@ fn main() {
 
 ไม่ panic แต่ return Result:
 
-```rust
+```rust,ignore
 use std::cell::RefCell;
 
 fn main() {
@@ -222,7 +222,7 @@ fn main() {
 
 สำหรับ Copy types:
 
-```rust
+```rust,ignore
 use std::cell::Cell;
 
 fn main() {

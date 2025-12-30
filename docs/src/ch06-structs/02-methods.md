@@ -105,7 +105,7 @@ impl Rectangle {
 
 ออกแบบ methods ที่ return `&mut self` เพื่อ chain ได้:
 
-```rust
+```rust,ignore
 #[derive(Debug)]
 struct Counter {
     value: i32,

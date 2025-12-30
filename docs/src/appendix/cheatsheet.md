@@ -23,7 +23,7 @@ const MAX_POINTS: u32 = 100_000;
 // Shadowing
 let x = 5;
 let x = x + 1; // x = 6
-```
+```text
 
 ---
 
@@ -57,7 +57,7 @@ let arr = [3; 5]; // [3, 3, 3, 3, 3]
 
 ## Functions
 
-```rust
+```rust,ignore
 // Basic function
 fn greet() {
     println!("Hello!");
@@ -186,7 +186,7 @@ impl User {
 
 ## Enums & Match
 
-```rust
+```rust,ignore
 // Define
 enum Message {
     Quit,
@@ -286,7 +286,7 @@ let s3 = format!("{} {}", s1, s2);
 
 ### HashMap
 
-```rust
+```rust,ignore
 use std::collections::HashMap;
 
 let mut map = HashMap::new();

@@ -80,7 +80,7 @@ fn main() {
 ```
 inner: 12
 outer: 6
-```
+```text
 
 **อธิบาย:**
 

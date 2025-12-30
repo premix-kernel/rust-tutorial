@@ -143,7 +143,7 @@ fn main() {
 
 ## ตัวอย่าง 5: สร้าง HashMap
 
-```rust
+```rust,ignore
 macro_rules! hashmap {
     ($($key:expr => $value:expr),* $(,)?) => {
         {

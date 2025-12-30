@@ -4,7 +4,7 @@
 
 ## Syntax พื้นฐาน
 
-```rust
+```rust,ignore
 if condition {
     // ทำเมื่อ condition เป็น true
 }
@@ -62,7 +62,7 @@ fn main() {
 
 ```
 Divisible by 3
-```
+```text
 
 > **หมายเหตุ:** Rust จะหยุดเมื่อเจอเงื่อนไขแรกที่ true
 > ดังนั้น 6 หาร 2 ลงตัวด้วย แต่ไม่ถูกพิมพ์
@@ -95,7 +95,7 @@ fn main() {
 
 เพราะ `if` เป็น **expression** สามารถใส่ใน `let` ได้:
 
-```rust
+```rust,ignore
 fn main() {
     let condition = true;
 
@@ -107,7 +107,7 @@ fn main() {
 
 > **สำคัญ:** ทุก branch ต้อง return ชนิดเดียวกัน
 
-```rust
+```rust,ignore
 fn main() {
     let condition = true;
 

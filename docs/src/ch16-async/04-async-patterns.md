@@ -60,7 +60,7 @@ async fn main() {
 
 ให้ future มีเวลาจำกัด:
 
-```rust
+```rust,ignore
 use tokio::time::{timeout, Duration};
 
 async fn slow_function() -> String {
@@ -112,7 +112,7 @@ async fn main() {
 
 ลองใหม่เมื่อ fail:
 
-```rust
+```rust,ignore
 use std::sync::atomic::{AtomicU32, Ordering};
 
 async fn fallible_operation() -> Result<String, &'static str> {

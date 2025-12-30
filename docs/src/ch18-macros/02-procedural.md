@@ -194,7 +194,7 @@ fn main() {
 
 ## Function-like Macro
 
-```rust
+```rust,ignore
 use proc_macro::TokenStream;
 use quote::quote;
 use syn::{parse_macro_input, LitStr};
@@ -254,7 +254,7 @@ println!("{}", msg);  // "Hello, World!"
 
 ### Crate Structure
 
-```
+```text
 my-project/
 ├── Cargo.toml
 ├── src/lib.rs         # Main library

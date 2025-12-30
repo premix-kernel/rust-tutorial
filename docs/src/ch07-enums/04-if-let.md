@@ -4,7 +4,7 @@
 
 ## ปัญหา: Match ยาวไป
 
-```rust
+```rust,ignore
 fn main() {
     let some_value: Option<i32> = Some(3);
 
@@ -18,7 +18,7 @@ fn main() {
 
 ## if let
 
-```rust
+```rust,ignore
 fn main() {
     let some_value: Option<i32> = Some(3);
 
@@ -53,7 +53,7 @@ if let PATTERN = EXPRESSION {
 
 ## if let กับ else
 
-```rust
+```rust,ignore
 fn main() {
     let some_value: Option<i32> = None;
 
@@ -67,7 +67,7 @@ fn main() {
 
 เทียบเท่ากับ:
 
-```rust
+```rust,ignore
 match some_value {
     Some(value) => println!("Value: {}", value),
     _ => println!("No value!"),
@@ -119,7 +119,7 @@ fn main() {
         println!("{}", top);
     }
 }
-```
+```text
 
 Output:
 

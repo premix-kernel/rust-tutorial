@@ -42,7 +42,7 @@ Compiler ไม่รู้ว่า `List` ใหญ่เท่าไหร่
 
 ### ทางแก้: ใช้ Box
 
-```rust
+```rust,ignore
 enum List {
     Cons(i32, Box<List>),
     Nil,
@@ -73,7 +73,7 @@ fn print_list(list: &List) {
 
 **ทำไมใช้ได้?** Box มีขนาดคงที่ (pointer size) ไม่ว่าจะชี้ไปที่อะไร
 
-```
+```text
 Stack                    Heap
 ┌─────────────┐         ┌─────────────┐
 │ Cons(1, ────┼────────►│ Cons(2, ────┼───►...

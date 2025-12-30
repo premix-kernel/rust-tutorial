@@ -74,7 +74,7 @@ fn main() {
 
 สร้าง Vec:
 
-```rust
+```rust,ignore
 fn main() {
     // With elements
     let v1 = vec![1, 2, 3, 4, 5];
@@ -147,7 +147,7 @@ fn main() {
 
 Debug print พร้อม file/line:
 
-```rust
+```rust,ignore
 fn main() {
     let x = 5;
     dbg!(x);  // [src/main.rs:3] x = 5

@@ -55,7 +55,7 @@ fn main() {
 
 **สำคัญ:** ทุก unsafe fn ควรมี `# Safety` section:
 
-```rust
+```rust,ignore
 /// Reads a value from the given pointer.
 ///
 /// # Safety

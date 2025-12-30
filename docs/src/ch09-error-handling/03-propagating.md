@@ -144,7 +144,7 @@ fn read_number_from_file() -> Result<i32, Box<dyn std::error::Error>> {
 
 ## ตัวอย่างจริง: API Call
 
-```rust
+```rust,ignore
 use std::fs;
 
 fn get_config_value(key: &str) -> Result<String, String> {

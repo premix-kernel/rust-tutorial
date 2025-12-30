@@ -103,7 +103,7 @@ let x = x + 1;
     let x = x * 2;
 }
 println!("{}", x);
-```
+```text
 
 A. 5  
 B. 6  

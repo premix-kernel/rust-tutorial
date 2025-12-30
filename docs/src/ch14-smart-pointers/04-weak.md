@@ -6,7 +6,7 @@
 
 เมื่อ Rc ชี้หากันเป็นวงกลม:
 
-```
+```text
    ┌──────────────────────────┐
    │                          │
    ▼                          │
@@ -39,7 +39,7 @@ use std::rc::{Rc, Weak};
 
 ## Rc::downgrade และ Weak::upgrade
 
-```rust
+```rust,ignore
 use std::rc::{Rc, Weak};
 
 fn main() {
@@ -69,7 +69,7 @@ fn main() {
 
 ## ตัวอย่าง: Tree Structure
 
-```rust
+```rust,ignore
 use std::rc::{Rc, Weak};
 use std::cell::RefCell;
 
@@ -114,7 +114,7 @@ fn main() {
 
 ### ทำไมถึงไม่ leak?
 
-```
+```text
               branch (strong=1, weak=1)
                 ▲ Weak
                 │

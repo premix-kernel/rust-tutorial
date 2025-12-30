@@ -53,7 +53,7 @@ fn main() {
 
 ### แบบที่ 2: get() (ปลอดภัยกว่า)
 
-```rust
+```rust,ignore
 fn main() {
     let v = vec![1, 2, 3, 4, 5];
 

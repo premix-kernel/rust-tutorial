@@ -15,7 +15,7 @@
 
 ## โครงสร้างโปรเจกต์
 
-```
+```text
 my_library/
 ├── Cargo.toml
 ├── src/
@@ -33,7 +33,7 @@ my_library/
 
 ### src/lib.rs
 
-```rust
+```rust,ignore
 pub fn add(a: i32, b: i32) -> i32 {
     a + b
 }
@@ -98,7 +98,7 @@ fn test_calculator_workflow() {
 
 ### tests/common/mod.rs
 
-```rust
+```rust,ignore
 use my_library::Calculator;
 
 pub fn setup_calculator_with_value(value: i32) -> Calculator {
@@ -268,7 +268,7 @@ async fn test_async_function() {
 
 ### File Structure
 
-```
+```text
 tests/
 ├── common/mod.rs     ← shared code (NOT a test)
 ├── test_a.rs         ← first test file

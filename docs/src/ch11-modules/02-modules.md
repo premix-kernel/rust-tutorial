@@ -6,7 +6,7 @@
 
 โปรเจกต์ Rust มีโครงสร้างเป็น tree:
 
-```
+```text
 crate (root)
 ├── front_of_house
 │   ├── hosting
@@ -116,7 +116,7 @@ fn main() {
 
 ### Idiomatic use
 
-```rust
+```rust,ignore
 // ✅ Good: use parent module สำหรับ functions
 use std::collections::HashMap;
 

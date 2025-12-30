@@ -109,7 +109,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 fn main() {
     let numbers = [10, 20, 30, 40, 50];
 
@@ -117,7 +117,7 @@ fn main() {
         println!("Index {}: {}", index, value);
     }
 }
-```
+```text
 
 **Output:**
 

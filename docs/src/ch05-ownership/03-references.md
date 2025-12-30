@@ -41,7 +41,7 @@ fn calculate_length(s: &String) -> usize { // รับ reference
 
 Reference คือ pointer ที่ชี้ไปยังค่า โดยไม่เป็นเจ้าของ:
 
-```
+```text
 s1 ──────► "hello" (Heap)
            ▲
            │

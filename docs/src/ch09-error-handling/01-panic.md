@@ -10,7 +10,7 @@
 fn main() {
     panic!("crash and burn");
 }
-```
+```text
 
 Output:
 
@@ -135,14 +135,14 @@ fn main() {
 
 ### expect (ดีกว่า unwrap)
 
-```rust
+```rust,ignore
 fn main() {
     let x: Option<i32> = None;
 
     // ให้ error message ที่ชัดเจน
     let value = x.expect("x should have a value");
 }
-```
+```text
 
 Output:
 

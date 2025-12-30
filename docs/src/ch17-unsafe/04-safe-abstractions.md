@@ -6,7 +6,7 @@
 
 **Unsafe ควรอยู่ข้างใน, Safe ควรอยู่ข้างนอก**
 
-```
+```text
 ┌─────────────────────────────────┐
 │         Safe API                │  ◄── ผู้ใช้เรียกที่นี่
 │  ┌─────────────────────────┐    │
@@ -61,7 +61,7 @@ fn main() {
 
 ## ตัวอย่าง 2: Custom Vec
 
-```rust
+```rust,ignore
 pub struct MyVec<T> {
     ptr: *mut T,
     len: usize,
@@ -141,7 +141,7 @@ impl<T> Drop for MyVec<T> {
 
 ## ตัวอย่าง 3: Thread-safe Counter
 
-```rust
+```rust,ignore
 use std::sync::atomic::{AtomicUsize, Ordering};
 
 pub struct Counter {

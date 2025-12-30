@@ -168,7 +168,7 @@ fn main() {
     println!("{:?}", rect);   // Debug format
     println!("{:#?}", rect);  // Pretty debug format
 }
-```
+```text
 
 Output:
 

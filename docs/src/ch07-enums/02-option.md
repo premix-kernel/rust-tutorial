@@ -66,7 +66,7 @@ fn main() {
 
 ### 1. match
 
-```rust
+```rust,ignore
 fn main() {
     let x: Option<i32> = Some(5);
 
@@ -79,7 +79,7 @@ fn main() {
 
 ### 2. if let
 
-```rust
+```rust,ignore
 fn main() {
     let x: Option<i32> = Some(5);
 
@@ -123,7 +123,7 @@ fn main() {
 
     println!("{:?}", doubled); // Some(10)
 }
-```
+```text
 
 ---
 

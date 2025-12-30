@@ -32,7 +32,7 @@ async fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 async fn step1() -> i32 {
     tokio::time::sleep(tokio::time::Duration::from_millis(100)).await;
     println!("Step 1 done");

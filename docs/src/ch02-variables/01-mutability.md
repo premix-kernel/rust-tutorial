@@ -13,7 +13,7 @@ fn main() {
 
 ผลลัพธ์:
 
-```
+```text
 x = 5
 ```
 
@@ -33,7 +33,7 @@ fn main() {
 
 Error:
 
-```
+```text
 error[E0384]: cannot assign twice to immutable variable `x`
 ```
 
@@ -60,7 +60,7 @@ fn main() {
 
 ผลลัพธ์:
 
-```
+```text
 x = 5
 x = 6
 ```
@@ -138,7 +138,7 @@ fn main() {
     // let mut spaces = "   ";
     // spaces = spaces.len(); // ❌ Error! ชนิดต่างกัน
 }
-```
+```text
 
 ---
 

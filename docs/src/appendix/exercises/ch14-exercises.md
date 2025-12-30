@@ -7,7 +7,7 @@
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 enum List {
     Cons(i32, Box<List>),
     Nil,
@@ -62,7 +62,7 @@ fn main() {
 
     println!("Count after block: {}", Rc::strong_count(&data));
 }
-```
+```text
 
 **Output:**
 
@@ -141,7 +141,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 use std::rc::{Rc, Weak};
 use std::cell::RefCell;
 

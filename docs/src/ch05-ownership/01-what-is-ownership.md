@@ -53,7 +53,7 @@ fn main() {
 - ต้อง allocate และ deallocate
 - เช่น: `String`, `Vec<T>`
 
-```
+```text
 ┌─────────────────┐
 │     Stack       │
 ├─────────────────┤
@@ -110,7 +110,7 @@ fn main() {
 
 ถ้า Rust copy ข้อมูลบน Heap แทนที่จะ move:
 
-```
+```text
         ┌─────────────┐
 s1 ────►│   hello     │◄──── s2 (ถ้า copy)
         └─────────────┘

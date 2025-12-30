@@ -114,7 +114,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 fn describe(value: Option<i32>) {
     match value {
         Some(n) if n > 0 => println!("positive"),

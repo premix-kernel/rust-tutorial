@@ -23,7 +23,7 @@
 
 ## โครงสร้างโปรเจกต์
 
-```
+```text
 todo-cli/
 ├── Cargo.toml
 ├── src/
@@ -40,7 +40,7 @@ todo-cli/
 
 ## Architecture Diagram
 
-```
+```text
 ┌─────────────────────────────────────────────┐
 │                   main.rs                    │
 │   - Parse CLI arguments                      │

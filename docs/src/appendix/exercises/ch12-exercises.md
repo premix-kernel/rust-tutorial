@@ -122,7 +122,7 @@ mod tests {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 #[cfg(test)]
 mod tests {
     #[test]

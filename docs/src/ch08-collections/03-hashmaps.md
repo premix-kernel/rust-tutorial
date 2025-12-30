@@ -45,7 +45,7 @@ fn main() {
 
 ## เข้าถึงข้อมูล
 
-```rust
+```rust,ignore
 use std::collections::HashMap;
 
 fn main() {
@@ -71,7 +71,7 @@ fn main() {
 
 ## วนลูป
 
-```rust
+```rust,ignore
 use std::collections::HashMap;
 
 fn main() {
@@ -179,7 +179,7 @@ fn main() {
 
 ## Methods ที่ใช้บ่อย
 
-```rust
+```rust,ignore
 use std::collections::HashMap;
 
 fn main() {

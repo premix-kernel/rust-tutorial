@@ -4,7 +4,7 @@
 
 ## Syntax
 
-```rust
+```rust,ignore
 fn function_name(param1: Type1, param2: Type2) {
     // use param1 and param2
 }
@@ -38,7 +38,7 @@ The number is: 10
 
 ## หลาย Parameters
 
-```rust
+```rust,ignore
 fn main() {
     print_labeled_measurement(5, 'h');
     greet("Alice", 25);

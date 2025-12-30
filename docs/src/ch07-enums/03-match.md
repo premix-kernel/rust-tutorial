@@ -4,7 +4,7 @@
 
 ## Syntax
 
-```rust
+```rust,ignore
 match value {
     pattern1 => expression1,
     pattern2 => expression2,

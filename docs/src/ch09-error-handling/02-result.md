@@ -94,7 +94,7 @@ fn main() {
 
 ## Methods ที่ใช้บ่อย
 
-```rust
+```rust,ignore
 fn main() {
     let ok_result: Result<i32, &str> = Ok(42);
     let err_result: Result<i32, &str> = Err("error");

@@ -133,7 +133,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 // ประกาศ external function
 extern "C" {
     fn abs(input: i32) -> i32;

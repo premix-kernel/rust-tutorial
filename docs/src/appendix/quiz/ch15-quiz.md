@@ -18,7 +18,7 @@ D. Lock thread
 let handle = thread::spawn(|| {
     // code ที่รันใน thread ใหม่
 });
-```
+```text
 
 </details>
 

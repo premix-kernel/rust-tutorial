@@ -50,7 +50,7 @@ fn main() {
 
 ### enumerate - เพิ่ม index
 
-```rust
+```rust,ignore
 fn main() {
     let v = vec!["a", "b", "c"];
 

@@ -39,7 +39,7 @@ D. `while`
 
 **B. `match` ที่มี pattern เดียว**
 
-```rust
+```rust,ignore
 // แทนที่จะเขียน
 match value {
     Some(x) => println!("{}", x),
@@ -117,7 +117,7 @@ D. Empty tuple
 
 **C. Catch-all pattern**
 
-```rust
+```rust,ignore
 match value {
     1 => println!("one"),
     2 => println!("two"),

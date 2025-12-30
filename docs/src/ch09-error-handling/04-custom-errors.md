@@ -167,7 +167,7 @@ fn read_number_from_file(path: &str) -> Result<i32, MyError> {
 thiserror = "1.0"
 ```
 
-```rust
+```rust,ignore
 use thiserror::Error;
 
 #[derive(Error, Debug)]

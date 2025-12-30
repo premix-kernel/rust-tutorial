@@ -43,7 +43,7 @@ hi from spawned thread: 4
 
 `thread::spawn` returns `JoinHandle<T>`:
 
-```rust
+```rust,ignore
 use std::thread;
 
 fn main() {

@@ -84,7 +84,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 macro_rules! map {
     ($($key:expr => $value:expr),* $(,)?) => {
         {
