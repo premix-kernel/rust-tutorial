@@ -138,7 +138,7 @@ fn main() {
     // let mut spaces = "   ";
     // spaces = spaces.len(); // ❌ Error! ชนิดต่างกัน
 }
-```text
+```
 
 ---
 

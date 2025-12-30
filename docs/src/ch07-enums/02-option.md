@@ -123,7 +123,7 @@ fn main() {
 
     println!("{:?}", doubled); // Some(10)
 }
-```text
+```
 
 ---
 

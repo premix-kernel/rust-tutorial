@@ -119,7 +119,7 @@ fn main() {
         println!("{}", top);
     }
 }
-```text
+```
 
 Output:
 

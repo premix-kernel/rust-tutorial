@@ -23,7 +23,7 @@ const MAX_POINTS: u32 = 100_000;
 // Shadowing
 let x = 5;
 let x = x + 1; // x = 6
-```text
+```
 
 ---
 

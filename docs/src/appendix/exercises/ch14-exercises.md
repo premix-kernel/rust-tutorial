@@ -62,7 +62,7 @@ fn main() {
 
     println!("Count after block: {}", Rc::strong_count(&data));
 }
-```text
+```
 
 **Output:**
 

@@ -96,7 +96,7 @@ fn main() {
 
     println!("{:?}", data.borrow());
 }
-```text
+```
 
 ---
 

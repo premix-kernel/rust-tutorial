@@ -117,7 +117,7 @@ fn main() {
         println!("Index {}: {}", index, value);
     }
 }
-```text
+```
 
 **Output:**
 

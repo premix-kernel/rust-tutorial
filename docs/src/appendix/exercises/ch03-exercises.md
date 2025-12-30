@@ -74,7 +74,7 @@ fn main() {
     let area = calculate_rectangle_area(5.0, 3.0);
     println!("Area: {}", area); // 15.0
 }
-```text
+```
 
 </details>
 

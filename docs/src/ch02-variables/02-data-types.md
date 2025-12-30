@@ -187,7 +187,7 @@ fn main() {
 
     println!("first={}, second={}", first, second);
 }
-```text
+```
 
 > **คำเตือน:** ถ้าเข้าถึง index ที่ไม่มีอยู่ โปรแกรมจะ panic!
 >
@@ -214,7 +214,7 @@ fn main() {
     let b: f32 = 2.0;
     let c: bool = true;
 }
-```text
+```
 
 ---
 
