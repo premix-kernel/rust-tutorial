@@ -34,7 +34,7 @@ D. Handle cookies
 
 **B. Parse JSON request body**
 
-```rust
+```rust,ignore
 async fn handler(Json(payload): Json<MyStruct>) { }
 ```
 
@@ -56,7 +56,7 @@ D. Navigate to path
 
 **B. Extract URL path parameters**
 
-```rust
+```rust,ignore
 async fn user(Path(id): Path<u32>) { }
 // GET /users/123 -> id = 123
 ```
@@ -103,7 +103,7 @@ D. Handle errors
 
 **B. Share application state**
 
-```rust
+```rust,ignore
 async fn handler(State(db): State<DatabasePool>) { }
 ```
 
