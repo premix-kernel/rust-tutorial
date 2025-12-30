@@ -11,7 +11,7 @@
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 struct Person {
     name: String,
     age: u32,
@@ -40,7 +40,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 struct Person {
     name: String,
     age: u32,
@@ -73,7 +73,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 struct Person {
     name: String,
     age: u32,

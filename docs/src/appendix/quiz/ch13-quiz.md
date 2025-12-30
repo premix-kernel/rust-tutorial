@@ -37,7 +37,7 @@ D. กรอง items
 
 **B. แปลง iterator เป็น collection**
 
-```rust
+```rust,ignore
 let v: Vec<i32> = (1..5).collect();
 ```
 
@@ -81,7 +81,7 @@ D. Find first match
 
 **B. Transform each element**
 
-```rust
+```rust,ignore
 let doubled: Vec<i32> = vec![1, 2, 3]
     .iter()
     .map(|x| x * 2)

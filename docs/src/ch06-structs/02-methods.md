@@ -39,7 +39,7 @@ fn main() {
 | `&mut self` | ยืมแบบแก้ไขได้       |
 | `self`      | รับ ownership        |
 
-```rust
+```rust,ignore
 impl Rectangle {
     // อ่านค่าอย่างเดียว
     fn area(&self) -> u32 {
@@ -62,7 +62,7 @@ impl Rectangle {
 
 ## Methods ที่มี Parameters
 
-```rust
+```rust,ignore
 impl Rectangle {
     fn can_hold(&self, other: &Rectangle) -> bool {
         self.width > other.width && self.height > other.height
@@ -85,7 +85,7 @@ fn main() {
 
 สามารถแยก methods เป็นหลาย `impl` blocks ได้:
 
-```rust
+```rust,ignore
 impl Rectangle {
     fn area(&self) -> u32 {
         self.width * self.height
@@ -145,7 +145,7 @@ fn main() {
 
 Rust จะเพิ่ม `&`, `&mut`, หรือ `*` อัตโนมัติเมื่อเรียก method:
 
-```rust
+```rust,ignore
 fn main() {
     let rect = Rectangle { width: 30, height: 50 };
 

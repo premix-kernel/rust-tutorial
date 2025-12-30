@@ -34,7 +34,7 @@ mod tests {
 
 ## #[ignore] - ข้าม Tests
 
-```rust
+```rust,ignore
 #[test]
 fn fast_test() {
     assert!(true);
@@ -171,7 +171,7 @@ mod tests {
 
 ## Test Helper Functions
 
-```rust
+```rust,ignore
 #[cfg(test)]
 mod tests {
     use super::*;

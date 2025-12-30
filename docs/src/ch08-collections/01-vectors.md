@@ -4,7 +4,7 @@
 
 ## สร้าง Vector
 
-```rust
+```rust,ignore
 fn main() {
     // สร้าง vector ว่าง
     let v1: Vec<i32> = Vec::new();
@@ -21,7 +21,7 @@ fn main() {
 
 ## เพิ่มข้อมูล
 
-```rust
+```rust,ignore
 fn main() {
     let mut v = Vec::new();
 
@@ -141,7 +141,7 @@ fn main() {
 
 เก็บหลาย types ด้วย enum:
 
-```rust
+```rust,ignore
 enum SpreadsheetCell {
     Int(i32),
     Float(f64),

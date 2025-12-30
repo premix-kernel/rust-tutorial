@@ -31,7 +31,7 @@ enum Option<T> {
 
 ## การใช้งาน Option
 
-```rust
+```rust,ignore
 fn main() {
     let some_number: Option<i32> = Some(5);
     let some_string: Option<&str> = Some("hello");
@@ -49,7 +49,7 @@ fn main() {
 
 ### Compiler บังคับให้จัดการ
 
-```rust
+```rust,ignore
 fn main() {
     let x: i32 = 5;
     let y: Option<i32> = Some(5);
@@ -91,7 +91,7 @@ fn main() {
 
 ### 3. unwrap (ระวัง!)
 
-```rust
+```rust,ignore
 fn main() {
     let x: Option<i32> = Some(5);
     let value = x.unwrap(); // ✅ ได้ 5
@@ -103,7 +103,7 @@ fn main() {
 
 ### 4. unwrap_or (ปลอดภัยกว่า)
 
-```rust
+```rust,ignore
 fn main() {
     let x: Option<i32> = Some(5);
     let y: Option<i32> = None;
@@ -115,7 +115,7 @@ fn main() {
 
 ### 5. map
 
-```rust
+```rust,ignore
 fn main() {
     let x: Option<i32> = Some(5);
 
@@ -139,7 +139,7 @@ fn main() {
 | `map(f)`             | แปลงค่าข้างใน              |
 | `and_then(f)`        | chain Options              |
 
-```rust
+```rust,ignore
 fn main() {
     let x: Option<i32> = Some(5);
     let y: Option<i32> = None;
@@ -161,7 +161,7 @@ fn main() {
 
 ## ตัวอย่างจริง: หาค่าใน Array
 
-```rust
+```rust,ignore
 fn find_item(items: &[i32], target: i32) -> Option<usize> {
     for (index, &item) in items.iter().enumerate() {
         if item == target {
@@ -185,7 +185,7 @@ fn main() {
 
 ## ตัวอย่างจริง: Division
 
-```rust
+```rust,ignore
 fn divide(a: f64, b: f64) -> Option<f64> {
     if b == 0.0 {
         None

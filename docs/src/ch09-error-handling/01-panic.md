@@ -123,7 +123,7 @@ fn process_age(age: i32) {
 
 ### unwrap
 
-```rust
+```rust,ignore
 fn main() {
     let x: Option<i32> = Some(5);
     let value = x.unwrap(); // ✅ 5

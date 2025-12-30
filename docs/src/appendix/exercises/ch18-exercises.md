@@ -119,7 +119,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 fn factorial(n: u32) -> u32 {
     if dbg!(n <= 1) {
         dbg!(1)

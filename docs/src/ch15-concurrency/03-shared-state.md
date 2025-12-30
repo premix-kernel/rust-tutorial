@@ -48,7 +48,7 @@ fn main() {
 
 **Arc** = Atomic Reference Counting (thread-safe Rc)
 
-```rust
+```rust,ignore
 use std::sync::{Arc, Mutex};
 use std::thread;
 

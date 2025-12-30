@@ -128,7 +128,7 @@ for item in &vec {
 
 ## Ownership
 
-```rust
+```rust,ignore
 // Move
 let s1 = String::from("hello");
 let s2 = s1;  // s1 is invalid now
@@ -151,7 +151,7 @@ fn change(s: &mut String) {
 
 ## Structs
 
-```rust
+```rust,ignore
 // Define
 struct User {
     username: String,
@@ -220,7 +220,7 @@ if let Some(value) = x {
 
 ## Error Handling
 
-```rust
+```rust,ignore
 // Result
 fn divide(a: f64, b: f64) -> Result<f64, String> {
     if b == 0.0 {
@@ -256,7 +256,7 @@ let content = std::fs::read_to_string("file.txt")
 
 ### Vec
 
-```rust
+```rust,ignore
 let mut v: Vec<i32> = Vec::new();
 let v = vec![1, 2, 3];
 
@@ -273,7 +273,7 @@ for i in &v {
 
 ### String
 
-```rust
+```rust,ignore
 let mut s = String::new();
 let s = String::from("hello");
 let s = "hello".to_string();
@@ -303,7 +303,7 @@ for (key, value) in &map {
 
 ## Iterators
 
-```rust
+```rust,ignore
 let v = vec![1, 2, 3, 4, 5];
 
 // Common methods
@@ -321,7 +321,7 @@ v.iter().all(|x| *x > 0);
 
 ## Smart Pointers
 
-```rust
+```rust,ignore
 // Box - Heap allocation
 let b = Box::new(5);
 

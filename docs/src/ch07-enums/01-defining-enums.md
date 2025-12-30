@@ -27,7 +27,7 @@ fn route(ip_kind: IpAddrKind) {
 
 Variants สามารถมีข้อมูลแนบได้:
 
-```rust
+```rust,ignore
 enum IpAddr {
     V4(u8, u8, u8, u8),
     V6(String),
@@ -45,7 +45,7 @@ fn main() {
 
 แต่ละ variant มีข้อมูลต่างกันได้:
 
-```rust
+```rust,ignore
 enum Message {
     Quit,                       // ไม่มีข้อมูล
     Move { x: i32, y: i32 },    // anonymous struct
@@ -67,7 +67,7 @@ fn main() {
 
 เหมือนกับ struct:
 
-```rust
+```rust,ignore
 enum Message {
     Quit,
     Move { x: i32, y: i32 },
@@ -94,7 +94,7 @@ fn main() {
 
 ### ใช้ Struct + Enum
 
-```rust
+```rust,ignore
 enum IpAddrKind {
     V4,
     V6,
@@ -115,7 +115,7 @@ fn main() {
 
 ### ใช้ Enum alone (ดีกว่า!)
 
-```rust
+```rust,ignore
 enum IpAddr {
     V4(String),
     V6(String),
@@ -130,7 +130,7 @@ fn main() {
 
 ## ตัวอย่างจริง: WebEvent
 
-```rust
+```rust,ignore
 enum WebEvent {
     PageLoad,
     PageUnload,

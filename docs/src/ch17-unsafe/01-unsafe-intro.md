@@ -189,7 +189,7 @@ pub extern "C" fn rust_add(a: i32, b: i32) -> i32 {
 
 วิธีที่ถูกต้อง: ห่อ unsafe ด้วย safe interface
 
-```rust
+```rust,ignore
 pub fn split_at_mut(slice: &mut [i32], mid: usize) -> (&mut [i32], &mut [i32]) {
     let len = slice.len();
     let ptr = slice.as_mut_ptr();

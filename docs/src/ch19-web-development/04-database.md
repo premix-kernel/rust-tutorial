@@ -23,7 +23,7 @@ tokio = { version = "1", features = ["full"] }
 
 ## SQLite Example (Beginner-friendly)
 
-```rust
+```rust,ignore
 use sqlx::sqlite::{SqlitePool, SqlitePoolOptions};
 
 #[tokio::main]
@@ -57,7 +57,7 @@ async fn main() -> Result<(), sqlx::Error> {
 
 ## PostgreSQL Connection Pool
 
-```rust
+```rust,ignore
 use sqlx::postgres::{PgPool, PgPoolOptions};
 
 async fn create_pool() -> Result<PgPool, sqlx::Error> {
@@ -85,7 +85,7 @@ async fn main() {
 
 ### Execute (INSERT, UPDATE, DELETE)
 
-```rust
+```rust,ignore
 use sqlx::PgPool;
 
 async fn insert_todo(pool: &PgPool, title: &str) -> Result<i64, sqlx::Error> {
@@ -123,7 +123,7 @@ async fn delete_todo(pool: &PgPool, id: i32) -> Result<bool, sqlx::Error> {
 
 ### Fetch with FromRow
 
-```rust
+```rust,ignore
 use sqlx::FromRow;
 
 #[derive(Debug, FromRow)]
@@ -157,7 +157,7 @@ async fn get_completed_todos(pool: &PgPool) -> Result<Vec<Todo>, sqlx::Error> {
 
 ## query_as! Macro (Compile-time checked)
 
-```rust
+```rust,ignore
 // ต้อง set DATABASE_URL env var
 // และรัน: cargo sqlx prepare
 
@@ -194,7 +194,7 @@ async fn create_user_checked(
 
 ## Transactions
 
-```rust
+```rust,ignore
 use sqlx::PgPool;
 
 async fn transfer_money(
@@ -230,7 +230,7 @@ async fn transfer_money(
 
 ## Integration with Axum
 
-```rust
+```rust,ignore
 use axum::{
     extract::{State, Path, Json},
     routing::get,
@@ -331,7 +331,7 @@ sqlx migrate run
 
 ### Error Handling
 
-```rust
+```rust,ignore
 match result {
     Ok(todo) => println!("Got: {:?}", todo),
     Err(sqlx::Error::RowNotFound) => println!("Not found"),

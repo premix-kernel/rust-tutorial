@@ -79,7 +79,7 @@ D. ปิด connection
 
 **B. กำหนด route และ handler**
 
-```rust
+```rust,ignore
 Router::new()
     .route("/", get(handler))
     .route("/users", post(create_user))

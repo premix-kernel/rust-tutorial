@@ -60,7 +60,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 mod shapes {
     pub mod circle {
         pub fn area(radius: f64) -> f64 {
@@ -95,7 +95,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 mod user {
     pub struct User {
         pub username: String,
@@ -135,7 +135,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 mod internal {
     pub mod helpers {
         pub fn format_name(name: &str) -> String {

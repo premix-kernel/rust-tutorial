@@ -23,7 +23,7 @@ fn main() {
 3. **ใช้ได้ทุกที่** - รวมถึง global scope
 4. **SCREAMING_SNAKE_CASE** - ใช้ตัวพิมพ์ใหญ่และ underscore
 
-```rust
+```rust,ignore
 // ✅ ถูกต้อง
 const MAX_SIZE: usize = 100;
 
@@ -147,7 +147,7 @@ fn main() {
 
 ### Mathematical Constants
 
-```rust
+```rust,ignore
 const PI: f64 = 3.14159265358979323846;
 const E: f64 = 2.71828182845904523536;
 

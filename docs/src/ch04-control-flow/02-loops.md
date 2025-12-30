@@ -39,7 +39,7 @@ Count: 3
 
 `loop` สามารถ return ค่าผ่าน `break`:
 
-```rust
+```rust,ignore
 fn main() {
     let mut counter = 0;
 

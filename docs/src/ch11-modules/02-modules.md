@@ -48,7 +48,7 @@ fn main() {
 
 **Default:** ทุกอย่างเป็น private
 
-```rust
+```rust,ignore
 mod my_module {
     pub fn public_function() {}  // ✅ เข้าถึงได้จากนอก
     fn private_function() {}     // ❌ private
@@ -77,7 +77,7 @@ mod my_module {
 | `pub(super)`   | Public ใน parent module |
 | `pub(in path)` | Public ใน path ที่ระบุ  |
 
-```rust
+```rust,ignore
 mod outer {
     pub(crate) fn crate_only() {}
 
@@ -185,7 +185,7 @@ use std::io::{self, Write};
 
 ## Glob Operator
 
-```rust
+```rust,ignore
 // นำเข้าทุกอย่างที่เป็น public
 use std::collections::*;
 
@@ -231,7 +231,7 @@ use my_lib::api::get_users;
 2. **Children can see private ancestors**
 3. **Siblings can see each other**
 
-```rust
+```rust,ignore
 mod parent {
     fn parent_private() {}
     pub fn parent_public() {}

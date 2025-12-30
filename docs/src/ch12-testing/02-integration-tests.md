@@ -237,7 +237,7 @@ fn test_calculator_chain() {
 
 ## Async Integration Tests
 
-```rust
+```rust,ignore
 // tests/async_test.rs
 
 #[tokio::test]

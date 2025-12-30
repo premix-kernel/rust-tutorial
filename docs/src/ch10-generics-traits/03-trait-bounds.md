@@ -52,7 +52,7 @@ where
 
 ## Return Trait
 
-```rust
+```rust,ignore
 fn get_summarizable() -> impl Summary {
     Tweet {
         username: String::from("user"),

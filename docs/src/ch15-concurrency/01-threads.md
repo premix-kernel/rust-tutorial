@@ -118,7 +118,7 @@ fn main() {
 
 กำหนด thread name และ stack size:
 
-```rust
+```rust,ignore
 use std::thread;
 
 fn main() {

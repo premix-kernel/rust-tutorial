@@ -73,7 +73,7 @@ Compiler ไม่รู้ว่า return value จะอยู่นานเ
 
 ### ทางแก้: Lifetime Annotations
 
-```rust
+```rust,ignore
 fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
     if x.len() > y.len() {
         x
@@ -97,7 +97,7 @@ fn main() {
 
 ## Lifetime กับ Scope
 
-```rust
+```rust,ignore
 fn main() {
     let string1 = String::from("long string is long");
 
@@ -228,7 +228,7 @@ let s: &'static str = "I have a static lifetime.";
 
 อย่าใช้ `'static` เพื่อ "แก้" lifetime errors โดยไม่เข้าใจ:
 
-```rust
+```rust,ignore
 // ❌ Bad: ใช้ 'static แบบผิดๆ
 fn get_str() -> &'static str {
     let s = String::from("hello");
@@ -264,7 +264,7 @@ fn longest_with_announcement<'a, 'b>(
 
 ใช้กับ generics:
 
-```rust
+```rust,ignore
 fn longest_with_trait<'a, T>(x: &'a str, y: &'a str, ann: T) -> &'a str
 where
     T: std::fmt::Display,

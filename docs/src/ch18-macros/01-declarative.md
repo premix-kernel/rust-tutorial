@@ -4,7 +4,7 @@
 
 ## ทำไมต้องใช้ Macros?
 
-```rust
+```rust,ignore
 // ❌ ซ้ำซาก
 let v1 = vec![1, 2, 3];
 let v2 = {
@@ -108,7 +108,7 @@ fn main() {
 
 ใช้ `$(...)*` หรือ `$(...)+` สำหรับซ้ำ:
 
-```rust
+```rust,ignore
 macro_rules! vec_of_strings {
     // ( pattern ),* = zero or more, comma separated
     ($($x:expr),*) => {

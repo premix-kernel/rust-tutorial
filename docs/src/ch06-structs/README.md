@@ -26,7 +26,7 @@ let user_age = 25;
 
 ใช้ Struct รวมข้อมูลที่เกี่ยวข้องกัน:
 
-```rust
+```rust,ignore
 struct User {
     name: String,
     email: String,

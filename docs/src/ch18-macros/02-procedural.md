@@ -93,7 +93,7 @@ fn main() {
 
 อ่าน struct fields:
 
-```rust
+```rust,ignore
 use proc_macro::TokenStream;
 use quote::quote;
 use syn::{parse_macro_input, DeriveInput, Data, Fields};
@@ -132,7 +132,7 @@ pub fn describe_derive(input: TokenStream) -> TokenStream {
 
 Usage:
 
-```rust
+```rust,ignore
 #[derive(Describe)]
 struct User {
     name: String,

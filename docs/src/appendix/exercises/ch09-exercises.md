@@ -10,7 +10,7 @@
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 fn parse_number(s: &str) -> Result<i32, String> {
     s.parse::<i32>()
         .map_err(|_| format!("'{}' is not a valid number", s))
@@ -37,7 +37,7 @@ fn main() {
 
 แปลงโค้ดนี้ให้ใช้ `?`:
 
-```rust
+```rust,ignore
 fn read_username() -> Result<String, std::io::Error> {
     let file = match std::fs::read_to_string("username.txt") {
         Ok(content) => content,
@@ -50,7 +50,7 @@ fn read_username() -> Result<String, std::io::Error> {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 fn read_username() -> Result<String, std::io::Error> {
     let content = std::fs::read_to_string("username.txt")?;
     Ok(content.trim().to_string())
@@ -93,7 +93,7 @@ let value = some_option.unwrap_or_default();
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 use std::fmt;
 
 #[derive(Debug)]

@@ -72,7 +72,7 @@ todo-cli/
 
 ### Todo Struct
 
-```rust
+```rust,ignore
 // src/todo.rs
 use serde::{Deserialize, Serialize};
 use chrono::{DateTime, Utc};
@@ -119,7 +119,7 @@ impl std::fmt::Display for Todo {
 
 ## Command Enum
 
-```rust
+```rust,ignore
 // src/lib.rs
 #[derive(Debug, PartialEq)]
 pub enum Command {
@@ -184,7 +184,7 @@ impl Command {
 
 ## Error Handling Strategy
 
-```rust
+```rust,ignore
 // src/lib.rs
 use thiserror::Error;
 

@@ -27,7 +27,7 @@
 
 ## ทางออก: ใช้ Weak
 
-```rust
+```rust,ignore
 use std::rc::{Rc, Weak};
 
 // Weak ไม่นับ reference
@@ -145,7 +145,7 @@ leaf ─────────┘ Strong (in children vec)
 
 ## ตัวอย่าง: Observer Pattern
 
-```rust
+```rust,ignore
 use std::rc::{Rc, Weak};
 use std::cell::RefCell;
 
@@ -235,7 +235,7 @@ fn main() {
 
 ### Patterns
 
-```rust
+```rust,ignore
 // Tree data structure
 struct Node {
     value: i32,

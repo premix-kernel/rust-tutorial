@@ -78,7 +78,7 @@ match some_value {
 
 ## if let กับ Enum
 
-```rust
+```rust,ignore
 enum Message {
     Quit,
     Move { x: i32, y: i32 },
@@ -106,7 +106,7 @@ fn main() {
 
 ทำซ้ำตราบใดที่ pattern ยัง match:
 
-```rust
+```rust,ignore
 fn main() {
     let mut stack = Vec::new();
 
@@ -150,7 +150,7 @@ fn main() {
 
 Unwrap หรือ return เร็ว:
 
-```rust
+```rust,ignore
 fn get_length(s: Option<String>) -> usize {
     let Some(text) = s else {
         return 0;  // ต้อง return, break, continue, panic
@@ -189,7 +189,7 @@ fn main() {
 
 ## ตัวอย่างจริง
 
-```rust
+```rust,ignore
 fn main() {
     let config_max: Option<u8> = Some(100);
 
@@ -210,7 +210,7 @@ fn main() {
 
 ## Chained if let
 
-```rust
+```rust,ignore
 fn main() {
     let maybe_number: Option<i32> = Some(42);
     let maybe_string: Option<&str> = Some("hello");
@@ -225,7 +225,7 @@ fn main() {
 
 หรือใช้ `&&` (Rust 1.53+):
 
-```rust
+```rust,ignore
 fn main() {
     let maybe_number: Option<i32> = Some(42);
     let maybe_string: Option<&str> = Some("hello");

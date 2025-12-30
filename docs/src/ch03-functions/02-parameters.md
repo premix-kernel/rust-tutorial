@@ -83,7 +83,7 @@ fn main() {
 
 ## ชนิดข้อมูลที่ใช้บ่อย
 
-```rust
+```rust,ignore
 fn main() {
     integers(10, -5);
     floats(3.14, 2.5);

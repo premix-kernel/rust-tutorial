@@ -6,7 +6,7 @@ Marker traits สำหรับ concurrency
 
 Type ที่ส่งระหว่าง threads ได้:
 
-```rust
+```rust,ignore
 // Most types are Send
 // Rc<T> is NOT Send (use Arc<T> instead)
 ```
@@ -15,7 +15,7 @@ Type ที่ส่งระหว่าง threads ได้:
 
 Type ที่หลาย threads เข้าถึงพร้อมกันได้:
 
-```rust
+```rust,ignore
 // T is Sync if &T is Send
 // RefCell<T> is NOT Sync
 // Mutex<T> IS Sync

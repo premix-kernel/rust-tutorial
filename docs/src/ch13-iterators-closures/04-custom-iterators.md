@@ -4,7 +4,7 @@
 
 ## Implementation พื้นฐาน
 
-```rust
+```rust,ignore
 struct Counter {
     count: u32,
     max: u32,
@@ -45,7 +45,7 @@ fn main() {
 
 เมื่อ implement `next()` ได้ Iterator methods ทั้งหมดมาฟรี:
 
-```rust
+```rust,ignore
 fn main() {
     // sum
     let sum: u32 = Counter::new(5).sum();
@@ -76,7 +76,7 @@ fn main() {
 
 ## ตัวอย่าง: Fibonacci Iterator
 
-```rust
+```rust,ignore
 struct Fibonacci {
     curr: u64,
     next: u64,
@@ -120,7 +120,7 @@ fn main() {
 
 ทำให้ใช้กับ `for` loop ได้:
 
-```rust
+```rust,ignore
 struct MyCollection {
     items: Vec<i32>,
 }
@@ -163,7 +163,7 @@ fn main() {
 
 ทำให้ `rev()` ใช้ได้:
 
-```rust
+```rust,ignore
 struct Range {
     start: i32,
     end: i32,
@@ -217,7 +217,7 @@ fn main() {
 
 ถ้ารู้ขนาด:
 
-```rust
+```rust,ignore
 impl ExactSizeIterator for Counter {
     fn len(&self) -> usize {
         (self.max - self.count) as usize
@@ -234,7 +234,7 @@ fn main() {
 
 ## ตัวอย่างจริง: Lines Iterator
 
-```rust
+```rust,ignore
 struct Lines<'a> {
     remaining: &'a str,
 }

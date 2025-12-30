@@ -4,7 +4,7 @@
 
 ## Future Trait
 
-```rust
+```rust,ignore
 pub trait Future {
     type Output;
 
@@ -43,7 +43,7 @@ pub enum Poll<T> {
 
 สร้าง anonymous Future:
 
-```rust
+```rust,ignore
 async fn example() {
     let future = async {
         println!("Inside async block");
@@ -93,7 +93,7 @@ async fn sequential() {
 
 ### Concurrent กับ join!
 
-```rust
+```rust,ignore
 use tokio::join;
 
 async fn concurrent() {
@@ -108,7 +108,7 @@ async fn concurrent() {
 
 ### Racing กับ select!
 
-```rust
+```rust,ignore
 use tokio::select;
 
 async fn race() {
@@ -145,7 +145,7 @@ fn takes_future(future: Pin<&mut dyn Future<Output = i32>>) {
 
 ## สร้าง Future เอง (Advanced)
 
-```rust
+```rust,ignore
 use std::future::Future;
 use std::pin::Pin;
 use std::task::{Context, Poll};

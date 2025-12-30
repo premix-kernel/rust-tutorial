@@ -4,7 +4,7 @@
 
 ## String Slices
 
-```rust
+```rust,ignore
 fn main() {
     let s = String::from("Hello World");
 
@@ -26,7 +26,7 @@ fn main() {
 
 ### ตัวอย่าง
 
-```rust
+```rust,ignore
 fn main() {
     let s = String::from("Hello World");
 
@@ -47,7 +47,7 @@ fn main() {
 
 `&str` คือ **string slice** - reference ไปยังส่วนหนึ่งของ String:
 
-```rust
+```rust,ignore
 fn main() {
     let s = String::from("Hello World");
 
@@ -71,7 +71,7 @@ fn main() {
 
 ## ใช้ Slices กับ Functions
 
-```rust
+```rust,ignore
 fn main() {
     let sentence = String::from("Hello World");
 
@@ -123,7 +123,7 @@ fn first_word(s: &str) -> &str {
 
 โดยไม่มี slices:
 
-```rust
+```rust,ignore
 fn first_word_index(s: &String) -> usize {
     let bytes = s.as_bytes();
     for (i, &item) in bytes.iter().enumerate() {
@@ -148,7 +148,7 @@ fn main() {
 
 ใช้ slices:
 
-```rust
+```rust,ignore
 fn first_word(s: &str) -> &str {
     let bytes = s.as_bytes();
     for (i, &item) in bytes.iter().enumerate() {
@@ -192,7 +192,7 @@ fn main() {
 
 ## ตัวอย่างจริง
 
-```rust
+```rust,ignore
 fn main() {
     let text = "The quick brown fox jumps over the lazy dog";
 

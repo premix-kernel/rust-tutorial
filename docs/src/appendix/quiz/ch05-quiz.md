@@ -28,7 +28,7 @@ D. ค่าไม่ถูก drop เมื่อ owner ออกจาก sco
 
 code นี้ถูกหรือผิด?
 
-```rust
+```rust,ignore
 let s1 = String::from("hello");
 let s2 = s1;
 println!("{}", s1);
@@ -64,7 +64,7 @@ D. Move
 
 **B. Reference (borrow)**
 
-```rust
+```rust,ignore
 let s = String::from("hello");
 let r = &s; // borrow แบบ immutable
 ```

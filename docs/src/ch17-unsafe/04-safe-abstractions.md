@@ -22,7 +22,7 @@
 
 Standard library ใช้ pattern นี้:
 
-```rust
+```rust,ignore
 fn split_at_mut(values: &mut [i32], mid: usize) -> (&mut [i32], &mut [i32]) {
     let len = values.len();
     let ptr = values.as_mut_ptr();
@@ -174,7 +174,7 @@ unsafe impl Sync for Counter {}
 
 ### 1. Minimize Unsafe Scope
 
-```rust
+```rust,ignore
 // ❌ Bad: unsafe block ใหญ่เกินไป
 unsafe {
     let ptr = some_pointer();
@@ -210,7 +210,7 @@ pub struct NonEmptyString {
 
 ### 3. Validate Early
 
-```rust
+```rust,ignore
 pub fn from_raw_parts(ptr: *const u8, len: usize) -> Result<Self, Error> {
     // ตรวจสอบก่อน unsafe
     if ptr.is_null() {

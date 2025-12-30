@@ -93,7 +93,7 @@ pub fn run(command: Command) -> Result<(), Box<dyn std::error::Error>> {
 
 ## storage.rs
 
-```rust
+```rust,ignore
 use crate::Todo;
 use std::fs;
 

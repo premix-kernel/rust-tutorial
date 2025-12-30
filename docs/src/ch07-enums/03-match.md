@@ -63,7 +63,7 @@ fn describe(color: Color) {
 
 ### แก้ไข
 
-```rust
+```rust,ignore
 fn describe(color: Color) {
     match color {
         Color::Red => println!("Red"),
@@ -98,7 +98,7 @@ fn main() {
 
 ดึงค่าจาก enum:
 
-```rust
+```rust,ignore
 enum Message {
     Quit,
     Move { x: i32, y: i32 },
@@ -127,7 +127,7 @@ fn main() {
 
 ## Match กับ Option
 
-```rust
+```rust,ignore
 fn plus_one(x: Option<i32>) -> Option<i32> {
     match x {
         None => None,

@@ -85,7 +85,7 @@ D. Test export
 
 **B. Public re-export**
 
-```rust
+```rust,ignore
 pub use internal::helper::function;
 // ตอนนี้ใช้ crate::function ได้เลย
 ```

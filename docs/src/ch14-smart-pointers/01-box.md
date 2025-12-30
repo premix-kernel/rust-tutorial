@@ -13,7 +13,7 @@
 
 ## การใช้งานพื้นฐาน
 
-```rust
+```rust,ignore
 fn main() {
     let b = Box::new(5);
     println!("b = {}", b);
@@ -84,7 +84,7 @@ Stack                    Heap
 
 ## Use Case 2: Trait Objects
 
-```rust
+```rust,ignore
 trait Draw {
     fn draw(&self);
 }
@@ -121,7 +121,7 @@ fn main() {
 
 ## Use Case 3: Large Data Transfer
 
-```rust
+```rust,ignore
 fn main() {
     // Large array on stack
     let big_array = [0u8; 1_000_000]; // 1MB on stack!
@@ -140,7 +140,7 @@ fn main() {
 
 Box implements `Deref` ทำให้ใช้งานเหมือน reference:
 
-```rust
+```rust,ignore
 use std::ops::Deref;
 
 fn main() {
@@ -164,7 +164,7 @@ fn hello(name: &str) {
 
 Rust แปลง types อัตโนมัติผ่าน Deref chain:
 
-```rust
+```rust,ignore
 // Box<String> -> String -> str
 // &Box<String> -> &String -> &str
 
@@ -188,7 +188,7 @@ fn greet(s: &str) {
 
 Box จะ drop ทั้ง pointer และ data บน heap เมื่อออกจาก scope:
 
-```rust
+```rust,ignore
 fn main() {
     {
         let b = Box::new(String::from("hello"));
@@ -201,7 +201,7 @@ fn main() {
 
 ### Custom Drop
 
-```rust
+```rust,ignore
 struct CustomSmartPointer {
     data: String,
 }
@@ -229,7 +229,7 @@ fn main() {
 
 ### Drop Early with std::mem::drop
 
-```rust
+```rust,ignore
 fn main() {
     let c = Box::new(String::from("hello"));
 

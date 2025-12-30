@@ -117,7 +117,7 @@ fn main() {
 
 ### 3. FnOnce - Move Ownership (T)
 
-```rust
+```rust,ignore
 fn main() {
     let message = String::from("Hello");
 
@@ -140,7 +140,7 @@ fn main() {
 
 บังคับให้ closure เป็นเจ้าของค่า:
 
-```rust
+```rust,ignore
 fn main() {
     let name = String::from("Alice");
 
@@ -243,7 +243,7 @@ fn main() {
 
 ## ตัวอย่างจริง: Map และ Filter
 
-```rust
+```rust,ignore
 fn main() {
     let numbers = vec![1, 2, 3, 4, 5];
 

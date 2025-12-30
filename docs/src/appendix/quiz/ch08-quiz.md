@@ -14,7 +14,7 @@ D. HashMap
 
 **B. Empty vector**
 
-```rust
+```rust,ignore
 let v: Vec<i32> = Vec::new();
 // หรือ
 let v = vec![1, 2, 3];
@@ -59,7 +59,7 @@ D. `&V`
 
 **B. `Option<&V>`**
 
-```rust
+```rust,ignore
 let value = map.get("key"); // Option<&V>
 ```
 

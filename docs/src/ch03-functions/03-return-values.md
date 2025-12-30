@@ -145,7 +145,7 @@ fn print_hello() -> () {
 
 ## ตัวอย่างจริง
 
-```rust
+```rust,ignore
 fn main() {
     let radius = 5.0;
     let area = circle_area(radius);

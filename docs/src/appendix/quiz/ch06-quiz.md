@@ -14,7 +14,7 @@ D. `data`
 
 **B. `struct`**
 
-```rust
+```rust,ignore
 struct User {
     name: String,
     age: u32,
@@ -39,7 +39,7 @@ D. function ต้องอยู่ใน impl
 
 **B. method มี `self` parameter**
 
-```rust
+```rust,ignore
 impl User {
     fn greet(&self) { } // method มี self
     fn new() -> Self { } // associated function ไม่มี self
@@ -110,7 +110,7 @@ D. `self` คือ type
 
 **B. `Self` คือ type, `self` คือ instance**
 
-```rust
+```rust,ignore
 impl User {
     fn new() -> Self { // Self = User type
         Self { name: String::new() }

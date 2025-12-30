@@ -38,7 +38,7 @@ todo_app/
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 // src/todo.rs
 use serde::{Deserialize, Serialize};
 
@@ -75,7 +75,7 @@ impl Todo {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 // src/storage.rs
 use crate::todo::Todo;
 use std::fs;

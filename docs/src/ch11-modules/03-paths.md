@@ -15,7 +15,7 @@
 
 เริ่มจาก crate root ด้วย `crate`:
 
-```rust
+```rust,ignore
 mod front_of_house {
     pub mod hosting {
         pub fn add_to_waitlist() {
@@ -55,7 +55,7 @@ fn main() {
 
 `super` = parent module (เหมือน `..` ใน filesystem)
 
-```rust
+```rust,ignore
 mod parent {
     fn parent_function() {
         println!("In parent");
@@ -92,7 +92,7 @@ fn main() {
 
 `self` = current module
 
-```rust
+```rust,ignore
 mod my_module {
     pub fn function_a() {
         println!("Function A");
@@ -162,7 +162,7 @@ fn main() {
 | Re-export    | Absolute    |
 | Library      | แบบไหนก็ได้ |
 
-```rust
+```rust,ignore
 // ✅ Good: ถ้าย้าย main ไปที่อื่น ไม่ต้องแก้
 crate::utils::helper();
 
@@ -226,7 +226,7 @@ fn main() {
 
 ### Path Examples
 
-```rust
+```rust,ignore
 crate::module::item        // absolute
 module::item               // relative
 self::item                 // current module

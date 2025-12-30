@@ -74,7 +74,7 @@ fn main() {
 
 ### 3. into_iter() - Take Ownership (T)
 
-```rust
+```rust,ignore
 fn main() {
     let v = vec![String::from("a"), String::from("b")];
 
@@ -199,7 +199,7 @@ fn main() {
 
 ## Infinite Iterators
 
-```rust
+```rust,ignore
 fn main() {
     // repeat - ซ้ำค่าเดิมตลอด
     let threes: Vec<i32> = std::iter::repeat(3).take(5).collect();

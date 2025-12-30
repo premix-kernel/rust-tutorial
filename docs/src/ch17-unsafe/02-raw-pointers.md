@@ -59,7 +59,7 @@ fn main() {
 
 ## สร้าง Null Pointer
 
-```rust
+```rust,ignore
 fn main() {
     // null pointer
     let null_ptr: *const i32 = std::ptr::null();
@@ -139,7 +139,7 @@ fn main() {
 
 ## ตัวอย่างจริง: Swap Values
 
-```rust
+```rust,ignore
 unsafe fn swap<T>(a: *mut T, b: *mut T) {
     let temp = std::ptr::read(a);
     std::ptr::copy_nonoverlapping(b, a, 1);

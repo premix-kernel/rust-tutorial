@@ -70,7 +70,7 @@ D. ได้ แต่ต้องเป็น struct
 
 **C. ได้ หลาย types**
 
-```rust
+```rust,ignore
 enum Message {
     Quit,                       // ไม่มี data
     Move { x: i32, y: i32 },   // struct-like

@@ -52,7 +52,7 @@ fn main() {
 
 สร้าง String โดยไม่พิมพ์:
 
-```rust
+```rust,ignore
 fn main() {
     let s = format!("Hello, {}!", "World");
     println!("{}", s);

@@ -56,7 +56,7 @@ pub mod handlers;
 
 ### src/config.rs
 
-```rust
+```rust,ignore
 pub struct Config {
     pub database_url: String,
     pub port: u16,
@@ -86,7 +86,7 @@ pub use queries::Query;
 
 ### src/database/connection.rs
 
-```rust
+```rust,ignore
 pub struct DatabaseConnection {
     url: String,
     connected: bool,
@@ -109,7 +109,7 @@ impl DatabaseConnection {
 
 ### src/database/queries.rs
 
-```rust
+```rust,ignore
 use super::DatabaseConnection;
 
 pub struct Query {

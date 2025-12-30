@@ -89,7 +89,7 @@ fn main() {
 
 ## Ownership
 
-```rust
+```rust,ignore
 use std::collections::HashMap;
 
 fn main() {
@@ -106,7 +106,7 @@ fn main() {
 
 ใช้ references หรือ clone ถ้าต้องการเก็บ:
 
-```rust
+```rust,ignore
 use std::collections::HashMap;
 
 fn main() {

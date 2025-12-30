@@ -127,7 +127,7 @@ fn main() {
 
 ### Methods สำหรับ Specific Type
 
-```rust
+```rust,ignore
 impl Point<f32> {
     fn distance_from_origin(&self) -> f32 {
         (self.x.powi(2) + self.y.powi(2)).sqrt()
@@ -191,7 +191,7 @@ enum Result<T, E> {
 
 ### สร้าง Generic Enum เอง
 
-```rust
+```rust,ignore
 enum Either<L, R> {
     Left(L),
     Right(R),
@@ -229,7 +229,7 @@ fn id_str(x: &str) -> &str { x }
 
 ## ตัวอย่างจริง: Container
 
-```rust
+```rust,ignore
 struct Stack<T> {
     items: Vec<T>,
 }

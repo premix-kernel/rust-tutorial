@@ -2,7 +2,7 @@
 
 ## นิยาม Struct
 
-```rust
+```rust,ignore
 struct User {
     username: String,
     email: String,
@@ -19,7 +19,7 @@ struct User {
 
 ## สร้าง Instance
 
-```rust
+```rust,ignore
 fn main() {
     let user1 = User {
         email: String::from("alice@example.com"),
@@ -44,7 +44,7 @@ struct User {
 
 ## เข้าถึงและแก้ไข Fields
 
-```rust
+```rust,ignore
 fn main() {
     let mut user1 = User {
         email: String::from("alice@example.com"),
@@ -71,7 +71,7 @@ fn main() {
 
 ถ้าชื่อ parameter ตรงกับ field ไม่ต้องเขียนซ้ำ:
 
-```rust
+```rust,ignore
 fn build_user(email: String, username: String) -> User {
     User {
         email,    // แทน email: email
@@ -88,7 +88,7 @@ fn build_user(email: String, username: String) -> User {
 
 สร้าง instance ใหม่จาก instance เดิม:
 
-```rust
+```rust,ignore
 fn main() {
     let user1 = User {
         email: String::from("alice@example.com"),

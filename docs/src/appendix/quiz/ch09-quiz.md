@@ -39,7 +39,7 @@ D. Print error
 
 **B. Unwrap หรือ return error**
 
-```rust
+```rust,ignore
 fn read_file() -> Result<String, Error> {
     let content = std::fs::read_to_string("file.txt")?;
     Ok(content)

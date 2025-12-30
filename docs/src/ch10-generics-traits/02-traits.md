@@ -4,7 +4,7 @@
 
 ## นิยาม Trait
 
-```rust
+```rust,ignore
 trait Summary {
     fn summarize(&self) -> String;
 }

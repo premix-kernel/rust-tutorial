@@ -33,7 +33,7 @@ s2 ──────► "hello" (Heap)
 
 ถ้าต้องการ copy ข้อมูลจริงๆ ใช้ `.clone()`:
 
-```rust
+```rust,ignore
 fn main() {
     let s1 = String::from("hello");
     let s2 = s1.clone(); // CLONE - deep copy
@@ -81,7 +81,7 @@ fn main() {
 
 ### 1. ต้องการให้ทั้งสองตัวแปรใช้ข้อมูลเดียวกัน
 
-```rust
+```rust,ignore
 fn main() {
     let original = String::from("hello");
     let backup = original.clone();
@@ -94,7 +94,7 @@ fn main() {
 
 ### 2. ส่งค่าเข้า function แต่ยังต้องการใช้
 
-```rust
+```rust,ignore
 fn main() {
     let s = String::from("hello");
 
@@ -161,7 +161,7 @@ fn main() {
 
 ## สรุป: Move vs Clone vs Copy
 
-```rust
+```rust,ignore
 fn main() {
     // Copy - Stack types (อัตโนมัติ)
     let x = 5;

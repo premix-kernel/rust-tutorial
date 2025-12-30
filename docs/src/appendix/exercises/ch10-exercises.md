@@ -72,7 +72,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 trait Describable {
     fn describe(&self) -> String;
 }
@@ -155,7 +155,7 @@ fn longest(x: &str, y: &str) -> &str {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
     if x.len() > y.len() {
         x

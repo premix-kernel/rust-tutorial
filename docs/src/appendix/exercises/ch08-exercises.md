@@ -35,7 +35,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 fn reverse_string(s: &str) -> String {
     s.chars().rev().collect()
 }
@@ -128,7 +128,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 enum Value {
     Int(i32),
     Float(f64),

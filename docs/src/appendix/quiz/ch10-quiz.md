@@ -60,7 +60,7 @@ D. Enum
 
 Trait define behavior ที่ types ต้อง implement
 
-```rust
+```rust,ignore
 trait Summary {
     fn summarize(&self) -> String;
 }

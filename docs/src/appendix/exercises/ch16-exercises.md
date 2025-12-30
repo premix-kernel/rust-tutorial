@@ -7,7 +7,7 @@
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 async fn fetch_data() -> String {
     // Simulate network delay
     tokio::time::sleep(tokio::time::Duration::from_millis(100)).await;
@@ -64,7 +64,7 @@ async fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 async fn task_a() -> i32 {
     tokio::time::sleep(tokio::time::Duration::from_millis(100)).await;
     println!("Task A done");
@@ -121,7 +121,7 @@ Handle errors ใน async function
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 async fn fetch_user(id: i32) -> Result<String, String> {
     if id > 0 {
         Ok(format!("User {}", id))

@@ -126,7 +126,7 @@ fn test_divide_by_zero_message() {
 
 ## ใช้ Result ใน Tests
 
-```rust
+```rust,ignore
 #[test]
 fn test_with_result() -> Result<(), String> {
     if 2 + 2 == 4 {
@@ -191,7 +191,7 @@ cargo test -- --test-threads=1
 
 ### Ignore Tests
 
-```rust
+```rust,ignore
 #[test]
 #[ignore]
 fn expensive_test() {

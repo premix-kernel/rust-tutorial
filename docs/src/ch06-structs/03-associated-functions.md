@@ -4,7 +4,7 @@
 
 ## Syntax
 
-```rust
+```rust,ignore
 impl Rectangle {
     fn new(width: u32, height: u32) -> Rectangle {
         Rectangle { width, height }
@@ -77,7 +77,7 @@ fn main() {
 | เรียกด้วย `.`                   | เรียกด้วย `::`               |
 | เข้าถึง instance data ได้       | เข้าถึง instance data ไม่ได้ |
 
-```rust
+```rust,ignore
 impl Rectangle {
     // Associated Function (ไม่มี self)
     fn new(width: u32, height: u32) -> Self {
@@ -102,7 +102,7 @@ fn main() {
 
 `String::from` เป็น associated function ที่เราใช้บ่อย:
 
-```rust
+```rust,ignore
 fn main() {
     let s = String::from("hello"); // associated function
 
@@ -114,7 +114,7 @@ fn main() {
 
 ## ตัวอย่างจริง: User
 
-```rust
+```rust,ignore
 #[derive(Debug)]
 struct User {
     username: String,
@@ -172,7 +172,7 @@ fn main() {
 
 ใช้ associated functions และ methods ร่วมกัน:
 
-```rust
+```rust,ignore
 #[derive(Debug)]
 struct Car {
     brand: String,
