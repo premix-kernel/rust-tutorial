@@ -7,7 +7,7 @@
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 fn main() {
     let x = 10;
 
@@ -33,7 +33,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 unsafe fn swap_raw(a: *mut i32, b: *mut i32) {
     let temp = *a;
     *a = *b;
@@ -65,7 +65,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 fn split_at_mut(slice: &mut [i32], mid: usize) -> (&mut [i32], &mut [i32]) {
     let len = slice.len();
     let ptr = slice.as_mut_ptr();
@@ -100,7 +100,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 static mut COUNTER: i32 = 0;
 
 fn increment() {

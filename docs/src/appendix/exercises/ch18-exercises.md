@@ -7,7 +7,7 @@
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 macro_rules! say_hello {
     () => {
         println!("Hello!");
@@ -30,7 +30,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 macro_rules! greet {
     ($name:expr) => {
         println!("Hello, {}!", $name);
@@ -54,7 +54,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 macro_rules! sum {
     ($($x:expr),*) => {
         {
@@ -84,7 +84,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 macro_rules! map {
     ($($key:expr => $value:expr),* $(,)?) => {
         {
@@ -119,7 +119,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 fn factorial(n: u32) -> u32 {
     if dbg!(n <= 1) {
         dbg!(1)

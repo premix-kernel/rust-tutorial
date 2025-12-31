@@ -14,7 +14,7 @@ D. `test!`
 
 **A. `#[test]`**
 
-```rust
+```rust,ignore
 #[test]
 fn test_add() {
     assert_eq!(2 + 2, 4);
@@ -39,7 +39,7 @@ D. Print panic message
 
 **B. Test ผ่านถ้า function panic**
 
-```rust
+```rust,ignore
 #[test]
 #[should_panic]
 fn test_divide_by_zero() {

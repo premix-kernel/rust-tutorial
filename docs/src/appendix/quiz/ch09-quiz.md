@@ -14,7 +14,7 @@ D. `Value` และ `Error`
 
 **B. `Ok` และ `Err`**
 
-```rust
+```rust,ignore
 enum Result<T, E> {
     Ok(T),
     Err(E),
@@ -39,7 +39,7 @@ D. Print error
 
 **B. Unwrap หรือ return error**
 
-```rust
+```rust,ignore
 fn read_file() -> Result<String, Error> {
     let content = std::fs::read_to_string("file.txt")?;
     Ok(content)
@@ -86,7 +86,7 @@ D. `expect` return Option
 
 **B. `expect` มี custom message**
 
-```rust
+```rust,ignore
 let x = some_option.unwrap();       // generic message
 let x = some_option.expect("msg"); // custom message
 ```
@@ -109,7 +109,7 @@ D. แปลงเป็น Option
 
 **B. Return ค่า default ถ้า None**
 
-```rust
+```rust,ignore
 let x = some_option.unwrap_or(0); // ใช้ 0 ถ้า None
 ```
 

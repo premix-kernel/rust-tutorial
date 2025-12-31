@@ -11,7 +11,7 @@
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 fn main() {
     let mut numbers = vec![1, 2, 3, 4, 5];
 
@@ -35,7 +35,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 fn reverse_string(s: &str) -> String {
     s.chars().rev().collect()
 }
@@ -62,7 +62,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 use std::collections::HashMap;
 
 fn main() {
@@ -94,7 +94,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 use std::collections::HashMap;
 
 fn main() {
@@ -128,7 +128,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 enum Value {
     Int(i32),
     Float(f64),

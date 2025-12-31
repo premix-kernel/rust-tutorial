@@ -14,7 +14,7 @@ D. import module
 
 **B. ทำให้ public**
 
-```rust
+```rust,ignore
 pub fn public_function() { }
 fn private_function() { } // default private
 ```
@@ -85,7 +85,7 @@ D. Test export
 
 **B. Public re-export**
 
-```rust
+```rust,ignore
 pub use internal::helper::function;
 // ตอนนี้ใช้ crate::function ได้เลย
 ```

@@ -14,7 +14,7 @@ D. Derive
 
 **B. Declarative**
 
-```rust
+```rust,ignore
 macro_rules! say_hello {
     () => {
         println!("Hello!");

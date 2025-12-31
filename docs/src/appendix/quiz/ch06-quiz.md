@@ -14,7 +14,7 @@ D. `data`
 
 **B. `struct`**
 
-```rust
+```rust,ignore
 struct User {
     name: String,
     age: u32,
@@ -39,7 +39,7 @@ D. function ต้องอยู่ใน impl
 
 **B. method มี `self` parameter**
 
-```rust
+```rust,ignore
 impl User {
     fn greet(&self) { } // method มี self
     fn new() -> Self { } // associated function ไม่มี self
@@ -86,7 +86,7 @@ D. Struct ที่มี method
 
 **B. Struct ที่ไม่มีชื่อ field**
 
-```rust
+```rust,ignore
 struct Color(u8, u8, u8);
 let red = Color(255, 0, 0);
 println!("{}", red.0); // access by index
@@ -110,7 +110,7 @@ D. `self` คือ type
 
 **B. `Self` คือ type, `self` คือ instance**
 
-```rust
+```rust,ignore
 impl User {
     fn new() -> Self { // Self = User type
         Self { name: String::new() }

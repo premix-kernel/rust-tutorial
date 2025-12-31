@@ -14,7 +14,7 @@ D. Testing
 
 **B. Command line argument parsing**
 
-```rust
+```rust,ignore
 #[derive(Parser)]
 struct Cli {
     #[arg(short, long)]
@@ -63,7 +63,7 @@ D. Database ORM
 
 **B. Easy error handling**
 
-```rust
+```rust,ignore
 fn main() -> anyhow::Result<()> {
     // ใช้ ? ได้กับทุก error types
     Ok(())

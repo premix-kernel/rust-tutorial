@@ -7,7 +7,7 @@
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 enum Direction {
     North,
     South,
@@ -42,7 +42,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 enum Message {
     Quit,
     Move { x: i32, y: i32 },
@@ -74,7 +74,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 fn divide(a: f64, b: f64) -> Option<f64> {
     if b == 0.0 {
         None
@@ -114,7 +114,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 fn describe(value: Option<i32>) {
     match value {
         Some(n) if n > 0 => println!("positive"),
@@ -141,7 +141,7 @@ fn main() {
 
 แปลง match นี้เป็น if let:
 
-```rust
+```rust,ignore
 match some_value {
     Some(x) => println!("{}", x),
     None => (),
@@ -151,7 +151,7 @@ match some_value {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 if let Some(x) = some_value {
     println!("{}", x);
 }

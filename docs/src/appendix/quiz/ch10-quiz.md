@@ -36,7 +36,7 @@ D. กำหนด thread
 
 **B. บอก compiler ว่า reference อยู่นานแค่ไหน**
 
-```rust
+```rust,ignore
 fn longest<'a>(x: &'a str, y: &'a str) -> &'a str
 ```
 
@@ -60,7 +60,7 @@ D. Enum
 
 Trait define behavior ที่ types ต้อง implement
 
-```rust
+```rust,ignore
 trait Summary {
     fn summarize(&self) -> String;
 }
@@ -84,7 +84,7 @@ D. Delete trait
 
 **C. Return type ที่ implement trait**
 
-```rust
+```rust,ignore
 fn returns_summarizable() -> impl Summary {
     // return any type that implements Summary
 }

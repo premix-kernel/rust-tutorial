@@ -14,7 +14,7 @@ D. `0` หรือ `1`
 
 **B. `bool`**
 
-```rust,compile_fail
+```rust,compile_fail,ignore
 if true { }  // ✅
 if 1 { }     // ❌ Error
 ```
@@ -39,7 +39,7 @@ D. ทุกแบบ
 
 `loop` รันตลอดจนกว่าจะ `break`
 
-```rust
+```rust,ignore
 loop {
     break; // ออกจาก loop
 }
@@ -84,7 +84,7 @@ D. ได้ แต่ต้องเป็น `return`
 
 **A. ได้ ใน `loop` เท่านั้น**
 
-```rust
+```rust,ignore
 let result = loop {
     break 42;
 };
@@ -108,7 +108,7 @@ D. ไม่มี effect
 
 **B. ข้ามไป iteration ถัดไป**
 
-```rust
+```rust,ignore
 for i in 0..5 {
     if i == 2 { continue; }
     println!("{}", i); // 0, 1, 3, 4

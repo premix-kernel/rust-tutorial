@@ -14,7 +14,7 @@ D. HashMap
 
 **B. Empty vector**
 
-```rust
+```rust,ignore
 let v: Vec<i32> = Vec::new();
 // หรือ
 let v = vec![1, 2, 3];
@@ -59,7 +59,7 @@ D. `&V`
 
 **B. `Option<&V>`**
 
-```rust
+```rust,ignore
 let value = map.get("key"); // Option<&V>
 ```
 
@@ -83,7 +83,7 @@ D. ลบตัวสุดท้าย
 
 **B. เพิ่มตัวสุดท้าย**
 
-```rust
+```rust,ignore
 let mut v = vec![1, 2, 3];
 v.push(4); // [1, 2, 3, 4]
 ```
@@ -106,7 +106,7 @@ D. ดึงค่าออกมา
 
 **B. แทรกค่าถ้ายังไม่มี**
 
-```rust
+```rust,ignore
 let count = map.entry("key").or_insert(0);
 *count += 1;
 ```

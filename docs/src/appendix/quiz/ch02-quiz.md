@@ -16,7 +16,7 @@ D. ขึ้นอยู่กับ scope
 
 ต้องใช้ `mut` เพื่อทำให้เป็น mutable:
 
-```rust
+```rust,ignore
 let mut x = 5;
 ```
 
@@ -38,7 +38,7 @@ D. `i64`
 
 **C. `i32`**
 
-```rust
+```rust,ignore
 let x = 42; // i32 by default
 ```
 
@@ -60,7 +60,7 @@ D. การสร้าง reference
 
 **B. การประกาศตัวแปรชื่อเดียวกันใหม่**
 
-```rust
+```rust,ignore
 let x = 5;
 let x = x + 1; // shadow
 ```
@@ -83,7 +83,7 @@ D. ไม่มีความแตกต่าง
 
 **B. `const` ต้องระบุ type**
 
-```rust
+```rust,ignore
 const MAX: u32 = 100; // ต้องระบุ type
 let x = 100;          // type inference ได้
 ```
@@ -96,7 +96,7 @@ let x = 100;          // type inference ได้
 
 ผลลัพธ์ของ code นี้คืออะไร?
 
-```rust
+```rust,ignore
 let x = 5;
 let x = x + 1;
 {

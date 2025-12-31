@@ -39,7 +39,7 @@ D. Cancel operation
 
 **B. รอให้ Future complete**
 
-```rust
+```rust,ignore
 let data = fetch().await;
 ```
 

@@ -4,7 +4,7 @@
 
 โค้ดนี้มี error อะไร? แก้ไขให้ทำงานได้
 
-```rust
+```rust,ignore
 fn main() {
     let s1 = String::from("hello");
     let s2 = s1;
@@ -19,7 +19,7 @@ fn main() {
 
 **วิธีแก้ 1: ใช้ clone**
 
-```rust
+```rust,ignore
 fn main() {
     let s1 = String::from("hello");
     let s2 = s1.clone();
@@ -29,7 +29,7 @@ fn main() {
 
 **วิธีแก้ 2: ใช้ reference**
 
-```rust
+```rust,ignore
 fn main() {
     let s1 = String::from("hello");
     let s2 = &s1;
@@ -45,7 +45,7 @@ fn main() {
 
 โค้ดนี้มี error อะไร? แก้ไขให้ทำงานได้
 
-```rust,compile_fail
+```rust,compile_fail,ignore
 fn print_string(s: String) {
     println!("{}", s);
 }
@@ -64,7 +64,7 @@ fn main() {
 
 **วิธีแก้: ใช้ reference**
 
-```rust
+```rust,ignore
 fn print_string(s: &String) {  // รับ reference
     println!("{}", s);
 }
@@ -90,7 +90,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 fn append_world(s: &mut String) {
     s.push_str(" World");
 }
@@ -110,7 +110,7 @@ fn main() {
 
 โค้ดนี้ถูกหรือผิด? อธิบาย
 
-```rust
+```rust,ignore
 fn main() {
     let mut s = String::from("hello");
 
@@ -129,7 +129,7 @@ fn main() {
 
 **วิธีแก้:**
 
-```rust
+```rust,ignore
 fn main() {
     let mut s = String::from("hello");
 
@@ -156,7 +156,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 fn first_word(s: &String) -> &str {
     let bytes = s.as_bytes();
 

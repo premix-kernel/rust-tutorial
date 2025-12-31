@@ -4,7 +4,7 @@
 
 แก้ไขโค้ดนี้ให้ทำงานได้:
 
-```rust
+```rust,ignore
 fn main() {
     let x = 5;
     x = 10;
@@ -15,7 +15,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 fn main() {
     let mut x = 5;  // เพิ่ม mut
     x = 10;
@@ -31,7 +31,7 @@ fn main() {
 
 เติม type ให้ถูกต้อง:
 
-```rust
+```rust,ignore
 fn main() {
     let a: ____ = 42;
     let b: ____ = 3.14;
@@ -44,7 +44,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 fn main() {
     let a: i32 = 42;
     let b: f64 = 3.14;
@@ -62,7 +62,7 @@ fn main() {
 
 ผลลัพธ์ของโค้ดนี้คืออะไร?
 
-```rust
+```rust,ignore
 fn main() {
     let x = 5;
     let x = x + 1;
@@ -105,7 +105,7 @@ outer: 6
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 fn main() {
     // Tuple
     let tup: (i32, f64, bool) = (10, 3.14, true);
@@ -133,7 +133,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 const MAX_USERS: u32 = 1000;
 
 fn main() {

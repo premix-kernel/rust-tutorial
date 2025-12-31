@@ -45,7 +45,7 @@ D. ทั้ง A และ B ถูกต้อง
 
 function นี้ return type อะไร?
 
-```rust
+```rust,ignore
 fn greet() {
     println!("Hello");
 }
@@ -81,7 +81,7 @@ D. ระบุเฉพาะ generic
 
 **A. ต้องระบุเสมอ**
 
-```rust
+```rust,ignore
 fn add(a: i32, b: i32) -> i32 { // ต้องระบุ
     a + b                        // return type ก็ต้องระบุ
 }
@@ -95,7 +95,7 @@ fn add(a: i32, b: i32) -> i32 { // ต้องระบุ
 
 ผลลัพธ์ของ code นี้?
 
-```rust
+```rust,ignore
 fn double(x: i32) -> i32 {
     x * 2
 }

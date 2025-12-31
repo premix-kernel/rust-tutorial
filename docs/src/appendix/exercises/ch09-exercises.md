@@ -10,7 +10,7 @@
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 fn parse_number(s: &str) -> Result<i32, String> {
     s.parse::<i32>()
         .map_err(|_| format!("'{}' is not a valid number", s))
@@ -37,7 +37,7 @@ fn main() {
 
 แปลงโค้ดนี้ให้ใช้ `?`:
 
-```rust
+```rust,ignore
 fn read_username() -> Result<String, std::io::Error> {
     let file = match std::fs::read_to_string("username.txt") {
         Ok(content) => content,
@@ -50,7 +50,7 @@ fn read_username() -> Result<String, std::io::Error> {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 fn read_username() -> Result<String, std::io::Error> {
     let content = std::fs::read_to_string("username.txt")?;
     Ok(content.trim().to_string())
@@ -65,7 +65,7 @@ fn read_username() -> Result<String, std::io::Error> {
 
 แก้ไขโค้ดให้ใช้ `unwrap_or` แทน match:
 
-```rust
+```rust,ignore
 let value = match some_option {
     Some(v) => v,
     None => 0,
@@ -75,7 +75,7 @@ let value = match some_option {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 let value = some_option.unwrap_or(0);
 
 // หรือใช้ unwrap_or_default() ถ้า type implement Default
@@ -93,7 +93,7 @@ let value = some_option.unwrap_or_default();
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 use std::fmt;
 
 #[derive(Debug)]
@@ -142,7 +142,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 fn parse_and_double(s: &str) -> Result<i32, std::num::ParseIntError> {
     s.parse::<i32>().map(|n| n * 2)
 }

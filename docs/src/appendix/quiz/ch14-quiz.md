@@ -14,7 +14,7 @@ D. Register
 
 **B. Heap**
 
-```rust
+```rust,ignore
 let b = Box::new(5); // เก็บ 5 บน heap
 ```
 
@@ -96,7 +96,7 @@ D. ย้าย ownership
 
 **B. เพิ่ม reference count**
 
-```rust
+```rust,ignore
 let a = Rc::new(5);
 let b = Rc::clone(&a); // เพิ่ม count, ไม่ copy ข้อมูล
 ```

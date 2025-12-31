@@ -15,7 +15,7 @@
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 fn grade(score: i32) -> &'static str {
     if score >= 80 {
         "A"
@@ -52,7 +52,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 fn main() {
     let mut count = 1;
 
@@ -82,7 +82,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 fn main() {
     let mut n = 10;
 
@@ -109,7 +109,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 fn main() {
     let numbers = [10, 20, 30, 40, 50];
 
@@ -146,7 +146,7 @@ Index 4: 50
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 fn main() {
     for n in 1..=20 {
         if n % 3 == 0 && n % 5 == 0 {

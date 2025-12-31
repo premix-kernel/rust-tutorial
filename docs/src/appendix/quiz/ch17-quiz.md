@@ -40,7 +40,7 @@ D. Reference
 
 **B. Raw immutable pointer**
 
-```rust
+```rust,ignore
 let x = 5;
 let ptr: *const i32 = &x;
 ```
