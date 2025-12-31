@@ -54,7 +54,7 @@ pub struct UpdateTodo {
 
 ## Application State
 
-```rust
+```rust,ignore
 use std::sync::Arc;
 use tokio::sync::RwLock;
 use std::collections::HashMap;
@@ -75,7 +75,7 @@ fn create_db() -> Db {
 
 ## Complete API
 
-```rust
+```rust,ignore
 use axum::{
     extract::{Path, State, Json},
     http::StatusCode,
@@ -241,7 +241,7 @@ curl -X DELETE http://localhost:3000/todos/{id}
 
 ## Error Handling
 
-```rust
+```rust,ignore
 use axum::response::{IntoResponse, Response};
 
 #[derive(Debug)]
@@ -284,7 +284,7 @@ async fn get_todo_v2(
 
 ## Add Middleware (CORS, Logging)
 
-```rust
+```rust,ignore
 use tower_http::cors::{CorsLayer, Any};
 use tower_http::trace::TraceLayer;
 

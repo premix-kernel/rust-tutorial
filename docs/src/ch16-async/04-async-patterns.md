@@ -6,7 +6,7 @@
 
 รอหลาย futures พร้อมกัน ใช้อันแรกที่เสร็จ:
 
-```rust
+```rust,ignore
 use tokio::select;
 use tokio::time::{sleep, Duration};
 
@@ -26,7 +26,7 @@ async fn main() {
 
 ### select! กับ Return Values
 
-```rust
+```rust,ignore
 use tokio::select;
 use tokio::sync::mpsc;
 
@@ -60,7 +60,7 @@ async fn main() {
 
 ให้ future มีเวลาจำกัด:
 
-```rust
+```rust,ignore
 use tokio::time::{timeout, Duration};
 
 async fn slow_function() -> String {
@@ -84,7 +84,7 @@ async fn main() {
 
 ### Timeout กับ select!
 
-```rust
+```rust,ignore
 use tokio::select;
 use tokio::time::{sleep, Duration};
 
@@ -112,7 +112,7 @@ async fn main() {
 
 ลองใหม่เมื่อ fail:
 
-```rust
+```rust,ignore
 use std::sync::atomic::{AtomicU32, Ordering};
 
 async fn fallible_operation() -> Result<String, &'static str> {
@@ -163,7 +163,7 @@ async fn main() {
 
 ปิดโปรแกรมอย่างสะอาด:
 
-```rust
+```rust,ignore
 use tokio::signal;
 use tokio::sync::broadcast;
 
@@ -209,7 +209,7 @@ async fn main() {
 
 จำกัดความถี่:
 
-```rust
+```rust,ignore
 use tokio::time::{interval, Duration};
 use tokio::sync::Semaphore;
 use std::sync::Arc;
@@ -246,7 +246,7 @@ async fn main() {
 
 รวม items ก่อน process:
 
-```rust
+```rust,ignore
 use tokio::sync::mpsc;
 use tokio::time::{timeout, Duration};
 

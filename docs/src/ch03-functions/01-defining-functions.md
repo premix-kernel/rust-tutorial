@@ -35,7 +35,7 @@ Hello from another function!
 
 ใน Rust ใช้ **snake_case** สำหรับชื่อฟังก์ชัน:
 
-```rust
+```rust,ignore
 // ✅ ถูกต้อง - snake_case
 fn calculate_area() {}
 fn get_user_name() {}

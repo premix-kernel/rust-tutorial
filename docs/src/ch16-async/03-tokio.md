@@ -27,7 +27,7 @@ Features ที่มี:
 
 ## Basic Usage
 
-```rust
+```rust,ignore
 #[tokio::main]
 async fn main() {
     println!("Hello from Tokio!");
@@ -68,7 +68,7 @@ fn main() {
 
 ## Manual Runtime
 
-```rust
+```rust,ignore
 fn main() {
     // สร้าง runtime เอง
     let rt = tokio::runtime::Runtime::new().unwrap();
@@ -90,7 +90,7 @@ fn main() {
 
 ### Runtime Types
 
-```rust
+```rust,ignore
 // Multi-threaded (default)
 let rt = tokio::runtime::Builder::new_multi_thread()
     .worker_threads(4)
@@ -111,7 +111,7 @@ let rt = tokio::runtime::Builder::new_current_thread()
 
 ### tokio::spawn
 
-```rust
+```rust,ignore
 use tokio::task;
 
 #[tokio::main]
@@ -130,7 +130,7 @@ async fn main() {
 
 ### Multiple Tasks
 
-```rust
+```rust,ignore
 use tokio::task;
 
 #[tokio::main]
@@ -159,7 +159,7 @@ async fn main() {
 
 ### join! - รอทุก futures
 
-```rust
+```rust,ignore
 use tokio::join;
 use tokio::time::{sleep, Duration};
 
@@ -185,7 +185,7 @@ async fn main() {
 
 ### try_join! - หยุดเมื่อ error
 
-```rust
+```rust,ignore
 use tokio::try_join;
 
 async fn may_fail(succeed: bool) -> Result<i32, &'static str> {
@@ -214,7 +214,7 @@ async fn main() {
 
 ## Tokio Time
 
-```rust
+```rust,ignore
 use tokio::time::{sleep, interval, Duration, Instant};
 
 #[tokio::main]
@@ -244,7 +244,7 @@ async fn main() {
 
 ### mpsc - Multiple Producer Single Consumer
 
-```rust
+```rust,ignore
 use tokio::sync::mpsc;
 
 #[tokio::main]
@@ -270,7 +270,7 @@ async fn main() {
 
 ### oneshot - Single value
 
-```rust
+```rust,ignore
 use tokio::sync::oneshot;
 
 #[tokio::main]

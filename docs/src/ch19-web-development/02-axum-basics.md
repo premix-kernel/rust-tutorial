@@ -17,7 +17,7 @@ serde_json = "1.0"
 
 ## Hello World
 
-```rust
+```rust,ignore
 use axum::{routing::get, Router};
 
 #[tokio::main]
@@ -56,7 +56,7 @@ cargo run
 
 ### Basic Routes
 
-```rust
+```rust,ignore
 let app = Router::new()
     .route("/", get(index))
     .route("/about", get(about))
@@ -65,7 +65,7 @@ let app = Router::new()
 
 ### HTTP Methods
 
-```rust
+```rust,ignore
 use axum::routing::{get, post, put, delete};
 
 let app = Router::new()
@@ -75,7 +75,7 @@ let app = Router::new()
 
 ### Nested Routes
 
-```rust
+```rust,ignore
 let api_routes = Router::new()
     .route("/users", get(list_users))
     .route("/posts", get(list_posts));
@@ -96,7 +96,7 @@ let app = Router::new()
 
 ### Basic Handler
 
-```rust
+```rust,ignore
 async fn hello() -> &'static str {
     "Hello, World!"
 }
@@ -119,7 +119,7 @@ async fn json_response() -> axum::Json<serde_json::Value> {
 | `(StatusCode, T)` | Custom status       |
 | `Result\<T, E\>`  | With error handling |
 
-```rust
+```rust,ignore
 use axum::{response::Html, http::StatusCode};
 
 async fn html_page() -> Html<String> {
@@ -139,7 +139,7 @@ async fn custom_status() -> (StatusCode, &'static str) {
 
 ### Path Parameters
 
-```rust
+```rust,ignore
 use axum::extract::Path;
 
 // GET /users/123
@@ -155,7 +155,7 @@ async fn get_user_post(Path((user_id, post_id)): Path<(u32, u32)>) -> String {
 
 ### Query Parameters
 
-```rust
+```rust,ignore
 use axum::extract::Query;
 use serde::Deserialize;
 
@@ -173,7 +173,7 @@ async fn search(Query(params): Query<SearchParams>) -> String {
 
 ### JSON Body
 
-```rust
+```rust,ignore
 use axum::extract::Json;
 use serde::{Deserialize, Serialize};
 
@@ -203,7 +203,7 @@ async fn create_user(Json(payload): Json<CreateUser>) -> Json<User> {
 
 ### Headers
 
-```rust
+```rust,ignore
 use axum::http::HeaderMap;
 
 async fn read_headers(headers: HeaderMap) -> String {
@@ -221,7 +221,7 @@ async fn read_headers(headers: HeaderMap) -> String {
 
 แชร์ข้อมูลระหว่าง handlers:
 
-```rust
+```rust,ignore
 use axum::extract::State;
 use std::sync::Arc;
 
@@ -251,7 +251,7 @@ async fn handler(State(state): State<Arc<AppState>>) -> String {
 
 ## Error Handling
 
-```rust
+```rust,ignore
 use axum::{
     http::StatusCode,
     response::{IntoResponse, Response},
@@ -282,7 +282,7 @@ async fn fallible_handler() -> Result<String, AppError> {
 
 ## Middleware
 
-```rust
+```rust,ignore
 use axum::middleware;
 use tower_http::cors::CorsLayer;
 use tower_http::trace::TraceLayer;

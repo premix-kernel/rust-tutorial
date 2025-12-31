@@ -376,7 +376,7 @@ where
 
 ## Async
 
-```rust
+```rust,ignore
 // Async function
 async fn fetch_data() -> String {
     // ...

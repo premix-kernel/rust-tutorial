@@ -48,7 +48,7 @@ pub trait HelloMacro {
 
 ### 2. Create Derive Macro (macro crate)
 
-```rust
+```rust,ignore
 // my-macro/src/lib.rs
 use proc_macro::TokenStream;
 use quote::quote;
@@ -93,7 +93,7 @@ fn main() {
 
 อ่าน struct fields:
 
-```rust
+```rust,ignore
 use proc_macro::TokenStream;
 use quote::quote;
 use syn::{parse_macro_input, DeriveInput, Data, Fields};
@@ -148,7 +148,7 @@ fn main() {
 
 ## Attribute Macro Example
 
-```rust
+```rust,ignore
 use proc_macro::TokenStream;
 use quote::quote;
 use syn::{parse_macro_input, ItemFn};
@@ -194,7 +194,7 @@ fn main() {
 
 ## Function-like Macro
 
-```rust
+```rust,ignore
 use proc_macro::TokenStream;
 use quote::quote;
 use syn::{parse_macro_input, LitStr};

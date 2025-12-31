@@ -91,7 +91,7 @@ D. Mark as failed
 
 **B. Skip test by default**
 
-```rust
+```rust,ignore
 #[test]
 #[ignore]
 fn expensive_test() { ... }

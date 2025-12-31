@@ -4,7 +4,7 @@
 
 ## Iterator Trait
 
-```rust
+```rust,ignore
 pub trait Iterator {
     type Item;
 

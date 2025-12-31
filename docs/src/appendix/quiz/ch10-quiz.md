@@ -14,7 +14,7 @@ D. Trait
 
 **B. Type parameter (generic)**
 
-```rust
+```rust,ignore
 fn largest<T: PartialOrd>(list: &[T]) -> &T { ... }
 ```
 
@@ -108,7 +108,7 @@ D. Handle errors
 
 **B. Specify trait bounds**
 
-```rust
+```rust,ignore
 fn some_function<T, U>(t: &T, u: &U)
 where
     T: Display + Clone,

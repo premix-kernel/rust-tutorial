@@ -14,7 +14,7 @@ D. `Task`
 
 **B. `Future`**
 
-```rust
+```rust,ignore
 async fn fetch() -> String {
     // return impl Future<Output = String>
     String::from("data")
@@ -81,7 +81,7 @@ D. Join tasks
 
 **B. สร้าง async task**
 
-```rust
+```rust,ignore
 tokio::spawn(async {
     // background task
 });
@@ -105,7 +105,7 @@ D. Lock mutex
 
 **B. รอหลาย futures พร้อมกัน**
 
-```rust
+```rust,ignore
 let (a, b) = tokio::join!(task1(), task2());
 ```
 

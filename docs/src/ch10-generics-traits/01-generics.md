@@ -54,7 +54,7 @@ fn main() {
 
 ### Syntax
 
-```rust
+```rust,ignore
 fn function_name<T>(param: T) -> T {
     // ...
 }

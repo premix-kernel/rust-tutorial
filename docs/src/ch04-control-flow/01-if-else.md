@@ -73,7 +73,7 @@ Divisible by 3
 
 ใน Rust condition **ต้อง**เป็น `bool`:
 
-```rust
+```rust,ignore
 fn main() {
     let number = 3;
 
@@ -107,7 +107,7 @@ fn main() {
 
 > **สำคัญ:** ทุก branch ต้อง return ชนิดเดียวกัน
 
-```rust
+```rust,ignore
 fn main() {
     let condition = true;
 

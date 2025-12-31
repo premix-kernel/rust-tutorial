@@ -2,7 +2,7 @@
 
 ## Syntax พื้นฐาน
 
-```rust
+```rust,ignore
 enum IpAddrKind {
     V4,
     V6,
