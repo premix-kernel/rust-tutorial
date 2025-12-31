@@ -6,7 +6,7 @@
 
 ### รูปแบบ 1: ไฟล์เดียว
 
-```
+```text
 src/
 ├── main.rs
 └── my_module.rs   ← mod my_module; จะหาที่นี่
@@ -14,7 +14,7 @@ src/
 
 ### รูปแบบ 2: โฟลเดอร์ + mod.rs
 
-```
+```text
 src/
 ├── main.rs
 └── my_module/
@@ -28,7 +28,7 @@ src/
 
 ### โครงสร้าง
 
-```
+```text
 my_project/
 ├── Cargo.toml
 └── src/
@@ -174,7 +174,7 @@ mod inline {    // inline module
 
 แทนที่จะใช้ `mod.rs` ใช้ชื่อ folder:
 
-```
+```text
 src/
 ├── lib.rs
 ├── database.rs      ← แทน database/mod.rs
@@ -205,7 +205,7 @@ pub mod public_module;   // public - user ของ crate ใช้ได้
 
 สำหรับโปรเจกต์ใหญ่มาก:
 
-```
+```text
 my_workspace/
 ├── Cargo.toml           ← [workspace]
 ├── crates/

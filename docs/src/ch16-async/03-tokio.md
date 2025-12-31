@@ -45,7 +45,7 @@ async fn do_something() -> String {
 
 ### #[tokio::main] ทำอะไร?
 
-```rust
+```rust,ignore
 // มันแปลง:
 #[tokio::main]
 async fn main() {

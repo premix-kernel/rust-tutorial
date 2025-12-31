@@ -52,7 +52,7 @@ cargo run --example web_server
 
 ## 📝 โครงสร้างไฟล์
 
-```
+```text
 examples/
 ├── hello_world.rs       # บทที่ 1-4
 ├── ownership.rs         # บทที่ 5

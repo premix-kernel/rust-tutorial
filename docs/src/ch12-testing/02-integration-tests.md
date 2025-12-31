@@ -15,7 +15,7 @@
 
 ## โครงสร้างโปรเจกต์
 
-```
+```text
 my_library/
 ├── Cargo.toml
 ├── src/
@@ -268,7 +268,7 @@ async fn test_async_function() {
 
 ### File Structure
 
-```
+```text
 tests/
 ├── common/mod.rs     ← shared code (NOT a test)
 ├── test_a.rs         ← first test file

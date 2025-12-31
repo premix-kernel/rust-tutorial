@@ -6,7 +6,7 @@
 
 โปรเจกต์ Rust มีโครงสร้างเป็น tree:
 
-```
+```text
 crate (root)
 ├── front_of_house
 │   ├── hosting
@@ -48,7 +48,7 @@ fn main() {
 
 **Default:** ทุกอย่างเป็น private
 
-```rust
+```rust,compile_fail
 mod my_module {
     pub fn public_function() {}  // ✅ เข้าถึงได้จากนอก
     fn private_function() {}     // ❌ private
@@ -77,7 +77,7 @@ mod my_module {
 | `pub(super)`   | Public ใน parent module |
 | `pub(in path)` | Public ใน path ที่ระบุ  |
 
-```rust
+```rust,compile_fail
 mod outer {
     pub(crate) fn crate_only() {}
 
@@ -231,7 +231,7 @@ use my_lib::api::get_users;
 2. **Children can see private ancestors**
 3. **Siblings can see each other**
 
-```rust
+```rust,compile_fail
 mod parent {
     fn parent_private() {}
     pub fn parent_public() {}

@@ -89,7 +89,7 @@ fn main() {
 
 ## Ownership
 
-```rust
+```rust,compile_fail
 use std::collections::HashMap;
 
 fn main() {

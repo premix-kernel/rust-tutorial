@@ -88,7 +88,7 @@ fn build_user(email: String, username: String) -> User {
 
 สร้าง instance ใหม่จาก instance เดิม:
 
-```rust
+```rust,compile_fail
 fn main() {
     let user1 = User {
         email: String::from("alice@example.com"),

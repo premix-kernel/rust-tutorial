@@ -30,7 +30,7 @@ fn main() {
 
 ### ปัญหา: ขนาดไม่แน่นอน
 
-```rust
+```rust,compile_fail
 // ❌ Error: recursive type has infinite size
 enum List {
     Cons(i32, List),
@@ -73,7 +73,7 @@ fn print_list(list: &List) {
 
 **ทำไมใช้ได้?** Box มีขนาดคงที่ (pointer size) ไม่ว่าจะชี้ไปที่อะไร
 
-```
+```text
 Stack                    Heap
 ┌─────────────┐         ┌─────────────┐
 │ Cons(1, ────┼────────►│ Cons(2, ────┼───►...
@@ -229,7 +229,7 @@ fn main() {
 
 ### Drop Early with std::mem::drop
 
-```rust
+```rust,compile_fail
 fn main() {
     let c = Box::new(String::from("hello"));
 

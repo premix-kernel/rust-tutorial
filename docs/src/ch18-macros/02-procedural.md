@@ -254,7 +254,7 @@ println!("{}", msg);  // "Hello, World!"
 
 ### Crate Structure
 
-```
+```text
 my-project/
 ├── Cargo.toml
 ├── src/lib.rs         # Main library

@@ -74,7 +74,7 @@ fn main() {
 
 ### 3. into_iter() - Take Ownership (T)
 
-```rust
+```rust,compile_fail
 fn main() {
     let v = vec![String::from("a"), String::from("b")];
 

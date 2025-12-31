@@ -65,7 +65,7 @@ D. `main.rs`
 
 **B. `tests/` folder**
 
-```
+```text
 project/
 ├── src/
 │   └── lib.rs

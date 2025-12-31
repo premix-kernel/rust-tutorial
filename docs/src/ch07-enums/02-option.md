@@ -49,7 +49,7 @@ fn main() {
 
 ### Compiler บังคับให้จัดการ
 
-```rust
+```rust,compile_fail
 fn main() {
     let x: i32 = 5;
     let y: Option<i32> = Some(5);

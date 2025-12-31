@@ -14,7 +14,7 @@ D. `0` หรือ `1`
 
 **B. `bool`**
 
-```rust
+```rust,compile_fail
 if true { }  // ✅
 if 1 { }     // ❌ Error
 ```

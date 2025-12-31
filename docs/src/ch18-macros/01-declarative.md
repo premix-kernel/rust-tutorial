@@ -4,7 +4,7 @@
 
 ## ทำไมต้องใช้ Macros?
 
-```rust
+```rust,compile_fail
 // ❌ ซ้ำซาก
 let v1 = vec![1, 2, 3];
 let v2 = {

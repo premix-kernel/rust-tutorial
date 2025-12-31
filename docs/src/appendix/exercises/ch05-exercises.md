@@ -45,7 +45,7 @@ fn main() {
 
 โค้ดนี้มี error อะไร? แก้ไขให้ทำงานได้
 
-```rust
+```rust,compile_fail
 fn print_string(s: String) {
     println!("{}", s);
 }

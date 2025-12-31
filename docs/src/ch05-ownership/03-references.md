@@ -41,7 +41,7 @@ fn calculate_length(s: &String) -> usize { // รับ reference
 
 Reference คือ pointer ที่ชี้ไปยังค่า โดยไม่เป็นเจ้าของ:
 
-```
+```text
 s1 ──────► "hello" (Heap)
            ▲
            │
@@ -82,7 +82,7 @@ fn main() {
 
 ### แต่ไม่สามารถแก้ไขได้
 
-```rust
+```rust,compile_fail
 fn main() {
     let s = String::from("hello");
 
@@ -114,7 +114,7 @@ fn change(s: &mut String) {
 
 ### มีได้แค่หนึ่ง mutable reference
 
-```rust
+```rust,compile_fail
 fn main() {
     let mut s = String::from("hello");
 
@@ -129,7 +129,7 @@ fn main() {
 
 ## ห้ามผสม Mutable และ Immutable
 
-```rust
+```rust,compile_fail
 fn main() {
     let mut s = String::from("hello");
 
@@ -163,7 +163,7 @@ fn main() {
 
 Rust ป้องกัน dangling references:
 
-```rust
+```rust,compile_fail
 fn main() {
     let reference_to_nothing = dangle();
 }

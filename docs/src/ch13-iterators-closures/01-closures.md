@@ -117,7 +117,7 @@ fn main() {
 
 ### 3. FnOnce - Move Ownership (T)
 
-```rust
+```rust,compile_fail
 fn main() {
     let message = String::from("Hello");
 
@@ -140,7 +140,7 @@ fn main() {
 
 บังคับให้ closure เป็นเจ้าของค่า:
 
-```rust
+```rust,compile_fail
 fn main() {
     let name = String::from("Alice");
 

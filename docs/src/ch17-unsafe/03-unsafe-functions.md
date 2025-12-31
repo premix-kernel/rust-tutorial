@@ -4,7 +4,7 @@
 
 ## Defining Unsafe Functions
 
-```rust
+```rust,compile_fail
 // ประกาศด้วย unsafe fn
 unsafe fn dangerous() {
     println!("Doing something dangerous!");

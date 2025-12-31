@@ -71,7 +71,7 @@ fn main() {
 
 ### + Operator
 
-```rust
+```rust,compile_fail
 fn main() {
     let s1 = String::from("Hello, ");
     let s2 = String::from("World!");
@@ -108,7 +108,7 @@ fn main() {
 
 **String ใน Rust เป็น UTF-8** → ไม่สามารถ index ด้วย `s[0]` ได้!
 
-```rust
+```rust,compile_fail
 fn main() {
     let hello = String::from("สวัสดี");
 

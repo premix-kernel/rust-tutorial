@@ -4,7 +4,7 @@
 
 ## ปัญหา: Borrowing Rules ตอน Compile
 
-```rust
+```rust,compile_fail
 fn main() {
     let x = 5;
 

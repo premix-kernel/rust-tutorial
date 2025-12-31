@@ -4,7 +4,7 @@
 
 เมื่อ assign ตัวแปร heap type ให้ตัวแปรอื่น ค่าจะถูก **move**:
 
-```rust
+```rust,compile_fail
 fn main() {
     let s1 = String::from("hello");
     let s2 = s1; // MOVE!
@@ -18,7 +18,7 @@ fn main() {
 
 ### แผนภาพ Move
 
-```
+```text
 ก่อน Move:
 s1 ──────► "hello" (Heap)
 
@@ -45,7 +45,7 @@ fn main() {
 
 ### แผนภาพ Clone
 
-```
+```text
 หลัง Clone:
 s1 ──────► "hello" (Heap memory 1)
 s2 ──────► "hello" (Heap memory 2)
@@ -161,7 +161,7 @@ fn main() {
 
 ## สรุป: Move vs Clone vs Copy
 
-```rust
+```rust,compile_fail
 fn main() {
     // Copy - Stack types (อัตโนมัติ)
     let x = 5;

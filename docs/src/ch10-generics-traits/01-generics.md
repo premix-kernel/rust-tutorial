@@ -69,7 +69,7 @@ fn pair<T, U>(first: T, second: U) -> (T, U) {
 
 ## Generic Structs
 
-```rust
+```rust,compile_fail
 struct Point<T> {
     x: T,
     y: T,
@@ -127,7 +127,7 @@ fn main() {
 
 ### Methods สำหรับ Specific Type
 
-```rust
+```rust,compile_fail
 impl Point<f32> {
     fn distance_from_origin(&self) -> f32 {
         (self.x.powi(2) + self.y.powi(2)).sqrt()

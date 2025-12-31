@@ -45,7 +45,7 @@ fn main() {
 
 `match` **ต้องครอบคลุมทุกกรณี**:
 
-```rust
+```rust,compile_fail
 enum Color {
     Red,
     Green,

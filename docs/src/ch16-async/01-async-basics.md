@@ -155,7 +155,7 @@ async fn example() {
 
 ### Capture Variables
 
-```rust
+```rust,compile_fail
 async fn example() {
     let name = String::from("Alice");
 

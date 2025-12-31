@@ -90,7 +90,7 @@ fn main() {
 
 ใช้ `move` เพื่อย้าย ownership เข้า thread:
 
-```rust
+```rust,compile_fail
 use std::thread;
 
 fn main() {

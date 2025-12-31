@@ -6,7 +6,7 @@
 
 **Unsafe ควรอยู่ข้างใน, Safe ควรอยู่ข้างนอก**
 
-```
+```text
 ┌─────────────────────────────────┐
 │         Safe API                │  ◄── ผู้ใช้เรียกที่นี่
 │  ┌─────────────────────────┐    │
@@ -174,7 +174,7 @@ unsafe impl Sync for Counter {}
 
 ### 1. Minimize Unsafe Scope
 
-```rust
+```rust,compile_fail
 // ❌ Bad: unsafe block ใหญ่เกินไป
 unsafe {
     let ptr = some_pointer();

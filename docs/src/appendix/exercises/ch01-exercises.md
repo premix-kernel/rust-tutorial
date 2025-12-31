@@ -79,7 +79,7 @@ cargo run
 <details>
 <summary>ดูเฉลย</summary>
 
-```
+```text
 my_project/
 ├── Cargo.toml
 └── src/

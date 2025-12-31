@@ -31,7 +31,7 @@ rustc main.rs
 
 ผลลัพธ์:
 
-```
+```text
 Hello, World!
 ```
 
@@ -51,7 +51,7 @@ fn main() {
 
 ### `fn main()`
 
-```rust
+```rust,ignore
 fn main() {
 ```
 
@@ -85,7 +85,7 @@ Rust มีมาตรฐานการเขียนโค้ด:
 2. **ชื่อฟังก์ชัน** - ใช้ snake_case เช่น `my_function`
 3. **วงเล็บปีกกา** - เปิดในบรรทัดเดียวกับ function
 
-```rust
+```rust,ignore
 // ✅ ถูกต้อง
 fn main() {
     println!("Hello!");

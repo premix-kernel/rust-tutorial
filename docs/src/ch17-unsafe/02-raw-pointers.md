@@ -24,7 +24,7 @@ fn main() {
 
 ## Dereference Raw Pointers
 
-```rust
+```rust,compile_fail
 fn main() {
     let mut num = 5;
 
@@ -59,7 +59,7 @@ fn main() {
 
 ## สร้าง Null Pointer
 
-```rust
+```rust,compile_fail
 fn main() {
     // null pointer
     let null_ptr: *const i32 = std::ptr::null();

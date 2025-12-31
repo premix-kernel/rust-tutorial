@@ -59,7 +59,7 @@ D. Config file
 
 **B. Entry point ของ module**
 
-```
+```text
 src/
 ├── main.rs
 └── my_module/

@@ -11,7 +11,7 @@
 
 ## ปัญหา: Dangling Reference
 
-```rust
+```rust,compile_fail
 fn main() {
     let r;                // declare r
     {
@@ -22,7 +22,7 @@ fn main() {
 }
 ```
 
-```
+```text
 ┌─────────────────────────────────────────────────────────┐
 │                 Dangling Reference                       │
 ├─────────────────────────────────────────────────────────┤
@@ -58,7 +58,7 @@ Rust compiler จะ reject โค้ดนี้เพราะ `x` ไม่�
 
 ### ปัญหา: Compiler ไม่รู้ว่า return อะไร
 
-```rust
+```rust,compile_fail
 // ❌ Error: missing lifetime specifier
 fn longest(x: &str, y: &str) -> &str {
     if x.len() > y.len() {
@@ -97,7 +97,7 @@ fn main() {
 
 ## Lifetime กับ Scope
 
-```rust
+```rust,compile_fail
 fn main() {
     let string1 = String::from("long string is long");
 
@@ -154,7 +154,7 @@ impl Foo {
 
 ## ตัวอย่าง: เมื่อต้องใส่ Lifetime
 
-```rust
+```rust,compile_fail
 // ✅ Elision works - Rule 2
 fn first_word(s: &str) -> &str {
     let bytes = s.as_bytes();
@@ -228,7 +228,7 @@ let s: &'static str = "I have a static lifetime.";
 
 อย่าใช้ `'static` เพื่อ "แก้" lifetime errors โดยไม่เข้าใจ:
 
-```rust
+```rust,compile_fail
 // ❌ Bad: ใช้ 'static แบบผิดๆ
 fn get_str() -> &'static str {
     let s = String::from("hello");
