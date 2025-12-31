@@ -48,7 +48,7 @@ Rust compiler จะ reject โค้ดนี้เพราะ `x` ไม่�
 &i32        // reference
 &'a i32     // reference with explicit lifetime 'a
 &'a mut i32 // mutable reference with lifetime 'a
-```
+```text
 
 `'a` (อ่านว่า "tick a") คือ **lifetime parameter** บอกว่า reference มีอายุเท่าไหร่
 
@@ -67,7 +67,7 @@ fn longest(x: &str, y: &str) -> &str {
         y
     }
 }
-```
+```text
 
 Compiler ไม่รู้ว่า return value จะอยู่นานเท่า `x` หรือ `y`
 
@@ -113,7 +113,7 @@ fn main() {
 fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
     if x.len() > y.len() { x } else { y }
 }
-```
+```text
 
 ---
 
@@ -128,7 +128,7 @@ Compiler มีกฎ 3 ข้อที่เดา lifetime ให้อัต�
 ```rust
 fn foo(x: &i32)                    // -> fn foo<'a>(x: &'a i32)
 fn foo(x: &i32, y: &i32)           // -> fn foo<'a, 'b>(x: &'a i32, y: &'b i32)
-```
+```text
 
 ### Rule 2: Single Input → Output
 
@@ -136,7 +136,7 @@ fn foo(x: &i32, y: &i32)           // -> fn foo<'a, 'b>(x: &'a i32, y: &'b i32)
 
 ```rust
 fn foo(x: &i32) -> &i32            // -> fn foo<'a>(x: &'a i32) -> &'a i32
-```
+```text
 
 ### Rule 3: Methods with &self
 
@@ -146,7 +146,7 @@ fn foo(x: &i32) -> &i32            // -> fn foo<'a>(x: &'a i32) -> &'a i32
 impl Foo {
     fn bar(&self, x: &str) -> &str // -> fn bar<'a, 'b>(&'a self, x: &'b str) -> &'a str
 }
-```
+```text
 
 > **ถ้ากฎทั้งหมดไม่เพียงพอ** → Compiler error → ต้องใส่ lifetime เอง
 
@@ -301,3 +301,5 @@ where
 3. `&self` → output ใช้ lifetime ของ self
 
 👉 ต่อไป: [บทที่ 11: Modules & Packages](../ch11-modules/README.md)
+
+```

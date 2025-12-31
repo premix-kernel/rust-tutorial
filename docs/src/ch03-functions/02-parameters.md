@@ -33,3 +33,4 @@ fn print_number(x: i32) {
 The number is: 5
 The number is: 10
 ```
+```

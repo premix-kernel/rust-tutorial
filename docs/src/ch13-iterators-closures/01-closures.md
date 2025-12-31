@@ -237,7 +237,7 @@ fn main() {
     println!("{}", add_5(3));   // 8
     println!("{}", add_10(3));  // 13
 }
-```
+```text
 
 ---
 
@@ -296,3 +296,5 @@ fn main() {
 | `impl Fn()` | return closure        |
 
 👉 ต่อไป: [Iterators](./02-iterators.md)
+
+```

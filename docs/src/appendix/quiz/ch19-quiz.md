@@ -112,3 +112,5 @@ async fn handler(State(db): State<DatabasePool>) { }
 ---
 
 👉 [Quiz บทที่ 20](./ch20-quiz.md)
+
+```

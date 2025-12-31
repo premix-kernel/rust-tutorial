@@ -221,7 +221,7 @@ fn main() {
 // Compiler สร้าง:
 fn id_i32(x: i32) -> i32 { x }
 fn id_str(x: &str) -> &str { x }
-```
+```text
 
 **ผลลัพธ์:** zero runtime cost! เหมือนเขียนแยกเอง
 
@@ -324,3 +324,5 @@ impl Add for Point {
 - ✅ Zero runtime cost (monomorphization)
 
 👉 ต่อไป: [Traits](./02-traits.md)
+
+```

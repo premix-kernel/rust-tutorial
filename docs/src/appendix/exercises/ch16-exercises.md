@@ -19,7 +19,7 @@ async fn main() {
     let data = fetch_data().await;
     println!("{}", data);
 }
-```
+```text
 
 </details>
 
@@ -51,7 +51,7 @@ async fn main() {
     let v2 = step2(v1).await;
     println!("Result: {}", v2);
 }
-```
+```text
 
 </details>
 
@@ -82,7 +82,7 @@ async fn main() {
     let (a, b) = tokio::join!(task_a(), task_b());
     println!("Results: {} + {} = {}", a, b, a + b);
 }
-```
+```text
 
 </details>
 
@@ -108,7 +108,7 @@ async fn main() {
     let result = handle.await.unwrap();
     println!("Background task result: {}", result);
 }
-```
+```text
 
 </details>
 
@@ -151,3 +151,5 @@ async fn main() {
 ---
 
 👉 [บทที่ 17](./ch17-exercises.md)
+
+```

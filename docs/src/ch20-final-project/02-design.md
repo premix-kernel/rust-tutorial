@@ -292,3 +292,5 @@ Commands:
 - **Separation of Concerns**: UI/Logic/Data แยกกัน
 
 👉 ต่อไป: [Implementation](./03-implementation.md)
+
+```

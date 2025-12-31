@@ -27,7 +27,7 @@ fn main() {
         Err(e) => println!("Error: {}", e),
     }
 }
-```
+```text
 
 </details>
 
@@ -55,7 +55,7 @@ fn read_username() -> Result<String, std::io::Error> {
     let content = std::fs::read_to_string("username.txt")?;
     Ok(content.trim().to_string())
 }
-```
+```text
 
 </details>
 
@@ -80,7 +80,7 @@ let value = some_option.unwrap_or(0);
 
 // หรือใช้ unwrap_or_default() ถ้า type implement Default
 let value = some_option.unwrap_or_default();
-```
+```text
 
 </details>
 
@@ -125,7 +125,7 @@ fn main() {
         Err(e) => println!("Error: {}", e),
     }
 }
-```
+```text
 
 </details>
 
@@ -158,3 +158,5 @@ fn main() {
 ---
 
 👉 [บทที่ 10](./ch10-exercises.md)
+
+```

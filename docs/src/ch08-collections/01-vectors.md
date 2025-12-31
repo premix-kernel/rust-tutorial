@@ -31,7 +31,7 @@ fn main() {
 
     println!("{:?}", v); // [1, 2, 3]
 }
-```
+```text
 
 ---
 
@@ -49,7 +49,7 @@ fn main() {
     // ⚠️ panic ถ้า index ไม่มี!
     // let hundred = &v[100]; // 💥 panic!
 }
-```
+```text
 
 ### แบบที่ 2: get() (ปลอดภัยกว่า)
 
@@ -169,7 +169,7 @@ fn main() {
 
 ## Ownership และ Vector
 
-```rust,compile_fail
+```rust,compile_fail,should_panic
 fn main() {
     let v = vec![1, 2, 3, 4, 5];
 
@@ -179,7 +179,7 @@ fn main() {
 
     println!("First: {}", first);
 }
-```
+```text
 
 > **ทำไม?** เพราะ push อาจทำให้ vector ย้ายที่ในเมมโมรี่
 > ทำให้ reference เดิมไม่ valid
@@ -207,3 +207,5 @@ fn main() {
 | `for x in &v` | iterate               |
 
 👉 ต่อไป: [String](./02-strings.md)
+
+```

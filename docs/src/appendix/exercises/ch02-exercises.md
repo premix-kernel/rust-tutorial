@@ -21,7 +21,7 @@ fn main() {
     x = 10;
     println!("{}", x);
 }
-```
+```text
 
 </details>
 
@@ -52,7 +52,7 @@ fn main() {
     let d: char = 'A';
     let e: &str = "Hello";
 }
-```
+```text
 
 </details>
 
@@ -80,7 +80,7 @@ fn main() {
 ```text
 inner: 12
 outer: 6
-```
+```text
 
 **อธิบาย:**
 
@@ -116,7 +116,7 @@ fn main() {
     let arr: [i32; 5] = [1, 2, 3, 4, 5];
     println!("first: {}, last: {}", arr[0], arr[4]);
 }
-```
+```text
 
 </details>
 
@@ -152,3 +152,5 @@ fn main() {
 ---
 
 👉 [บทที่ 3](./ch03-exercises.md)
+
+```

@@ -61,7 +61,7 @@ fn main() {
 
     println!("File: {:?}", file);
 }
-```
+```text
 
 ---
 
@@ -171,7 +171,7 @@ fn main() {
 
     println!("{:?}", result2);
 }
-```
+```text
 
 ---
 
@@ -194,7 +194,7 @@ fn main() {
         Err(e) => println!("Error: {}", e),
     }
 }
-```
+```text
 
 ---
 
@@ -218,3 +218,5 @@ fn main() {
 | `ok()`               | แปลงเป็น Option                 |
 
 👉 ต่อไป: [การส่งต่อ Error](./03-propagating.md)
+
+```

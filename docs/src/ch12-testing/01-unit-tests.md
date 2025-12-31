@@ -310,7 +310,7 @@ mod tests {
         }
     }
 }
-```
+```text
 
 ---
 
@@ -344,3 +344,5 @@ mod tests {
 | `--exact`          | Match exact name  |
 
 👉 ต่อไป: [Integration Tests](./02-integration-tests.md)
+
+```

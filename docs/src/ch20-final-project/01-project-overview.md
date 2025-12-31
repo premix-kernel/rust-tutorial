@@ -4,7 +4,7 @@
 
 สร้าง command-line todo app ที่มี features:
 
-```
+```text
 $ todo add "Learn Rust"
 ✅ Added: Learn Rust
 
@@ -41,6 +41,8 @@ $ todo remove 1
 [dependencies]
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
-```
+```text
 
 👉 ต่อไป: [การออกแบบ](./02-design.md)
+
+```

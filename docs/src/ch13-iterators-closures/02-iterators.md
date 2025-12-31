@@ -209,7 +209,7 @@ fn main() {
     let cycle: Vec<i32> = vec![1, 2].into_iter().cycle().take(6).collect();
     println!("{:?}", cycle);  // [1, 2, 1, 2, 1, 2]
 }
-```
+```text
 
 ---
 
@@ -233,3 +233,5 @@ fn main() {
 | Infinite         | `repeat`, `cycle`        |
 
 👉 ต่อไป: [Iterator Methods](./03-iterator-methods.md)
+
+```

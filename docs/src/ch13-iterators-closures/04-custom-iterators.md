@@ -70,7 +70,7 @@ fn main() {
         .sum();
     println!("Sum of even squares: {}", result);  // 220
 }
-```
+```text
 
 ---
 
@@ -228,7 +228,7 @@ fn main() {
     let counter = Counter::new(10);
     println!("Size: {}", counter.len());  // 10
 }
-```
+```text
 
 ---
 
@@ -275,7 +275,7 @@ fn main() {
         println!("Line: {}", line);
     }
 }
-```
+```text
 
 ---
 
@@ -303,3 +303,5 @@ fn main() {
 - `IntoIterator` ทำให้ใช้กับ `for` ได้
 
 👉 ต่อไป: [บทที่ 14: Smart Pointers](../ch14-smart-pointers/README.md)
+
+```

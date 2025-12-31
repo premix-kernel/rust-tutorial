@@ -124,7 +124,7 @@ enum IpAddr {
 fn main() {
     let home = IpAddr::V4(String::from("127.0.0.1"));
 }
-```
+```text
 
 ---
 
@@ -156,7 +156,7 @@ fn main() {
     inspect(press);
     inspect(click);
 }
-```
+```text
 
 ---
 
@@ -178,3 +178,5 @@ fn main() {
 | Use          | `Name::A`                    |
 
 👉 ต่อไป: [Option\<T\>](./02-option.md)
+
+```

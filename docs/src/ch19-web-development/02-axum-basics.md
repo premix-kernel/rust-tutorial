@@ -291,7 +291,7 @@ let app = Router::new()
     .route("/", get(handler))
     .layer(CorsLayer::permissive())
     .layer(TraceLayer::new_for_http());
-```
+```text
 
 ---
 
@@ -315,3 +315,5 @@ let app = Router::new()
 | Nested  | `.nest("/api", routes)`         |
 
 👉 ต่อไป: [สร้าง REST API](./03-api-example.md)
+
+```

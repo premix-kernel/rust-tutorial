@@ -9,7 +9,7 @@ struct User {
     sign_in_count: u64,
     active: bool,
 }
-```
+```text
 
 - ใช้ `struct` keyword
 - ตั้งชื่อแบบ **PascalCase** (ตัวพิมพ์ใหญ่ขึ้นต้นแต่ละคำ)
@@ -178,4 +178,5 @@ Rectangle {
     width: 30,
     height: 50,
 }
+```
 ```

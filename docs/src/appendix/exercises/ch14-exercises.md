@@ -31,7 +31,7 @@ fn main() {
 
     print_list(&list); // 1 -> 2 -> 3 -> Nil
 }
-```
+```text
 
 </details>
 
@@ -71,7 +71,7 @@ Count after creation: 1
 Count after clone1: 2
 Count after clone2: 3
 Count after block: 1
-```
+```text
 
 </details>
 
@@ -96,7 +96,7 @@ fn main() {
 
     println!("After: {:?}", data.borrow());
 }
-```
+```text
 
 </details>
 
@@ -128,7 +128,7 @@ fn main() {
     // ดูผลลัพธ์
     println!("{:?}", data.borrow()); // [1, 2, 3, 4, 5]
 }
-```
+```text
 
 </details>
 
@@ -181,3 +181,5 @@ fn main() {
 ---
 
 👉 [บทที่ 15](./ch15-exercises.md)
+
+```

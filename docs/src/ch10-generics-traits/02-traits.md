@@ -125,3 +125,5 @@ Common derives: `Debug`, `Clone`, `Copy`, `PartialEq`, `Eq`, `Hash`, `Default`
 | Derive    | `#[derive(Debug, Clone)]`          |
 
 👉 ต่อไป: [Trait Bounds](./03-trait-bounds.md)
+
+```

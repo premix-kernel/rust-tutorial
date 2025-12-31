@@ -56,7 +56,7 @@ Rust ออกเวอร์ชันใหม่ทุก 6 สัปดาห
 
 ```bash
 rustup update
-```
+```text
 
 ---
 
@@ -79,3 +79,5 @@ rustup update
 ✅ ติดตั้ง VS Code + rust-analyzer
 
 👉 ต่อไป: [Hello World](./02-hello-world.md)
+
+```

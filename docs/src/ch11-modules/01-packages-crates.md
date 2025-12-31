@@ -48,6 +48,8 @@ edition = "2024"
 [dependencies]
 rand = "0.8"
 serde = { version = "1.0", features = ["derive"] }
-```
+```text
 
 👉 ต่อไป: [Modules](./02-modules.md)
+
+```

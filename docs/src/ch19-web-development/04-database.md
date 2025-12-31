@@ -331,12 +331,14 @@ sqlx migrate run
 
 ### Error Handling
 
-```rust
+```rust,ignore
 match result {
     Ok(todo) => println!("Got: {:?}", todo),
     Err(sqlx::Error::RowNotFound) => println!("Not found"),
     Err(e) => eprintln!("Database error: {}", e),
 }
-```
+```text
 
 👉 ต่อไป: [บทที่ 20: Final Project](../ch20-final-project/README.md)
+
+```

@@ -27,7 +27,7 @@ fn main() {
 
     handle.join().unwrap();
 }
-```
+```text
 
 </details>
 
@@ -55,7 +55,7 @@ fn main() {
     let result = handle.join().unwrap();
     println!("Sum: {}", result);
 }
-```
+```text
 
 </details>
 
@@ -86,7 +86,7 @@ fn main() {
         println!("Received: {}", received);
     }
 }
-```
+```text
 
 </details>
 
@@ -122,7 +122,7 @@ fn main() {
 
     println!("Count: {}", *counter.lock().unwrap());
 }
-```
+```text
 
 </details>
 
@@ -169,3 +169,5 @@ fn main() {
 ---
 
 👉 [บทที่ 16](./ch16-exercises.md)
+
+```

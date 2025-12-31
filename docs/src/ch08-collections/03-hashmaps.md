@@ -209,7 +209,7 @@ fn main() {
     map.clear();
     println!("after clear: {:?}", map); // {}
 }
-```
+```text
 
 ---
 
@@ -236,7 +236,7 @@ fn main() {
     println!("Most common: {} ({}x)", most_common, count);
     println!("All: {:?}", frequency);
 }
-```
+```text
 
 ---
 
@@ -257,3 +257,5 @@ fn main() {
 | HashMap\<K,V\> | key-value lookup |
 
 👉 ต่อไป: [บทที่ 9: Error Handling](../ch09-error-handling/README.md)
+
+```

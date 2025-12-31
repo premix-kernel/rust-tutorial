@@ -94,7 +94,7 @@ fn main() {
     let rect = Rectangle::new(10, 20); // ::
     let area = rect.area();             // .
 }
-```
+```text
 
 ---
 
@@ -108,7 +108,7 @@ fn main() {
 
     let len = s.len(); // method
 }
-```
+```text
 
 ---
 
@@ -259,3 +259,5 @@ fn main() {
 | Builder             | Chain methods ที่ return Self |
 
 👉 ต่อไป: [บทที่ 7: Enums & Pattern Matching](../ch07-enums/README.md)
+
+```

@@ -37,7 +37,7 @@ mod tests {
         assert_eq!(add(0, 0), 0);
     }
 }
-```
+```text
 
 </details>
 
@@ -72,7 +72,7 @@ mod tests {
         assert_ne!("hello", "world");
     }
 }
-```
+```text
 
 </details>
 
@@ -109,7 +109,7 @@ mod tests {
         divide(10, 0);
     }
 }
-```
+```text
 
 </details>
 
@@ -137,7 +137,7 @@ mod tests {
         }
     }
 }
-```
+```text
 
 </details>
 
@@ -174,3 +174,5 @@ mod tests {
 ---
 
 👉 [บทที่ 13](./ch13-exercises.md)
+
+```

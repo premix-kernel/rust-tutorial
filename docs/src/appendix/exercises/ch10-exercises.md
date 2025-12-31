@@ -59,7 +59,7 @@ fn main() {
     let pair = Pair::new("hello", "world");
     println!("{}, {}", pair.first, pair.second);
 }
-```
+```text
 
 </details>
 
@@ -106,7 +106,7 @@ fn main() {
     println!("{}", person.describe());
     println!("{}", product.describe());
 }
-```
+```text
 
 </details>
 
@@ -132,7 +132,7 @@ fn main() {
     let cloned = print_and_clone(s);
     println!("Cloned: {}", cloned);
 }
-```
+```text
 
 </details>
 
@@ -178,3 +178,5 @@ fn main() {
 ---
 
 👉 [บทที่ 11](./ch11-exercises.md)
+
+```

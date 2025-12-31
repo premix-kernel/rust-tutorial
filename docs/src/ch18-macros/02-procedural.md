@@ -261,6 +261,8 @@ my-project/
 └── my-macro/
     ├── Cargo.toml     # proc-macro = true
     └── src/lib.rs     # Macro implementations
-```
+```text
 
 👉 ต่อไป: [Macros ที่ใช้บ่อย](./03-common-macros.md)
+
+```

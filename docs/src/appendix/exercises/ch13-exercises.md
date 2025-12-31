@@ -17,7 +17,7 @@ fn main() {
     let add_typed = |a: i32, b: i32| -> i32 { a + b };
     println!("5 + 3 = {}", add_typed(5, 3));
 }
-```
+```text
 
 </details>
 
@@ -46,7 +46,7 @@ fn main() {
     println!("{}", greet("World"));
     // println!("{}", greeting); // Error: greeting moved
 }
-```
+```text
 
 </details>
 
@@ -76,7 +76,7 @@ fn main() {
 
     println!("{:?}", result); // [4, 8]
 }
-```
+```text
 
 </details>
 
@@ -101,7 +101,7 @@ fn main() {
     let product = numbers.iter().fold(1, |acc, x| acc * x);
     println!("Product: {}", product); // 120
 }
-```
+```text
 
 </details>
 
@@ -154,3 +154,5 @@ fn main() {
 ---
 
 👉 [บทที่ 14](./ch14-exercises.md)
+
+```

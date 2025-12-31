@@ -91,7 +91,7 @@ async fn concurrent() {
     sing_song(&song).await;
     // Total: ~1 second (overlapped)
 }
-```
+```text
 
 ---
 
@@ -242,7 +242,7 @@ impl AsyncFetcher for MyFetcher {
         "data".to_string()
     }
 }
-```
+```text
 
 ---
 
@@ -284,3 +284,5 @@ impl AsyncFetcher for MyFetcher {
 | smol      | Minimal, lightweight          |
 
 👉 ต่อไป: [Futures](./02-futures.md)
+
+```

@@ -15,7 +15,7 @@
 
 เริ่มจาก crate root ด้วย `crate`:
 
-```rust
+```rust,ignore
 mod front_of_house {
     pub mod hosting {
         pub fn add_to_waitlist() {
@@ -36,7 +36,7 @@ fn main() {
 
 เริ่มจาก module ปัจจุบัน:
 
-```rust
+```rust,ignore
 mod front_of_house {
     pub mod hosting {
         pub fn add_to_waitlist() {}
@@ -55,7 +55,7 @@ fn main() {
 
 `super` = parent module (เหมือน `..` ใน filesystem)
 
-```rust
+```rust,ignore
 mod parent {
     fn parent_function() {
         println!("In parent");
@@ -110,7 +110,7 @@ mod my_module {
 
 ### ใช้ self กับ use
 
-```rust
+```rust,ignore
 mod outer {
     pub mod inner {
         pub fn func() {}
@@ -128,7 +128,7 @@ mod outer {
 
 ## Path ใน use Statement
 
-```rust
+```rust,ignore
 mod front_of_house {
     pub mod hosting {
         pub fn add_to_waitlist() {}
@@ -174,7 +174,7 @@ utils::helper();
 
 ## ตัวอย่างจริง
 
-```rust
+```rust,ignore
 mod database {
     pub mod connection {
         pub fn connect() {
@@ -232,6 +232,8 @@ module::item               // relative
 self::item                 // current module
 super::item                // parent module
 super::super::item         // grandparent
-```
+```text
 
 👉 ต่อไป: [แยกไฟล์](./04-separating-files.md)
+
+```

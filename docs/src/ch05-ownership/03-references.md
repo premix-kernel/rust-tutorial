@@ -17,7 +17,7 @@ fn calculate_length(s: String) -> (String, usize) {
     let len = s.len();
     (s, len) // ต้อง return s กลับ 😩
 }
-```
+```text
 
 ## ทางออก: ใช้ Reference
 
@@ -187,7 +187,7 @@ fn no_dangle() -> String { // ✅ Return String แทน
     let s = String::from("hello");
     s // move ownership ออกไป
 }
-```
+```text
 
 ---
 
@@ -222,7 +222,7 @@ fn print_length(s: &String) {
 fn add_world(s: &mut String) {
     s.push_str(", World!");
 }
-```
+```text
 
 ---
 
@@ -244,3 +244,5 @@ fn add_world(s: &mut String) {
 | No dangling | Reference ต้อง valid เสมอ       |
 
 👉 ต่อไป: [Slices](./04-slices.md)
+
+```

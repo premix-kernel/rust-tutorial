@@ -20,7 +20,7 @@ fn main() {
         println!("Value via mut ptr: {}", *ptr_mut);
     }
 }
-```
+```text
 
 </details>
 
@@ -52,7 +52,7 @@ fn main() {
 
     println!("After: x={}, y={}", x, y);
 }
-```
+```text
 
 </details>
 
@@ -87,7 +87,7 @@ fn main() {
     println!("Left: {:?}", left);   // [1, 2]
     println!("Right: {:?}", right); // [3, 4, 5]
 }
-```
+```text
 
 </details>
 
@@ -118,7 +118,7 @@ fn main() {
         println!("Counter: {}", COUNTER);
     }
 }
-```
+```text
 
 **หมายเหตุ:** ไม่แนะนำใน production code! ใช้ `Mutex` หรือ `AtomicI32` แทน
 
@@ -157,3 +157,5 @@ pub extern "C" fn rust_function(x: i32) -> i32 {
 ---
 
 👉 [บทที่ 18](./ch18-exercises.md)
+
+```

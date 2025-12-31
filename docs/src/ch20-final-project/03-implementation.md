@@ -36,7 +36,7 @@ fn main() {
 
 ## lib.rs
 
-```rust
+```rust,ignore
 mod todo;
 mod storage;
 
@@ -114,6 +114,8 @@ pub fn save(todos: &[Todo]) -> Result<(), Box<dyn std::error::Error>> {
     fs::write(FILE_PATH, content)?;
     Ok(())
 }
-```
+```text
 
 👉 ต่อไป: [สรุป](./04-review.md)
+
+```

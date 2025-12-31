@@ -19,7 +19,7 @@ fn main() {
     greet("World");
     greet("Rust");
 }
-```
+```text
 
 </details>
 
@@ -49,7 +49,7 @@ fn main() {
     let sum = add(5, 3);
     println!("5 + 3 = {}", sum);
 }
-```
+```text
 
 </details>
 
@@ -74,7 +74,7 @@ fn main() {
     let area = calculate_rectangle_area(5.0, 3.0);
     println!("Area: {}", area); // 15.0
 }
-```
+```text
 
 </details>
 
@@ -107,7 +107,7 @@ fn main() {
     println!("4 is even: {}", is_even(4)); // true
     println!("7 is even: {}", is_even(7)); // false
 }
-```
+```text
 
 </details>
 
@@ -141,3 +141,5 @@ fn main() {
 ---
 
 👉 [บทที่ 4](./ch04-exercises.md)
+
+```

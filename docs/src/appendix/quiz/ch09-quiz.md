@@ -118,3 +118,5 @@ let x = some_option.unwrap_or(0); // ใช้ 0 ถ้า None
 ---
 
 👉 [Quiz บทที่ 10](./ch10-quiz.md)
+
+```

@@ -12,7 +12,7 @@
 ```bash
 rustc --version
 cargo --version
-```
+```text
 
 </details>
 
@@ -45,7 +45,7 @@ fn main() {
 
 ```bash
 cargo run
-```
+```text
 
 </details>
 
@@ -84,7 +84,7 @@ my_project/
 ├── Cargo.toml
 └── src/
     └── main.rs
-```
+```text
 
 - `Cargo.toml` - ไฟล์ config ของโปรเจกต์
 - `src/main.rs` - ไฟล์โค้ดหลัก
@@ -121,3 +121,5 @@ cargo add rand
 ---
 
 👉 [บทที่ 2](./ch02-exercises.md)
+
+```

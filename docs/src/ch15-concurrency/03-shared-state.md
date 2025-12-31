@@ -17,7 +17,7 @@ fn main() {
 
     println!("m = {:?}", m);
 }
-```
+```text
 
 > ⚠️ **คำเตือน: อันตรายของ Concurrency**
 >
@@ -71,6 +71,8 @@ fn main() {
 
     println!("Result: {}", *counter.lock().unwrap()); // 10
 }
-```
+```text
 
 👉 ต่อไป: [Sync & Send](./04-sync-send.md)
+
+```

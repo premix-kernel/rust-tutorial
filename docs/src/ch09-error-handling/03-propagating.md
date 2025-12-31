@@ -138,7 +138,7 @@ fn read_number_from_file() -> Result<i32, Box<dyn std::error::Error>> {
     let number: i32 = content.trim().parse()?; // ParseIntError -> Box<dyn Error>
     Ok(number)
 }
-```
+```text
 
 ---
 
@@ -215,3 +215,5 @@ fn main() {
 | main Result  | `fn main() -> Result<(), E>` |
 
 👉 ต่อไป: [Custom Error Types](./04-custom-errors.md)
+
+```

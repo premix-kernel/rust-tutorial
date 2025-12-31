@@ -110,7 +110,7 @@ unsafe impl MyUnsafeTrait for i32 {
         println!("{}", self);
     }
 }
-```
+```text
 
 ตัวอย่างจริง: `Send` และ `Sync` traits
 
@@ -133,7 +133,7 @@ fn main() {
         println!("f1: {}", u.f1);
     }
 }
-```
+```text
 
 ---
 
@@ -181,7 +181,7 @@ fn main() {
 pub extern "C" fn rust_add(a: i32, b: i32) -> i32 {
     a + b
 }
-```
+```text
 
 ---
 
@@ -233,3 +233,5 @@ pub fn split_at_mut(slice: &mut [i32], mid: usize) -> (&mut [i32], &mut [i32]) {
 4. **Wrap ด้วย safe API**
 
 👉 ต่อไป: [Raw Pointers](./02-raw-pointers.md)
+
+```

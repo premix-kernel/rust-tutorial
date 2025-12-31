@@ -17,3 +17,4 @@ Output:
 ```text
 thread 'main' panicked at 'crash and burn', src/main.rs:2:5
 ```
+```

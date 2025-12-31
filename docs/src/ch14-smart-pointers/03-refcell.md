@@ -117,7 +117,7 @@ fn main() {
         Err(_) => println!("Already borrowed!"),
     }
 }
-```
+```text
 
 ---
 
@@ -192,7 +192,7 @@ fn main() {
     println!("leaf: {:#?}", leaf);
     println!("branch: {:#?}", branch);
 }
-```
+```text
 
 ---
 
@@ -269,3 +269,5 @@ fn main() {
 | Multiple owners + mutability  | `Rc<RefCell<T>>` |
 
 👉 ต่อไป: [Weak\<T\>](./04-weak.md)
+
+```

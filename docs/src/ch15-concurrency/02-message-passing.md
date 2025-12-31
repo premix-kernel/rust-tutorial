@@ -72,6 +72,8 @@ fn main() {
         println!("Got: {}", received);
     }
 }
-```
+```text
 
 👉 ต่อไป: [Shared State](./03-shared-state.md)
+
+```

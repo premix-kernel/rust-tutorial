@@ -108,7 +108,7 @@ fn main() {
 
 **String ใน Rust เป็น UTF-8** → ไม่สามารถ index ด้วย `s[0]` ได้!
 
-```rust,compile_fail
+```rust,compile_fail,should_panic
 fn main() {
     let hello = String::from("สวัสดี");
 
@@ -170,7 +170,7 @@ fn main() {
     println!("upper: {}", s.to_uppercase());
     println!("lower: {}", s.to_lowercase());
 }
-```
+```text
 
 ---
 
@@ -191,7 +191,7 @@ fn main() {
     let padded = format!("{:0>5}", num); // "00042"
     println!("Padded: {}", padded);
 }
-```
+```text
 
 ---
 
@@ -214,3 +214,5 @@ fn main() {
 | Slice   | `&s[0..5]` (ระวัง UTF-8) |
 
 👉 ต่อไป: [HashMap](./03-hashmaps.md)
+
+```

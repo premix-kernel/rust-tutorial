@@ -292,7 +292,7 @@ async fn main() {
         println!("Processing batch: {:?}", batch);
     }
 }
-```
+```text
 
 ---
 
@@ -324,3 +324,5 @@ async fn main() {
 | `try_join!` | รอทุกอัน หยุดเมื่อ error |
 
 👉 ต่อไป: [บทที่ 17: Unsafe Rust](../ch17-unsafe/README.md)
+
+```

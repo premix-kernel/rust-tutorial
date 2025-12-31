@@ -234,7 +234,7 @@ fn main() {
     // numbers ยังใช้ได้!
     println!("After scope: {:?}", numbers);
 }
-```
+```text
 
 ---
 
@@ -262,7 +262,7 @@ fn main() {
         println!("Total sum: {}", total);
     });
 }
-```
+```text
 
 ---
 
@@ -287,3 +287,5 @@ fn main() {
 | `thread::Builder`   | กำหนด name/stack size       |
 
 👉 ต่อไป: [Message Passing](./02-message-passing.md)
+
+```

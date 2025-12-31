@@ -294,7 +294,7 @@ let app = Router::new()
     .with_state(db)
     .layer(CorsLayer::new().allow_origin(Any).allow_methods(Any))
     .layer(TraceLayer::new_for_http());
-```
+```text
 
 ---
 
@@ -317,3 +317,5 @@ let app = Router::new()
 | `/todos/:id` | DELETE | Delete      |
 
 👉 ต่อไป: [เชื่อมต่อ Database](./04-database.md)
+
+```

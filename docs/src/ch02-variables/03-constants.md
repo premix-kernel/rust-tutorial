@@ -23,7 +23,7 @@ fn main() {
 3. **ใช้ได้ทุกที่** - รวมถึง global scope
 4. **SCREAMING_SNAKE_CASE** - ใช้ตัวพิมพ์ใหญ่และ underscore
 
-```rust,ignore
+```rust,ignore,compile_fail
 // ✅ ถูกต้อง
 const MAX_SIZE: usize = 100;
 
@@ -157,7 +157,7 @@ fn main() {
 
     println!("Circle area: {:.2}", area); // 78.54
 }
-```
+```text
 
 ---
 
@@ -179,3 +179,5 @@ fn main() {
 - ✅ Constants และ Shadowing
 
 👉 ต่อไป: [บทที่ 3: Functions](../ch03-functions/README.md)
+
+```

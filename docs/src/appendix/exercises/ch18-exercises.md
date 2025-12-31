@@ -17,7 +17,7 @@ macro_rules! say_hello {
 fn main() {
     say_hello!();
 }
-```
+```text
 
 </details>
 
@@ -41,7 +41,7 @@ fn main() {
     greet!("World");
     greet!("Rust");
 }
-```
+```text
 
 </details>
 
@@ -71,7 +71,7 @@ fn main() {
     let result = sum!(1, 2, 3, 4, 5);
     println!("Sum: {}", result); // 15
 }
-```
+```text
 
 </details>
 
@@ -106,7 +106,7 @@ fn main() {
 
     println!("{:?}", scores);
 }
-```
+```text
 
 </details>
 
@@ -141,3 +141,5 @@ fn main() {
 ---
 
 👉 [บทที่ 19](./ch19-exercises.md)
+
+```

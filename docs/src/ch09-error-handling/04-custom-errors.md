@@ -202,7 +202,7 @@ fn process() -> Result<i32, AppError> {
 anyhow = "1.0"
 ```
 
-```rust
+```rust,ignore
 use anyhow::{Context, Result};
 
 fn read_config() -> Result<String> {
@@ -216,7 +216,7 @@ fn main() -> Result<()> {
     println!("Config: {}", config);
     Ok(())
 }
-```
+```text
 
 ---
 
@@ -248,3 +248,5 @@ fn main() -> Result<()> {
 | Custom errors | ต้องการ specific error types |
 
 👉 ต่อไป: [บทที่ 10: Generics, Traits & Lifetimes](../ch10-generics-traits/README.md)
+
+```

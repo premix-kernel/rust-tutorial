@@ -120,3 +120,5 @@ Derive macros auto-implement traits
 ---
 
 👉 [Quiz บทที่ 19](./ch19-quiz.md)
+
+```

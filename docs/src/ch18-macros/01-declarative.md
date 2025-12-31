@@ -29,7 +29,7 @@ macro_rules! macro_name {
         expansion
     };
 }
-```
+```text
 
 ---
 
@@ -45,7 +45,7 @@ macro_rules! say_hello {
 fn main() {
     say_hello!();  // Hello!
 }
-```
+```text
 
 ---
 
@@ -63,7 +63,7 @@ fn main() {
     greet!("Rust");    // Hello, Rust!
     greet!(1 + 2);     // Hello, 3!
 }
-```
+```text
 
 ### Designators (ตัวจับ)
 
@@ -100,7 +100,7 @@ fn main() {
     println!("{}", calculate!(sub 5, 3));  // 2
     println!("{}", calculate!(mul 4, 5));  // 20
 }
-```
+```text
 
 ---
 
@@ -129,7 +129,7 @@ fn main() {
     let v2 = vec_of_strings![1, 2, 3];
     println!("{:?}", v2); // ["1", "2", "3"]
 }
-```
+```text
 
 ### Repetition Operators
 
@@ -165,7 +165,7 @@ fn main() {
 
     println!("{:?}", scores);
 }
-```
+```text
 
 ---
 
@@ -187,7 +187,7 @@ fn main() {
     debug_var!(name);  // name = "Rust"
     debug_var!(vec);   // vec = [1, 2, 3]
 }
-```
+```text
 
 `stringify!` แปลง expression เป็น string literal
 
@@ -211,7 +211,7 @@ fn main() {
     foo();  // Called "foo"()
     bar();  // Called "bar"()
 }
-```
+```text
 
 ---
 
@@ -247,3 +247,5 @@ fn main() {
 | `stringify!($x)` | Convert to string  |
 
 👉 ต่อไป: [Procedural Macros](./02-procedural.md)
+
+```

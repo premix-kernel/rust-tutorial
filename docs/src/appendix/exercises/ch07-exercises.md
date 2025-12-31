@@ -25,7 +25,7 @@ fn main() {
         Direction::West => println!("ไปทางตะวันตก"),
     }
 }
-```
+```text
 
 </details>
 
@@ -58,7 +58,7 @@ fn main() {
         Message::Write(text) => println!("Write: {}", text),
     }
 }
-```
+```text
 
 </details>
 
@@ -96,7 +96,7 @@ fn main() {
         println!("Cannot divide by zero");
     }
 }
-```
+```text
 
 </details>
 
@@ -131,7 +131,7 @@ fn main() {
     describe(Some(0));   // zero
     describe(None);      // no value
 }
-```
+```text
 
 </details>
 
@@ -162,3 +162,5 @@ if let Some(x) = some_value {
 ---
 
 👉 [บทที่ 8](./ch08-exercises.md)
+
+```

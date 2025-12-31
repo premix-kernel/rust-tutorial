@@ -223,7 +223,7 @@ fn main() {
 
     println!("{}", message);
 }
-```
+```text
 
 ---
 
@@ -276,3 +276,5 @@ fn main() {
 | @ Binding | `x @ 1..=10 => ...`              |
 
 👉 ต่อไป: [if let & while let](./04-if-let.md)
+
+```

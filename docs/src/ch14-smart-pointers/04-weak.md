@@ -21,7 +21,7 @@
 - A มี strong reference จาก B → ยังไม่ drop
 - B มี strong reference จาก A → ยังไม่ drop
 → Memory leak! 💥
-```
+```text
 
 ---
 
@@ -63,7 +63,7 @@ fn main() {
     assert!(weak.upgrade().is_none());
     println!("Data is gone!");
 }
-```
+```text
 
 ---
 
@@ -127,7 +127,7 @@ leaf ─────────┘ Strong (in children vec)
 2. leaf's strong -1 (from branch's children)
 3. leaf's strong=1 → ยังอยู่
 4. leaf's parent.upgrade() = None
-```
+```text
 
 ---
 
@@ -200,7 +200,7 @@ fn main() {
 
     subject.notify_all("World");  // Nothing printed, observer is gone
 }
-```
+```text
 
 ---
 
@@ -248,6 +248,8 @@ Rc<RefCell<T>>
 
 // Break reference cycles
 Weak<T>
-```
+```text
 
 👉 ต่อไป: [บทที่ 15: Concurrency](../ch15-concurrency/README.md)
+
+```

@@ -25,7 +25,7 @@ fn main() {
 
     println!("Area: {}", rect.area());
 }
-```
+```text
 
 ---
 
@@ -153,7 +153,7 @@ fn main() {
     rect.area();
     (&rect).area();
 }
-```
+```text
 
 ---
 
@@ -213,3 +213,5 @@ fn main() {
 | impl block | `impl StructName { ... }`        |
 
 👉 ต่อไป: [Associated Functions](./03-associated-functions.md)
+
+```

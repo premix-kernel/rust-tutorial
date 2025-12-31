@@ -31,7 +31,7 @@ fn main() {
 
     // println!("{}", s); // ❌ Error! s ไม่มีแล้ว
 }
-```
+```text
 
 ---
 
@@ -155,7 +155,7 @@ fn gives_ownership() -> String {
     let s = String::from("hello");
     s // return และ move ownership
 }
-```
+```text
 
 ---
 
@@ -197,7 +197,7 @@ fn main() {
 
     println!("{}", outer); // ✅ OK
 } // outer ถูก drop ที่นี่
-```
+```text
 
 ---
 
@@ -220,3 +220,5 @@ fn main() {
 | Heap   | ข้อมูลขนาดใหญ่ต้อง move     |
 
 👉 ต่อไป: [Move & Clone](./02-move-clone.md)
+
+```

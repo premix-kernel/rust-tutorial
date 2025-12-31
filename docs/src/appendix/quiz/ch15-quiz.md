@@ -115,3 +115,5 @@ thread::spawn(move || {
 ---
 
 👉 [Quiz บทที่ 16](./ch16-quiz.md)
+
+```

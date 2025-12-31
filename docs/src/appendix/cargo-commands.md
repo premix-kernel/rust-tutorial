@@ -160,3 +160,5 @@ cargo run -p crate1
 ---
 
 👉 [Resources](./resources.md)
+
+```

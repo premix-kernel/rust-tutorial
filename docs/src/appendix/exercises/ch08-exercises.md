@@ -22,7 +22,7 @@ fn main() {
     let sum: i32 = numbers.iter().sum();
     println!("Sum: {}", sum); // 36
 }
-```
+```text
 
 </details>
 
@@ -45,7 +45,7 @@ fn main() {
     let reversed = reverse_string(original);
     println!("{} -> {}", original, reversed); // Hello -> olleH
 }
-```
+```text
 
 </details>
 
@@ -77,7 +77,7 @@ fn main() {
 
     println!("Average: {}", average); // 88
 }
-```
+```text
 
 </details>
 
@@ -111,7 +111,7 @@ fn main() {
         println!("{}: {}", word, count);
     }
 }
-```
+```text
 
 </details>
 
@@ -157,3 +157,5 @@ fn main() {
 ---
 
 👉 [บทที่ 9](./ch09-exercises.md)
+
+```

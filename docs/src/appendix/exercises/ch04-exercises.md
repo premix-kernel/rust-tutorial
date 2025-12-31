@@ -35,7 +35,7 @@ fn main() {
     println!("72 -> {}", grade(72)); // B
     println!("45 -> {}", grade(45)); // F
 }
-```
+```text
 
 </details>
 
@@ -66,7 +66,7 @@ fn main() {
         count += 1;
     }
 }
-```
+```text
 
 </details>
 
@@ -93,7 +93,7 @@ fn main() {
 
     println!("Liftoff!");
 }
-```
+```text
 
 </details>
 
@@ -127,7 +127,7 @@ Index 1: 20
 Index 2: 30
 Index 3: 40
 Index 4: 50
-```
+```text
 
 </details>
 
@@ -167,3 +167,5 @@ fn main() {
 ---
 
 👉 [บทที่ 5](./ch05-exercises.md)
+
+```

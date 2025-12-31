@@ -290,7 +290,7 @@ fn main() {
         println!("Release mode");
     }
 }
-```
+```text
 
 ---
 
@@ -319,3 +319,5 @@ fn main() {
 | `cfg!`         | Check config    | `bool`        |
 
 👉 ต่อไป: [บทที่ 19: Web Development](../ch19-web-development/README.md)
+
+```

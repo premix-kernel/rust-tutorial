@@ -47,7 +47,7 @@ use math::add;
 fn main() {
     println!("5 + 3 = {}", add(5, 3));
 }
-```
+```text
 
 </details>
 
@@ -122,7 +122,7 @@ fn main() {
     println!("Username: {}", user.username);
     println!("Email: {}", user.email());
 }
-```
+```text
 
 </details>
 
@@ -158,3 +158,5 @@ fn main() {
 ---
 
 👉 [บทที่ 12](./ch12-exercises.md)
+
+```

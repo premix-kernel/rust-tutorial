@@ -10,7 +10,7 @@ fn main() {
     let s2 = s1;
     println!("{}", s1);
 }
-```
+```text
 
 <details>
 <summary>ดูเฉลย</summary>
@@ -25,7 +25,7 @@ fn main() {
     let s2 = s1.clone();
     println!("{}", s1); // ✅ OK
 }
-```
+```text
 
 **วิธีแก้ 2: ใช้ reference**
 
@@ -35,7 +35,7 @@ fn main() {
     let s2 = &s1;
     println!("{}", s1); // ✅ OK
 }
-```
+```text
 
 </details>
 
@@ -55,7 +55,7 @@ fn main() {
     print_string(s);
     println!("{}", s); // Error!
 }
-```
+```text
 
 <details>
 <summary>ดูเฉลย</summary>
@@ -74,7 +74,7 @@ fn main() {
     print_string(&s);  // ส่ง reference
     println!("{}", s); // ✅ OK
 }
-```
+```text
 
 </details>
 
@@ -100,7 +100,7 @@ fn main() {
     append_world(&mut greeting);
     println!("{}", greeting); // Hello World
 }
-```
+```text
 
 </details>
 
@@ -140,7 +140,7 @@ fn main() {
     let r3 = &mut s;  // แล้วค่อยสร้าง mutable ref
     println!("{}", r3);
 }
-```
+```text
 
 </details>
 
@@ -181,3 +181,5 @@ fn main() {
 ---
 
 👉 [บทที่ 6](./ch06-exercises.md)
+
+```

@@ -183,7 +183,7 @@ async fn foo() -> i32 {
 fn bar() -> impl Future<Output = i32> {
     async { 42 }
 }
-```
+```text
 
 ---
 
@@ -206,3 +206,5 @@ fn bar() -> impl Future<Output = i32> {
 | Pin           | ป้องกันการ move           |
 
 👉 ต่อไป: [Tokio Runtime](./03-tokio.md)
+
+```

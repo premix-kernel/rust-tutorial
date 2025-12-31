@@ -284,7 +284,7 @@ async fn main() {
     let result = rx.await.unwrap();
     println!("Got: {}", result);
 }
-```
+```text
 
 ---
 
@@ -310,3 +310,5 @@ async fn main() {
 | `oneshot::channel` | Single value channel   |
 
 👉 ต่อไป: [Async Patterns](./04-async-patterns.md)
+
+```

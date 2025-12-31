@@ -25,7 +25,7 @@ todo_app/
 │   └── storage.rs
 └── data/
     └── todos.json
-```
+```text
 
 </details>
 
@@ -62,7 +62,7 @@ impl Todo {
         self.completed = !self.completed;
     }
 }
-```
+```text
 
 </details>
 
@@ -97,7 +97,7 @@ pub fn save_todos(todos: &[Todo]) -> std::io::Result<()> {
     let json = serde_json::to_string_pretty(todos)?;
     fs::write(FILE_PATH, json)
 }
-```
+```text
 
 </details>
 
@@ -152,7 +152,7 @@ fn main() {
         }
     }
 }
-```
+```text
 
 </details>
 
@@ -248,3 +248,5 @@ cargo run -- delete 1
 🎉 **ยินดีด้วย!** คุณเรียนจบครบทุกบทแล้ว!
 
 👉 [Quiz](../quiz/README.md)
+
+```

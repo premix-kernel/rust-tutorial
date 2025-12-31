@@ -138,7 +138,7 @@ impl Drop for TestContext {
 
 ### ใช้ Shared Code
 
-```rust
+```rust,ignore
 // tests/integration_test.rs
 mod common;
 
@@ -273,6 +273,8 @@ tests/
 ├── common/mod.rs     ← shared code (NOT a test)
 ├── test_a.rs         ← first test file
 └── test_b.rs         ← second test file
-```
+```text
 
 👉 ต่อไป: [จัดระเบียบ Tests](./03-test-organization.md)
+
+```

@@ -155,7 +155,7 @@ fn main() {
 
     println!("Result: {}", result);
 }
-```
+```text
 
 ---
 
@@ -179,7 +179,7 @@ fn main() {
         None => println!("Not found"),
     }
 }
-```
+```text
 
 ---
 
@@ -201,7 +201,7 @@ fn main() {
     println!("{:?}", result1); // Some(5.0)
     println!("{:?}", result2); // None
 }
-```
+```text
 
 ---
 
@@ -224,3 +224,5 @@ fn main() {
 | map       | `opt.map(\|x\| x * 2)`                      |
 
 👉 ต่อไป: [Match Expression](./03-match.md)
+
+```

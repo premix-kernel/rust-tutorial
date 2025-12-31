@@ -105,3 +105,5 @@ impl<T: Display + PartialOrd> Pair<T> {
 | Return       | `-> impl Trait`      |
 
 👉 ต่อไป: [Lifetimes](./04-lifetimes.md)
+
+```

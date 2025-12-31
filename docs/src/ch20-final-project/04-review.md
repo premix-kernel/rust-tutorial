@@ -79,7 +79,7 @@ let sum: i32 = vec![1, 2, 3]
 std::thread::spawn(move || {
     println!("Running in parallel!");
 });
-```
+```text
 
 ---
 
@@ -180,3 +180,5 @@ std::thread::spawn(move || {
 **Rust makes systems programming accessible to everyone.**
 
 ขอให้โชคดีกับการเขียน Rust!
+
+```

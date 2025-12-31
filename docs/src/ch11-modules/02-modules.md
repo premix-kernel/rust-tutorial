@@ -23,7 +23,7 @@ crate (root)
 
 ## นิยาม Module
 
-```rust
+```rust,ignore
 mod front_of_house {
     pub mod hosting {
         pub fn add_to_waitlist() {}
@@ -100,7 +100,7 @@ fn main() {
 
 ### Basic use
 
-```rust
+```rust,ignore
 mod front_of_house {
     pub mod hosting {
         pub fn add_to_waitlist() {}
@@ -149,7 +149,7 @@ fn function2() -> IoResult<()> {
 
 ## Re-exporting with pub use
 
-```rust
+```rust,ignore
 mod front_of_house {
     pub mod hosting {
         pub fn add_to_waitlist() {}
@@ -193,7 +193,7 @@ fn main() {
     let mut map = HashMap::new();
     let mut set = HashSet::new();
 }
-```
+```text
 
 > **คำเตือน:** ใช้ `*` ระวัง เพราะไม่ชัดเจนว่า names มาจากไหน
 
@@ -201,7 +201,7 @@ fn main() {
 
 ## ตัวอย่างจริง: Library Structure
 
-```rust
+```rust,ignore
 // lib.rs
 mod authentication;
 mod database;
@@ -276,3 +276,5 @@ mod parent {
 | Glob          | `use module::*;`       |
 
 👉 ต่อไป: [Paths](./03-paths.md)
+
+```

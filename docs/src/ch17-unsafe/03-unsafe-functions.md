@@ -167,7 +167,7 @@ fn main() {
         println!("Back to Rust: {}", rust_str);
     }
 }
-```
+```text
 
 ---
 
@@ -249,3 +249,5 @@ fn main() {
 | Static mut  | `static mut NAME: T = value;`        |
 
 👉 ต่อไป: [Safe Abstractions](./04-safe-abstractions.md)
+
+```

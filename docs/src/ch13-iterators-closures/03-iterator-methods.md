@@ -273,7 +273,7 @@ fn main() {
 
     println!("Sum of odd squares: {}", result);  // 1 + 9 + 25 = 35
 }
-```
+```text
 
 ---
 
@@ -312,3 +312,5 @@ fn main() {
 | `any` / `all`           | ตรวจเงื่อนไข       |
 
 👉 ต่อไป: [Custom Iterators](./04-custom-iterators.md)
+
+```

@@ -116,3 +116,5 @@ let count = map.entry("key").or_insert(0);
 ---
 
 👉 [Quiz บทที่ 9](./ch09-quiz.md)
+
+```

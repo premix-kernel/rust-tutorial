@@ -108,7 +108,7 @@ cargo test --exact test_name
 
 # รัน tests ที่มีคำนี้ในชื่อ
 cargo test add
-```
+```text
 
 ---
 
@@ -130,7 +130,7 @@ mod tests {
         assert_eq!(calculate(5), 10);
     }
 }
-```
+```text
 
 ### Pattern 2: Test submodules
 
@@ -276,7 +276,7 @@ fn test_with_fixture() {
     let content = fs::read_to_string(&file.path).unwrap();
     assert_eq!(content, "Hello, World!");
 } // file ถูก cleanup อัตโนมัติ
-```
+```text
 
 ---
 
@@ -316,3 +316,5 @@ fn test_with_fixture() {
 4. เขียน doc tests สำหรับ public API
 
 👉 ต่อไป: [บทที่ 13: Iterators & Closures](../ch13-iterators-closures/README.md)
+
+```

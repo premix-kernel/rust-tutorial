@@ -46,7 +46,7 @@ cargo run --example ownership
 
 # Web Server (เปิด http://localhost:3000)
 cargo run --example web_server
-```
+```text
 
 ---
 
@@ -73,7 +73,7 @@ examples/
 
 ### hello_world
 
-```
+```text
 🦀 สวัสดี Rust!
 Hello, World!
 
@@ -85,7 +85,7 @@ Is Learning: true
 
 ### ownership
 
-```
+```text
 🦀 Ownership Demo
 
 1️⃣ Move:
@@ -101,3 +101,5 @@ x = 5, y = 5
 ---
 
 👉 [กลับหน้า Appendix](./README.md)
+
+```
