@@ -24,7 +24,7 @@ fn another_function() {
 
 ผลลัพธ์:
 
-```
+```text
 Hello from main!
 Hello from another function!
 ```

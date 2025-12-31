@@ -172,33 +172,10 @@ fn main() {
 
 Output:
 
-```
+```text
 Rectangle { width: 30, height: 50 }
 Rectangle {
     width: 30,
     height: 50,
 }
 ```
-
----
-
-## ลองทำดู! 🎯
-
-1. สร้าง struct `Book` ที่มี title, author, pages
-2. สร้าง struct `Point` สำหรับพิกัด 2D
-3. ใช้ `#[derive(Debug)]` และ print struct
-
----
-
-## สรุป
-
-| แนวคิด    | ตัวอย่าง                      |
-| --------- | ----------------------------- |
-| Define    | `struct Name { field: Type }` |
-| Create    | `Name { field: value }`       |
-| Access    | `instance.field`              |
-| Shorthand | `field` แทน `field: field`    |
-| Update    | `..other_instance`            |
-| Debug     | `#[derive(Debug)]`            |
-
-👉 ต่อไป: [Methods](./02-methods.md)

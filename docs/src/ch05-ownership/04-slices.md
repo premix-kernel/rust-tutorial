@@ -96,7 +96,7 @@ fn first_word(s: &str) -> &str { // รับ &str แทน &String
 > **เคล็ดลับ:** ใช้ `&str` เป็น parameter ดีกว่า `&String`
 > เพราะรับได้ทั้ง `String` และ `&str`
 
-```rust
+```rust,ignore
 fn main() {
     let my_string = String::from("Hello World");
 

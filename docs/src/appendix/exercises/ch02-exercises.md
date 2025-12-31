@@ -77,7 +77,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```
+```text
 inner: 12
 outer: 6
 ```

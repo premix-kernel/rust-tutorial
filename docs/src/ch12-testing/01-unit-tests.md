@@ -235,7 +235,7 @@ mod tests {
 
 ทดสอบ code ใน documentation:
 
-````rust
+```
 /// Adds two numbers together.
 ///
 /// # Examples

@@ -200,7 +200,7 @@ mod tests {
 
 Comments ที่มี code examples จะถูก test:
 
-````rust
+```
 /// Adds two numbers together.
 ///
 /// # Examples

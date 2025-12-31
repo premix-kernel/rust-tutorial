@@ -19,7 +19,7 @@ fn print_summary2(item: &impl Summary) {
 
 ## Multiple Trait Bounds
 
-```rust
+```rust,ignore
 fn notify<T: Summary + Display>(item: &T) {
     println!("Summary: {}", item.summarize());
     println!("Display: {}", item);
