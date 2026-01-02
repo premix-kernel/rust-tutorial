@@ -4,7 +4,7 @@
 
 ## Future Trait
 
-```rust
+```rust,ignore
 pub trait Future {
     type Output;
 
@@ -43,7 +43,7 @@ pub enum Poll<T> {
 
 สร้าง anonymous Future:
 
-```rust
+```rust,ignore
 async fn example() {
     let future = async {
         println!("Inside async block");
@@ -62,7 +62,7 @@ async fn example() {
 
 **สำคัญมาก:** Future ไม่ทำอะไรจนกว่าจะถูก poll
 
-```rust
+```rust,ignore
 async fn do_something() {
     println!("This runs when polled!");
 }
@@ -83,7 +83,7 @@ fn main() {
 
 ### Sequential
 
-```rust
+```rust,ignore
 async fn sequential() {
     let a = async_fn_1().await;  // รัน 1 ก่อน
     let b = async_fn_2().await;  // แล้วรัน 2
@@ -93,7 +93,7 @@ async fn sequential() {
 
 ### Concurrent กับ join!
 
-```rust
+```rust,ignore
 use tokio::join;
 
 async fn concurrent() {
@@ -108,7 +108,7 @@ async fn concurrent() {
 
 ### Racing กับ select!
 
-```rust
+```rust,ignore
 use tokio::select;
 
 async fn race() {
@@ -126,7 +126,7 @@ async fn race() {
 
 `Pin` ป้องกัน Future ไม่ให้ถูก move ในหน่วยความจำ:
 
-```rust
+```rust,ignore
 use std::pin::Pin;
 use std::future::Future;
 
@@ -145,7 +145,7 @@ fn takes_future(future: Pin<&mut dyn Future<Output = i32>>) {
 
 ## สร้าง Future เอง (Advanced)
 
-```rust
+```rust,ignore
 use std::future::Future;
 use std::pin::Pin;
 use std::task::{Context, Poll};
@@ -173,7 +173,7 @@ impl Future for MyFuture {
 
 ## async fn vs Future
 
-```rust
+```rust,ignore
 // ทั้งสองเหมือนกัน:
 
 async fn foo() -> i32 {

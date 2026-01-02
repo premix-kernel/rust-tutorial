@@ -61,7 +61,7 @@ fn main() {
 
 ## ตัวอย่าง 2: Custom Vec
 
-```rust
+```rust,ignore
 pub struct MyVec<T> {
     ptr: *mut T,
     len: usize,
@@ -174,7 +174,7 @@ unsafe impl Sync for Counter {}
 
 ### 1. Minimize Unsafe Scope
 
-```rust
+```rust,ignore
 // ❌ Bad: unsafe block ใหญ่เกินไป
 unsafe {
     let ptr = some_pointer();
@@ -194,7 +194,7 @@ process(slice);
 
 ### 2. Document Invariants
 
-```rust
+```rust,ignore
 /// A non-empty string that is guaranteed to be valid UTF-8.
 ///
 /// # Invariants
@@ -210,7 +210,7 @@ pub struct NonEmptyString {
 
 ### 3. Validate Early
 
-```rust
+```rust,ignore
 pub fn from_raw_parts(ptr: *const u8, len: usize) -> Result<Self, Error> {
     // ตรวจสอบก่อน unsafe
     if ptr.is_null() {

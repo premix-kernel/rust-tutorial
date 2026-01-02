@@ -246,7 +246,7 @@ cargo test --doc
 
 ## Test Fixtures และ Setup
 
-```rust
+```rust,ignore
 use std::fs;
 use std::io::Write;
 

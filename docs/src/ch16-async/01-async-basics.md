@@ -6,7 +6,7 @@ Asynchronous programming ใน Rust ช่วยจัดการ I/O-bound ta
 
 ### Synchronous (Blocking)
 
-```rust
+```rust,ignore
 fn main() {
     let data1 = fetch_data_1(); // รอ... 2 seconds
     let data2 = fetch_data_2(); // รอ... 2 seconds
@@ -16,7 +16,7 @@ fn main() {
 
 ### Asynchronous (Non-blocking)
 
-```rust
+```rust,ignore
 async fn main() {
     let (data1, data2) = join!(
         fetch_data_1(), // เริ่มพร้อมกัน
@@ -30,7 +30,7 @@ async fn main() {
 
 ## async fn
 
-```rust
+```rust,ignore
 async fn hello_world() {
     println!("Hello, world!");
 }
@@ -45,7 +45,7 @@ async fn hello_world() {
 
 ## .await
 
-```rust
+```rust,ignore
 async fn fetch_number() -> i32 {
     // simulate async work
     42
@@ -59,7 +59,7 @@ async fn main() {
 
 ### Sequential vs Concurrent
 
-```rust
+```rust,ignore
 async fn learn_song() -> String {
     tokio::time::sleep(std::time::Duration::from_secs(1)).await;
     "La la la".to_string()
@@ -99,7 +99,7 @@ async fn concurrent() {
 
 Rust ไม่มี async runtime ในตัว ต้องใช้ library:
 
-```toml
+```toml,ignore
 # Cargo.toml
 [dependencies]
 tokio = { version = "1", features = ["full"] }
@@ -107,7 +107,7 @@ tokio = { version = "1", features = ["full"] }
 
 ### Basic Usage
 
-```rust
+```rust,ignore
 #[tokio::main]
 async fn main() {
     println!("Hello from async main!");
@@ -125,7 +125,7 @@ async fn do_something() -> i32 {
 
 ### Manual Runtime
 
-```rust
+```rust,ignore
 fn main() {
     let rt = tokio::runtime::Runtime::new().unwrap();
 
@@ -139,7 +139,7 @@ fn main() {
 
 ## async Block
 
-```rust
+```rust,ignore
 async fn example() {
     let future = async {
         // code here runs lazily
@@ -155,7 +155,7 @@ async fn example() {
 
 ### Capture Variables
 
-```rust
+```rust,ignore
 async fn example() {
     let name = String::from("Alice");
 
@@ -175,7 +175,7 @@ async fn example() {
 
 ## Futures are Lazy
 
-```rust
+```rust,ignore
 async fn my_async_fn() {
     println!("This runs when awaited");
 }
@@ -193,7 +193,7 @@ fn main() {
 
 ## Return Types
 
-```rust
+```rust,ignore
 use std::future::Future;
 
 // These are equivalent:
@@ -212,7 +212,7 @@ fn bar() -> impl Future<Output = i32> {
 
 ## Error Handling in Async
 
-```rust
+```rust,ignore
 async fn fetch_data() -> Result<String, std::io::Error> {
     // simulate possible failure
     Ok("data".to_string())
@@ -230,7 +230,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
 ## Async in Traits (Rust 1.75+)
 
-```rust
+```rust,ignore
 trait AsyncFetcher {
     async fn fetch(&self) -> String;
 }

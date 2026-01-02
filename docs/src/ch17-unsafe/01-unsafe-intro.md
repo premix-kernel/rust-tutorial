@@ -76,7 +76,7 @@ fn main() {
 
 ## 3. Access Mutable Statics
 
-```rust
+```rust,ignore
 static mut COUNTER: u32 = 0;
 
 fn add_to_count(inc: u32) {
@@ -158,7 +158,7 @@ fn main() {
 
 ตัวอย่างเรียก function จาก C library:
 
-```rust
+```rust,ignore
 // ประกาศ external C function
 extern "C" {
     fn abs(input: i32) -> i32;
@@ -175,7 +175,7 @@ fn main() {
 
 ### สร้าง Rust function ที่ C เรียกได้
 
-```rust
+```rust,ignore
 // export function สำหรับ C
 #[no_mangle]
 pub extern "C" fn rust_add(a: i32, b: i32) -> i32 {

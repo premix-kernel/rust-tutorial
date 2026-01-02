@@ -6,7 +6,7 @@
 
 ### 1. เรียก panic! เอง
 
-```rust
+```rust,should_panic
 fn main() {
     panic!("crash and burn");
 }
@@ -14,13 +14,13 @@ fn main() {
 
 Output:
 
-```
+```text
 thread 'main' panicked at 'crash and burn', src/main.rs:2:5
 ```
 
 ### 2. Bug ในโค้ด
 
-```rust
+```rust,should_panic
 fn main() {
     let v = vec![1, 2, 3];
     v[99]; // 💥 panic! index out of bounds
@@ -37,7 +37,7 @@ fn main() {
 RUST_BACKTRACE=1 cargo run
 ```
 
-```
+```text
 thread 'main' panicked at 'index out of bounds: the len is 3 but the index is 99'
 stack backtrace:
    0: std::panicking::begin_panic_handler
@@ -135,7 +135,7 @@ fn main() {
 
 ### expect (ดีกว่า unwrap)
 
-```rust
+```rust,should_panic
 fn main() {
     let x: Option<i32> = None;
 
@@ -146,7 +146,7 @@ fn main() {
 
 Output:
 
-```
+```text
 thread 'main' panicked at 'x should have a value', src/main.rs:4:18
 ```
 
@@ -154,7 +154,7 @@ thread 'main' panicked at 'x should have a value', src/main.rs:4:18
 
 ## unreachable! และ todo!
 
-```rust
+```rust,should_panic
 fn main() {
     let level = 5;
 
@@ -174,7 +174,7 @@ fn main() {
 
 ## ตัวอย่างจริง: Assertion
 
-```rust
+```rust,should_panic
 fn set_age(age: u32) {
     assert!(age <= 150, "Age {} is unrealistic", age);
     println!("Age set to {}", age);

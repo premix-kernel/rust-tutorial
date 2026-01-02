@@ -11,7 +11,7 @@
 
 ## ปัญหา: Dangling Reference
 
-```rust
+```rust,compile_fail
 fn main() {
     let r;                // declare r
     {
@@ -58,7 +58,7 @@ Rust compiler จะ reject โค้ดนี้เพราะ `x` ไม่�
 
 ### ปัญหา: Compiler ไม่รู้ว่า return อะไร
 
-```rust
+```rust,compile_fail
 // ❌ Error: missing lifetime specifier
 fn longest(x: &str, y: &str) -> &str {
     if x.len() > y.len() {
@@ -228,7 +228,7 @@ let s: &'static str = "I have a static lifetime.";
 
 อย่าใช้ `'static` เพื่อ "แก้" lifetime errors โดยไม่เข้าใจ:
 
-```rust
+```rust,compile_fail
 // ❌ Bad: ใช้ 'static แบบผิดๆ
 fn get_str() -> &'static str {
     let s = String::from("hello");
@@ -236,7 +236,7 @@ fn get_str() -> &'static str {
 }
 
 // ✅ Good: return owned String
-fn get_str() -> String {
+fn get_str_good() -> String {
     String::from("hello")
 }
 ```

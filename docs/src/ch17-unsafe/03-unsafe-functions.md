@@ -76,7 +76,7 @@ unsafe fn read_value<T>(ptr: *const T) -> T {
 
 ### เรียก C Functions
 
-```rust
+```rust,ignore
 // ประกาศ external functions
 extern "C" {
     fn abs(input: i32) -> i32;
@@ -100,7 +100,7 @@ fn main() {
 | `"stdcall"`  | Win32 API             |
 | `"fastcall"` | Optimized             |
 
-```rust
+```rust,ignore
 extern "system" {
     fn GetCurrentProcessId() -> u32;
 }
@@ -110,7 +110,7 @@ extern "system" {
 
 ## Export Rust to C
 
-```rust
+```rust,ignore
 #[no_mangle]  // ไม่เปลี่ยนชื่อ function
 pub extern "C" fn add(a: i32, b: i32) -> i32 {
     a + b
@@ -129,7 +129,7 @@ pub extern "C" fn greet(name: *const std::ffi::c_char) {
 
 ### Build as Library
 
-```toml
+```toml,ignore
 # Cargo.toml
 [lib]
 crate-type = ["cdylib"]  # Dynamic library
@@ -141,7 +141,7 @@ crate-type = ["staticlib"]  # Static library
 
 ## Working with C Strings
 
-```rust
+```rust,ignore
 use std::ffi::{CStr, CString};
 use std::os::raw::c_char;
 
@@ -173,7 +173,7 @@ fn main() {
 
 ## ตัวอย่างจริง: Binding to C Library
 
-```rust
+```rust,ignore
 // Binding to libc
 #[link(name = "c")]
 extern "C" {
@@ -203,7 +203,7 @@ fn main() {
 
 ## Static Mut Variables
 
-```rust
+```rust,ignore
 static mut COUNTER: u32 = 0;
 
 fn increment() {
