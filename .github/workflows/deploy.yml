@@ -1,4 +1,4 @@
-name: Build and Deploy mdBook
+name: Deploy GitHub Pages
 
 on:
   push:
@@ -25,9 +25,21 @@ jobs:
 
       - name: Setup Rust
         uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+
+      - name: Check Formatting
+        run: cargo fmt --all -- --check
+
+      - name: Clippy
+        run: cargo clippy -- -D warnings
 
       - name: Install mdBook
         run: cargo install mdbook
+
+      - name: Run Tests (mdBook)
+        working-directory: ./docs
+        run: mdbook test
 
       - name: Build mdBook
         working-directory: ./docs
