@@ -106,7 +106,7 @@ D. ดึงค่าออกมา
 
 **B. แทรกค่าถ้ายังไม่มี**
 
-```rust
+```rust,ignore
 let count = map.entry("key").or_insert(0);
 *count += 1;
 ```

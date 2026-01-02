@@ -105,7 +105,7 @@ D. Lock mutex
 
 **B. รอหลาย futures พร้อมกัน**
 
-```rust
+```rust,ignore
 let (a, b) = tokio::join!(task1(), task2());
 ```
 

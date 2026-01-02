@@ -7,7 +7,7 @@
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 use axum::{Router, routing::get};
 
 async fn hello() -> &'static str {
@@ -39,7 +39,7 @@ async fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 use axum::{Router, routing::get, extract::Path};
 
 async fn greet(Path(name): Path<String>) -> String {
@@ -70,7 +70,7 @@ Return JSON response
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 use axum::{Router, routing::get, Json};
 use serde::Serialize;
 
@@ -113,7 +113,7 @@ async fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 use axum::{Router, routing::post, Json};
 use serde::{Deserialize, Serialize};
 
@@ -164,7 +164,7 @@ async fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 use axum::{
     Router,
     routing::{get, post, delete},

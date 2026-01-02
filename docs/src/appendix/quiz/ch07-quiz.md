@@ -117,7 +117,7 @@ D. Empty tuple
 
 **C. Catch-all pattern**
 
-```rust
+```rust,ignore
 match value {
     1 => println!("one"),
     2 => println!("two"),

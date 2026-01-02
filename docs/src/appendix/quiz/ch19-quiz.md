@@ -103,7 +103,7 @@ D. Handle errors
 
 **B. Share application state**
 
-```rust
+```rust,ignore
 async fn handler(State(db): State<DatabasePool>) { }
 ```
 

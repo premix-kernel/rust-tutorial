@@ -15,7 +15,7 @@ cargo add serde --features derive
 cargo add serde_json
 ```
 
-```
+```text
 todo_app/
 ├── Cargo.toml
 ├── src/
@@ -38,7 +38,7 @@ todo_app/
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 // src/todo.rs
 use serde::{Deserialize, Serialize};
 
@@ -75,7 +75,7 @@ impl Todo {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 // src/storage.rs
 use crate::todo::Todo;
 use std::fs;
@@ -110,7 +110,7 @@ pub fn save_todos(todos: &[Todo]) -> std::io::Result<()> {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 // src/main.rs
 use clap::{Parser, Subcommand};
 
@@ -165,7 +165,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 // src/main.rs
 mod storage;
 mod todo;

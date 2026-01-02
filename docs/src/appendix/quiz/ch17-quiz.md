@@ -111,7 +111,7 @@ D. ใช้ macros แทน
 
 **A. ห่อ unsafe code ด้วย safe interface**
 
-```rust
+```rust,ignore
 pub fn split_at_mut(slice: &mut [i32], mid: usize) -> (&mut [i32], &mut [i32]) {
     // unsafe inside, but function is safe
     unsafe { ... }

@@ -103,7 +103,7 @@ D. เมื่อต้องการ print
 
 **B. เมื่อต้องการ move ownership เข้า closure**
 
-```rust
+```rust,ignore
 let data = vec![1, 2, 3];
 thread::spawn(move || {
     println!("{:?}", data); // data moved here

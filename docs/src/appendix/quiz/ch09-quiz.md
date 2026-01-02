@@ -109,7 +109,7 @@ D. แปลงเป็น Option
 
 **B. Return ค่า default ถ้า None**
 
-```rust
+```rust,ignore
 let x = some_option.unwrap_or(0); // ใช้ 0 ถ้า None
 ```
 

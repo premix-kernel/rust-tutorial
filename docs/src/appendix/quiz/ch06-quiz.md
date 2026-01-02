@@ -110,7 +110,7 @@ D. `self` คือ type
 
 **B. `Self` คือ type, `self` คือ instance**
 
-```rust
+```rust,ignore
 impl User {
     fn new() -> Self { // Self = User type
         Self { name: String::new() }

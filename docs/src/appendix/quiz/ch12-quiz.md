@@ -65,7 +65,7 @@ D. `main.rs`
 
 **B. `tests/` folder**
 
-```
+```text
 project/
 ├── src/
 │   └── lib.rs
@@ -117,7 +117,7 @@ D. `assert_eq!` ใช้ได้เฉพาะ numbers
 
 **B. `assert_eq!` แสดง values เมื่อ fail**
 
-```
+```text
 left: 5
 right: 6
 ```

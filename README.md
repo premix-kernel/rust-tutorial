@@ -1,6 +1,6 @@
 # 📚 เรียน Rust ฉบับสมบูรณ์
 
-[![Build mdBook](https://github.com/premix-kernel/rust-tutorial/actions/workflows/mdbook.yml/badge.svg)](https://github.com/premix-kernel/rust-tutorial/actions/workflows/mdbook.yml)
+[![Deploy GitHub Pages](https://github.com/premix-kernel/rust-tutorial/actions/workflows/deploy.yml/badge.svg)](https://github.com/premix-kernel/rust-tutorial/actions/workflows/deploy.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 > 🦀 เอกสารสอนภาษา Rust สำหรับผู้เริ่มต้น | คำอธิบายภาษาไทย | โค้ดภาษาอังกฤษ
