@@ -4,7 +4,7 @@
 
 สร้าง command-line todo app ที่มี features:
 
-```
+```text
 $ todo add "Learn Rust"
 ✅ Added: Learn Rust
 

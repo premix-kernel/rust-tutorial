@@ -14,7 +14,7 @@ D. `Task`
 
 **B. `Future`**
 
-```rust
+```rust,ignore
 async fn fetch() -> String {
     // return impl Future<Output = String>
     String::from("data")
@@ -39,7 +39,7 @@ D. Cancel operation
 
 **B. รอให้ Future complete**
 
-```rust
+```rust,ignore
 let data = fetch().await;
 ```
 
@@ -81,7 +81,7 @@ D. Join tasks
 
 **B. สร้าง async task**
 
-```rust
+```rust,ignore
 tokio::spawn(async {
     // background task
 });

@@ -22,11 +22,11 @@ cd hello_cargo
 
 Cargo จะสร้างโครงสร้างโฟลเดอร์ให้:
 
-```
+```text
 hello_cargo/
-├── Cargo.toml
-└── src/
-    └── main.rs
++-- Cargo.toml
+\-- src/
+    \-- main.rs
 ```
 
 ---
@@ -72,8 +72,8 @@ cargo build
 
 จะสร้างไฟล์ executable ใน `target/debug/`:
 
-```
-./target/debug/hello_cargo
+```text
+target/debug/hello_cargo
 ```
 
 ### Build แบบ Release (เร็วกว่า)
@@ -92,10 +92,10 @@ cargo run
 
 คำสั่งนี้จะ **build และ run** ในคำสั่งเดียว สะดวกมาก!
 
-```
+```text
    Compiling hello_cargo v0.1.0
     Finished dev [unoptimized + debuginfo] target(s) in 0.50s
-     Running `target/debug/hello_cargo`
+     Running target/debug/hello_cargo
 Hello, world!
 ```
 

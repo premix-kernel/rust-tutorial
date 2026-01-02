@@ -14,7 +14,7 @@ D. Lock thread
 
 **B. สร้าง thread ใหม่**
 
-```rust
+```rust,ignore
 let handle = thread::spawn(|| {
     // code ที่รันใน thread ใหม่
 });
@@ -79,7 +79,7 @@ D. File
 
 **B. Sender และ Receiver**
 
-```rust
+```rust,ignore
 let (tx, rx) = mpsc::channel();
 // tx = transmitter/sender
 // rx = receiver

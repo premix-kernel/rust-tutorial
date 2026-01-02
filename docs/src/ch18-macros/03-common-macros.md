@@ -213,7 +213,7 @@ fn process(x: i32) {
 
 หยุดโปรแกรมทันที:
 
-```rust
+```rust,should_panic
 fn main() {
     let v = vec![1, 2, 3];
 
@@ -235,12 +235,12 @@ fn main() {
 
 รวมไฟล์ใน binary:
 
-```rust
+```rust,ignore
 // Include as string
-const README: &str = include_str!("../README.md");
+const README: &str = include_str!("../../README.md");
 
 // Include as bytes
-const LOGO: &[u8] = include_bytes!("../logo.png");
+const LOGO: &[u8] = include_bytes!("../../logo.png");
 
 fn main() {
     println!("First 100 chars of README:");

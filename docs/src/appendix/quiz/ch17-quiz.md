@@ -40,7 +40,7 @@ D. Reference
 
 **B. Raw immutable pointer**
 
-```rust
+```rust,ignore
 let x = 5;
 let ptr: *const i32 = &x;
 ```
@@ -87,7 +87,7 @@ D. Export to JavaScript
 
 **B. Define C-compatible ABI**
 
-```rust
+```rust,ignore
 extern "C" {
     fn abs(input: i32) -> i32;
 }
