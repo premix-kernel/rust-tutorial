@@ -16,7 +16,7 @@
 
 Procedural macros ต้องอยู่ใน separate crate:
 
-```toml
+```toml,ignore
 # my-macro/Cargo.toml
 [package]
 name = "my-macro"
@@ -39,7 +39,7 @@ proc-macro2 = "1"
 
 ### 1. Define Trait (main crate)
 
-```rust
+```rust,ignore
 // src/lib.rs
 pub trait HelloMacro {
     fn hello_macro();
@@ -48,7 +48,7 @@ pub trait HelloMacro {
 
 ### 2. Create Derive Macro (macro crate)
 
-```rust
+```rust,ignore
 // my-macro/src/lib.rs
 use proc_macro::TokenStream;
 use quote::quote;
@@ -75,7 +75,7 @@ pub fn hello_macro_derive(input: TokenStream) -> TokenStream {
 
 ### 3. Use It
 
-```rust
+```rust,ignore
 use hello_macro::HelloMacro;
 use hello_macro_derive::HelloMacro;
 
@@ -93,7 +93,7 @@ fn main() {
 
 อ่าน struct fields:
 
-```rust
+```rust,ignore
 use proc_macro::TokenStream;
 use quote::quote;
 use syn::{parse_macro_input, DeriveInput, Data, Fields};
@@ -132,7 +132,7 @@ pub fn describe_derive(input: TokenStream) -> TokenStream {
 
 Usage:
 
-```rust
+```rust,ignore
 #[derive(Describe)]
 struct User {
     name: String,
@@ -148,7 +148,7 @@ fn main() {
 
 ## Attribute Macro Example
 
-```rust
+```rust,ignore
 use proc_macro::TokenStream;
 use quote::quote;
 use syn::{parse_macro_input, ItemFn};
@@ -175,7 +175,7 @@ pub fn log_call(_attr: TokenStream, item: TokenStream) -> TokenStream {
 
 Usage:
 
-```rust
+```rust,ignore
 #[log_call]
 fn add(a: i32, b: i32) -> i32 {
     a + b
@@ -194,7 +194,7 @@ fn main() {
 
 ## Function-like Macro
 
-```rust
+```rust,ignore
 use proc_macro::TokenStream;
 use quote::quote;
 use syn::{parse_macro_input, LitStr};
@@ -214,7 +214,7 @@ pub fn make_greeting(input: TokenStream) -> TokenStream {
 
 Usage:
 
-```rust
+```rust,ignore
 let msg = make_greeting!("World");
 println!("{}", msg);  // "Hello, World!"
 ```

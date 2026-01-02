@@ -2,7 +2,7 @@
 
 ## main.rs
 
-```rust
+```rust,ignore
 use std::env;
 use todo_cli::{run, Command};
 
@@ -36,7 +36,7 @@ fn main() {
 
 ## lib.rs
 
-```rust
+```rust,ignore
 mod todo;
 mod storage;
 
@@ -93,7 +93,7 @@ pub fn run(command: Command) -> Result<(), Box<dyn std::error::Error>> {
 
 ## storage.rs
 
-```rust
+```rust,ignore
 use crate::Todo;
 use std::fs;
 

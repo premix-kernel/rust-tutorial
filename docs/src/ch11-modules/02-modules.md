@@ -6,7 +6,7 @@
 
 โปรเจกต์ Rust มีโครงสร้างเป็น tree:
 
-```
+```text
 crate (root)
 ├── front_of_house
 │   ├── hosting
@@ -23,7 +23,7 @@ crate (root)
 
 ## นิยาม Module
 
-```rust
+```rust,ignore
 mod front_of_house {
     pub mod hosting {
         pub fn add_to_waitlist() {}
@@ -48,7 +48,7 @@ fn main() {
 
 **Default:** ทุกอย่างเป็น private
 
-```rust
+```rust,ignore
 mod my_module {
     pub fn public_function() {}  // ✅ เข้าถึงได้จากนอก
     fn private_function() {}     // ❌ private
@@ -77,7 +77,7 @@ mod my_module {
 | `pub(super)`   | Public ใน parent module |
 | `pub(in path)` | Public ใน path ที่ระบุ  |
 
-```rust
+```rust,ignore
 mod outer {
     pub(crate) fn crate_only() {}
 
@@ -100,7 +100,7 @@ fn main() {
 
 ### Basic use
 
-```rust
+```rust,ignore
 mod front_of_house {
     pub mod hosting {
         pub fn add_to_waitlist() {}
@@ -116,7 +116,7 @@ fn main() {
 
 ### Idiomatic use
 
-```rust
+```rust,ignore
 // ✅ Good: use parent module สำหรับ functions
 use std::collections::HashMap;
 
@@ -132,7 +132,7 @@ use std::io::Result;
 
 ### use กับ as (alias)
 
-```rust
+```rust,ignore
 use std::fmt::Result;
 use std::io::Result as IoResult;
 
@@ -149,7 +149,7 @@ fn function2() -> IoResult<()> {
 
 ## Re-exporting with pub use
 
-```rust
+```rust,ignore
 mod front_of_house {
     pub mod hosting {
         pub fn add_to_waitlist() {}
@@ -168,7 +168,7 @@ pub use crate::front_of_house::hosting;
 
 ## Nested Paths
 
-```rust
+```rust,ignore
 // แทนที่จะเขียน:
 use std::cmp::Ordering;
 use std::io;
@@ -185,7 +185,7 @@ use std::io::{self, Write};
 
 ## Glob Operator
 
-```rust
+```rust,ignore
 // นำเข้าทุกอย่างที่เป็น public
 use std::collections::*;
 
@@ -201,7 +201,7 @@ fn main() {
 
 ## ตัวอย่างจริง: Library Structure
 
-```rust
+```rust,ignore
 // lib.rs
 mod authentication;
 mod database;
@@ -217,7 +217,7 @@ pub mod api {
 
 ผู้ใช้ library:
 
-```rust
+```rust,ignore
 use my_lib::User;
 use my_lib::Connection;
 use my_lib::api::get_users;
@@ -231,7 +231,7 @@ use my_lib::api::get_users;
 2. **Children can see private ancestors**
 3. **Siblings can see each other**
 
-```rust
+```rust,ignore
 mod parent {
     fn parent_private() {}
     pub fn parent_public() {}

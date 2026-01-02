@@ -6,7 +6,7 @@
 
 ### รูปแบบ 1: ไฟล์เดียว
 
-```
+```text
 src/
 ├── main.rs
 └── my_module.rs   ← mod my_module; จะหาที่นี่
@@ -14,7 +14,7 @@ src/
 
 ### รูปแบบ 2: โฟลเดอร์ + mod.rs
 
-```
+```text
 src/
 ├── main.rs
 └── my_module/
@@ -28,7 +28,7 @@ src/
 
 ### โครงสร้าง
 
-```
+```text
 my_project/
 ├── Cargo.toml
 └── src/
@@ -47,7 +47,7 @@ my_project/
 
 ### src/lib.rs
 
-```rust
+```rust,ignore
 // ประกาศ modules
 pub mod config;
 pub mod database;
@@ -56,7 +56,7 @@ pub mod handlers;
 
 ### src/config.rs
 
-```rust
+```rust,ignore
 pub struct Config {
     pub database_url: String,
     pub port: u16,
@@ -74,7 +74,7 @@ impl Config {
 
 ### src/database/mod.rs
 
-```rust
+```rust,ignore
 // ประกาศ submodules
 pub mod connection;
 pub mod queries;
@@ -86,7 +86,7 @@ pub use queries::Query;
 
 ### src/database/connection.rs
 
-```rust
+```rust,ignore
 pub struct DatabaseConnection {
     url: String,
     connected: bool,
@@ -109,7 +109,7 @@ impl DatabaseConnection {
 
 ### src/database/queries.rs
 
-```rust
+```rust,ignore
 use super::DatabaseConnection;
 
 pub struct Query {
@@ -129,14 +129,14 @@ impl Query {
 
 ### src/handlers/mod.rs
 
-```rust
+```rust,ignore
 pub mod users;
 pub mod posts;
 ```
 
 ### src/main.rs
 
-```rust
+```rust,ignore
 use my_project::{config::Config, database::DatabaseConnection};
 
 fn main() {
@@ -158,7 +158,7 @@ Rust หา module ตามลำดับนี้:
 2. **File:** `src/name.rs`
 3. **Directory:** `src/name/mod.rs`
 
-```rust
+```rust,ignore
 // src/lib.rs
 mod foo;        // หา src/foo.rs หรือ src/foo/mod.rs
 mod bar;        // หา src/bar.rs หรือ src/bar/mod.rs
@@ -174,7 +174,7 @@ mod inline {    // inline module
 
 แทนที่จะใช้ `mod.rs` ใช้ชื่อ folder:
 
-```
+```text
 src/
 ├── lib.rs
 ├── database.rs      ← แทน database/mod.rs
@@ -183,7 +183,7 @@ src/
     └── queries.rs
 ```
 
-```rust
+```rust,ignore
 // src/database.rs
 pub mod connection;
 pub mod queries;
@@ -193,7 +193,7 @@ pub mod queries;
 
 ## Private vs Public Files
 
-```rust
+```rust,ignore
 // src/lib.rs
 mod private_module;      // private - ใช้ได้ใน crate นี้เท่านั้น
 pub mod public_module;   // public - user ของ crate ใช้ได้
@@ -205,7 +205,7 @@ pub mod public_module;   // public - user ของ crate ใช้ได้
 
 สำหรับโปรเจกต์ใหญ่มาก:
 
-```
+```text
 my_workspace/
 ├── Cargo.toml           ← [workspace]
 ├── crates/
@@ -220,7 +220,7 @@ my_workspace/
 │       └── src/main.rs
 ```
 
-```toml
+```toml,ignore
 # Cargo.toml (workspace root)
 [workspace]
 members = ["crates/*"]

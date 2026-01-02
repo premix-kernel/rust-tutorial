@@ -88,7 +88,7 @@ D. ใส่ tests ใน main.rs
 
 **B. แยก modules ตาม responsibility**
 
-```
+```text
 src/
 ├── main.rs
 ├── lib.rs

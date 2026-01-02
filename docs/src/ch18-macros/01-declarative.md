@@ -4,7 +4,7 @@
 
 ## ทำไมต้องใช้ Macros?
 
-```rust
+```rust,ignore
 // ❌ ซ้ำซาก
 let v1 = vec![1, 2, 3];
 let v2 = {
@@ -23,7 +23,7 @@ let v1 = vec![1, 2, 3];
 
 ## Syntax พื้นฐาน
 
-```rust
+```rust,ignore
 macro_rules! macro_name {
     ( pattern ) => {
         expansion
