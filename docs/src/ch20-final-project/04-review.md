@@ -108,51 +108,7 @@ std::thread::spawn(move || {
 
 ## Resources สำหรับเรียนต่อ
 
-### Official Resources
-
-- 📖 [The Rust Book](https://doc.rust-lang.org/book/) - Complete guide
-- 📝 [Rust by Example](https://doc.rust-lang.org/rust-by-example/) - Learn by doing
-- 📚 [Rustlings](https://github.com/rust-lang/rustlings) - Small exercises
-
-### Practice
-
-- 🎯 [Exercism Rust Track](https://exercism.org/tracks/rust) - Mentored exercises
-- 🧩 [Advent of Code](https://adventofcode.com/) - Yearly puzzles
-- 💻 [LeetCode](https://leetcode.com/) - Data structures & algorithms
-
-### Community
-
-- 💬 [Rust Discord](https://discord.gg/rust-lang) - Chat community
-- 🗣️ [Rust Users Forum](https://users.rust-lang.org/) - Q&A
-- 📺 [Rust YouTube](https://www.youtube.com/@RustVideos) - Talks & tutorials
-
-### Crates
-
-- 📦 [Crates.io](https://crates.io) - Official package registry
-- 🔍 [Lib.rs](https://lib.rs) - Better crate search
-- 📊 [Blessed.rs](https://blessed.rs) - Recommended crates
-
----
-
-## Rust Philosophy
-
-จำหลักการเหล่านี้ไว้:
-
-> **"If it compiles, it works."**
->
-> - Memory safety at compile time
-> - No null pointer exceptions
-> - No data races
-
-> **"Zero-cost abstractions"**
->
-> - High-level code, low-level performance
-> - Pay only for what you use
-
-> **"Fearless concurrency"**
->
-> - The compiler prevents race conditions
-> - Safe parallelism by default
+ดูรายละเอียดเพิ่มเติมที่ � [Appendix: Resources](../appendix/resources.md)
 
 ---
 
