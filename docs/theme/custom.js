@@ -33,8 +33,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // 3. Dynamic Footer
-    const pageContent = document.querySelector('.page-content');
-    if (pageContent) {
+    // 3. Dynamic Footer
+    const contentWrapper = document.querySelector('main');
+    if (contentWrapper) {
         const currentUrl = encodeURIComponent(window.location.href);
         const title = encodeURIComponent(document.title);
 
@@ -55,6 +56,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 </p>
             </div>
         `;
-        pageContent.appendChild(footer);
+        contentWrapper.appendChild(footer);
+    } else {
+        console.error("Rust Tutorial: Could not find 'main' element to append footer.");
     }
 });
