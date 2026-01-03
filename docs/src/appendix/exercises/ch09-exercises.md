@@ -70,7 +70,7 @@ let value = match some_option {
     Some(v) => v,
     None => 0,
 };
-```text
+```
 
 <details>
 <summary>ดูเฉลย</summary>
@@ -80,7 +80,7 @@ let value = some_option.unwrap_or(0);
 
 // หรือใช้ unwrap_or_default() ถ้า type implement Default
 let value = some_option.unwrap_or_default();
-```text
+```
 
 </details>
 
