@@ -27,6 +27,22 @@
 | 🎮 Game Engines | Game Development |
 | 🔐 Blockchain | Crypto, Smart Contracts |
 
+### 🌍 ใครใช้ Rust?
+
+บริษัทชั้นนำระดับโลกเปลี่ยนมาใช้ Rust เพราะความปลอดภัยและประสิทธิภาพ:
+
+| บริษัท | โปรเจกต์ | ทำไมถึงเลือก Rust |
+|--------|----------|-------------------|
+| **Microsoft** | [Windows kernel](https://www.theregister.com/2023/04/27/microsoft_windows_rust/) | Memory safety ใน OS |
+| **Google** | [Android (Binder)](https://security.googleblog.com/2022/12/memory-safe-languages-in-android-13.html) | ลดช่องโหว่ด้านความปลอดภัย |
+| **Meta** | [Mononoke](https://engineering.fb.com/2022/07/27/developer-tools/programming-languages-endorsed-for-server-side-use-at-meta/) | Concurrency ที่ดีกว่า |
+| **AWS** | [Firecracker](https://aws.amazon.com/blogs/opensource/why-aws-loves-rust-and-how-wed-like-to-help/) | Low latency สำหรับ Lambda |
+| **Cloudflare** | [Pingora](https://blog.cloudflare.com/how-we-built-pingora-the-proxy-that-connects-cloudflare-to-the-internet/) | แทน nginx, เร็วกว่า 3 เท่า |
+| **Discord** | [Read States](https://discord.com/blog/why-discord-is-switching-from-go-to-rust) | Go → Rust, ลด latency spike |
+| **Linux** | [Rust for Linux](https://www.kernel.org/doc/html/next/rust/index.html) | ภาษาที่ 2 หลัง C ใน kernel |
+
+> 💡 **รู้หรือไม่?** Discord เคยมีปัญหา latency spike ทุก 2 นาที เมื่อเปลี่ยนจาก Go เป็น Rust ปัญหาหายไปเลย!
+
 ---
 
 ## หนังสือเล่มนี้มีอะไรบ้าง?
