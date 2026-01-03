@@ -12,7 +12,7 @@ Rust มี 3 ประเภทของ loop:
 
 ## loop - วนไม่รู้จบ
 
-```rust
+```rust,ignore
 fn main() {
     let mut count = 0;
 
@@ -29,7 +29,7 @@ fn main() {
 
 ผลลัพธ์:
 
-```
+```text
 Count: 1
 Count: 2
 Count: 3
@@ -39,7 +39,7 @@ Count: 3
 
 `loop` สามารถ return ค่าผ่าน `break`:
 
-```rust
+```rust,ignore
 fn main() {
     let mut counter = 0;
 
@@ -59,7 +59,7 @@ fn main() {
 
 ## while - วนตามเงื่อนไข
 
-```rust
+```rust,ignore
 fn main() {
     let mut number = 3;
 
@@ -74,7 +74,7 @@ fn main() {
 
 ผลลัพธ์:
 
-```
+```text
 3!
 2!
 1!
@@ -87,7 +87,7 @@ LIFTOFF!
 
 `for` เป็น loop ที่ใช้บ่อยที่สุด:
 
-```rust
+```rust,ignore
 fn main() {
     let a = [10, 20, 30, 40, 50];
 
@@ -99,7 +99,7 @@ fn main() {
 
 ### Range
 
-```rust
+```rust,ignore
 fn main() {
     // 1 ถึง 4 (ไม่รวม 5)
     for number in 1..5 {
@@ -119,7 +119,7 @@ fn main() {
 
 ### Reverse
 
-```rust
+```rust,ignore
 fn main() {
     for number in (1..4).rev() {
         println!("{}!", number);
@@ -130,7 +130,7 @@ fn main() {
 
 ผลลัพธ์:
 
-```
+```text
 3!
 2!
 1!
@@ -141,7 +141,7 @@ LIFTOFF!
 
 ## continue - ข้าม iteration
 
-```rust
+```rust,ignore
 fn main() {
     for number in 1..=10 {
         if number % 2 == 0 {
@@ -154,7 +154,7 @@ fn main() {
 
 ผลลัพธ์:
 
-```
+```text
 1
 3
 5
@@ -168,7 +168,7 @@ fn main() {
 
 ใช้ label เพื่อ break/continue loop นอก:
 
-```rust
+```rust,ignore
 fn main() {
     let mut count = 0;
 
@@ -200,7 +200,7 @@ fn main() {
 
 ### เมื่อไหร่ใช้อะไร?
 
-```rust
+```rust,ignore
 fn main() {
     // ใช้ for เมื่อรู้จำนวนรอบ หรือวน collection
     for i in 0..5 {
@@ -227,7 +227,7 @@ fn main() {
 
 ## ตัวอย่างจริง: FizzBuzz
 
-```rust
+```rust,ignore
 fn main() {
     for n in 1..=15 {
         if n % 15 == 0 {
@@ -247,7 +247,7 @@ fn main() {
 
 ## ตัวอย่างจริง: หาผลรวม
 
-```rust
+```rust,ignore
 fn main() {
     let numbers = [1, 2, 3, 4, 5];
     let mut sum = 0;

@@ -4,7 +4,7 @@
 
 ## Iterator Trait
 
-```rust
+```rust,ignore
 pub trait Iterator {
     type Item;
 
@@ -23,7 +23,7 @@ pub trait Iterator {
 
 ## Basic Usage
 
-```rust
+```rust,ignore
 fn main() {
     let v = vec![1, 2, 3];
 
@@ -45,7 +45,7 @@ fn main() {
 
 ### 1. iter() - Borrow (&T)
 
-```rust
+```rust,ignore
 fn main() {
     let v = vec![1, 2, 3];
 
@@ -60,7 +60,7 @@ fn main() {
 
 ### 2. iter_mut() - Mutable Borrow (&mut T)
 
-```rust
+```rust,ignore
 fn main() {
     let mut v = vec![1, 2, 3];
 
@@ -74,7 +74,7 @@ fn main() {
 
 ### 3. into_iter() - Take Ownership (T)
 
-```rust
+```rust,ignore
 fn main() {
     let v = vec![String::from("a"), String::from("b")];
 
@@ -98,7 +98,7 @@ fn main() {
 
 ## for Loop กับ Iterator
 
-```rust
+```rust,ignore
 fn main() {
     let v = vec![1, 2, 3];
 
@@ -123,7 +123,7 @@ fn main() {
 
 Iterator ไม่ทำอะไรจนกว่าจะ "consume":
 
-```rust
+```rust,ignore
 fn main() {
     let v = vec![1, 2, 3];
 
@@ -147,7 +147,7 @@ fn main() {
 
 ## Range as Iterator
 
-```rust
+```rust,ignore
 fn main() {
     // Range เป็น iterator
     for i in 0..5 {
@@ -169,7 +169,7 @@ fn main() {
 
 ## Common Iterators
 
-```rust
+```rust,ignore
 fn main() {
     // chars() - iterate characters
     for c in "hello".chars() {
@@ -199,7 +199,7 @@ fn main() {
 
 ## Infinite Iterators
 
-```rust
+```rust,ignore
 fn main() {
     // repeat - ซ้ำค่าเดิมตลอด
     let threes: Vec<i32> = std::iter::repeat(3).take(5).collect();

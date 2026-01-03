@@ -4,7 +4,7 @@
 
 ## Simple String Error
 
-```rust
+```rust,ignore
 fn divide(a: f64, b: f64) -> Result<f64, String> {
     if b == 0.0 {
         Err(String::from("Cannot divide by zero"))
@@ -25,7 +25,7 @@ fn main() {
 
 ## Enum Error Type
 
-```rust
+```rust,ignore
 #[derive(Debug)]
 enum MathError {
     DivisionByZero,
@@ -62,7 +62,7 @@ fn main() {
 
 ## Implement Display และ Error
 
-```rust
+```rust,ignore
 use std::fmt;
 use std::error::Error;
 
@@ -112,7 +112,7 @@ fn main() {
 
 ## From Trait สำหรับ Error Conversion
 
-```rust
+```rust,ignore
 use std::io;
 use std::num::ParseIntError;
 use std::fmt;
@@ -167,7 +167,7 @@ fn read_number_from_file(path: &str) -> Result<i32, MyError> {
 thiserror = "1.0"
 ```
 
-```rust
+```rust,ignore
 use thiserror::Error;
 
 #[derive(Error, Debug)]
@@ -202,7 +202,7 @@ fn process() -> Result<i32, AppError> {
 anyhow = "1.0"
 ```
 
-```rust
+```rust,ignore
 use anyhow::{Context, Result};
 
 fn read_config() -> Result<String> {

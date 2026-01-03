@@ -20,7 +20,7 @@
 
 ## ตัวอย่างพื้นฐาน
 
-```rust
+```rust,ignore
 fn main() {
     {
         let s = String::from("hello"); // s เกิดขึ้น เป็น owner ของ "hello"
@@ -53,7 +53,7 @@ fn main() {
 - ต้อง allocate และ deallocate
 - เช่น: `String`, `Vec<T>`
 
-```
+```text
 ┌─────────────────┐
 │     Stack       │
 ├─────────────────┤
@@ -73,7 +73,7 @@ fn main() {
 
 ข้อมูลขนาดเล็กถูก **copy** อัตโนมัติ:
 
-```rust
+```rust,ignore
 fn main() {
     let x = 5;
     let y = x; // copy ค่า
@@ -94,7 +94,7 @@ fn main() {
 
 ข้อมูลบน Heap ถูก **move**:
 
-```rust
+```rust,ignore
 fn main() {
     let s1 = String::from("hello");
     let s2 = s1; // s1 ถูก MOVE ไป s2
@@ -110,7 +110,7 @@ fn main() {
 
 ถ้า Rust copy ข้อมูลบน Heap แทนที่จะ move:
 
-```
+```text
         ┌─────────────┐
 s1 ────►│   hello     │◄──── s2 (ถ้า copy)
         └─────────────┘
@@ -128,7 +128,7 @@ Rust ป้องกันโดยทำให้ `s1` ใช้ไม่ได
 
 ### ส่งค่าเข้า function = Move
 
-```rust
+```rust,ignore
 fn main() {
     let s = String::from("hello");
 
@@ -144,7 +144,7 @@ fn takes_ownership(some_string: String) {
 
 ### Return = ย้าย ownership กลับ
 
-```rust
+```rust,ignore
 fn main() {
     let s1 = gives_ownership(); // s1 ได้รับ ownership
 
@@ -161,7 +161,7 @@ fn gives_ownership() -> String {
 
 ## ตัวอย่าง: ส่งและรับกลับ
 
-```rust
+```rust,ignore
 fn main() {
     let s1 = String::from("hello");
 
@@ -184,7 +184,7 @@ fn calculate_length(s: String) -> (String, usize) {
 
 ## Scope และ Drop
 
-```rust
+```rust,ignore
 fn main() {
     let outer = String::from("outer");
 

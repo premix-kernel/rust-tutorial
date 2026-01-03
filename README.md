@@ -52,7 +52,15 @@ mdbook build
 # ไฟล์อยู่ใน docs/book/
 ```
 
-### วิธีที่ 4: รัน Example Code
+### วิธีที่ 4: ทดสอบ Code Examples
+
+```bash
+cd docs
+mdbook test
+# ตรวจสอบว่า code blocks ถูกต้องก่อน commit
+```
+
+### วิธีที่ 5: รัน Example Code
 
 ```bash
 # รันตัวอย่างโค้ด

@@ -41,7 +41,7 @@ D. Cancel operation
 
 ```rust,ignore
 let data = fetch().await;
-```
+```text
 
 </details>
 
@@ -85,7 +85,7 @@ D. Join tasks
 tokio::spawn(async {
     // background task
 });
-```
+```text
 
 </details>
 

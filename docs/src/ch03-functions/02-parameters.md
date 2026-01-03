@@ -4,7 +4,7 @@
 
 ## Syntax
 
-```rust
+```rust,ignore
 fn function_name(param1: Type1, param2: Type2) {
     // use param1 and param2
 }
@@ -29,7 +29,7 @@ fn print_number(x: i32) {
 
 ผลลัพธ์:
 
-```
+```text
 The number is: 5
 The number is: 10
 ```
@@ -55,7 +55,7 @@ fn greet(name: &str, age: u32) {
 
 ผลลัพธ์:
 
-```
+```text
 The measurement is: 5h
 Hello, Alice! You are 25 years old.
 ```

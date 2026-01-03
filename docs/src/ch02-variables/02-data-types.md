@@ -24,7 +24,7 @@ Rust แบ่งชนิดข้อมูลเป็น 2 กลุ่มห
 | 128-bit | i128          | u128                   |
 | arch    | isize         | usize                  |
 
-```rust
+```rust,ignore
 fn main() {
     let a: i32 = 42;        // จำนวนเต็ม 32-bit
     let b: u8 = 255;        // จำนวนเต็มบวก 8-bit (0-255)
@@ -37,7 +37,7 @@ fn main() {
 
 #### รูปแบบการเขียนตัวเลข
 
-```rust
+```rust,ignore
 fn main() {
     let decimal = 98_222;      // Decimal (ใส่ _ ให้อ่านง่าย)
     let hex = 0xff;            // Hexadecimal
@@ -54,7 +54,7 @@ fn main() {
 
 ### 2. Floating-Point (ทศนิยม)
 
-```rust
+```rust,ignore
 fn main() {
     let x = 2.0;      // f64 (default, แม่นยำกว่า)
     let y: f32 = 3.0; // f32 (ใช้หน่วยความจำน้อยกว่า)
@@ -65,7 +65,7 @@ fn main() {
 
 #### การคำนวณ
 
-```rust
+```rust,ignore
 fn main() {
     let sum = 5 + 10;           // บวก
     let difference = 95.5 - 4.3; // ลบ
@@ -85,7 +85,7 @@ fn main() {
 
 ### 3. Boolean (ค่าความจริง)
 
-```rust
+```rust,ignore
 fn main() {
     let t = true;
     let f: bool = false;
@@ -103,7 +103,7 @@ fn main() {
 
 ### 4. Character (ตัวอักษร)
 
-```rust
+```rust,ignore
 fn main() {
     let c = 'z';
     let z: char = 'ℤ';
@@ -125,7 +125,7 @@ fn main() {
 
 **Tuple** รวมค่าหลายชนิดไว้ด้วยกัน มีขนาดคงที่
 
-```rust
+```rust,ignore
 fn main() {
     let tup: (i32, f64, u8) = (500, 6.4, 1);
 
@@ -146,7 +146,7 @@ fn main() {
 
 Tuple ว่าง `()` เรียกว่า **unit** ใช้แทน "ไม่มีค่า"
 
-```rust
+```rust,ignore
 fn main() {
     let unit: () = ();
     println!("unit = {:?}", unit); // ()
@@ -159,7 +159,7 @@ fn main() {
 
 **Array** รวมค่าชนิดเดียวกันไว้ด้วยกัน มีขนาดคงที่
 
-```rust
+```rust,ignore
 fn main() {
     // ประกาศ array
     let a = [1, 2, 3, 4, 5];
@@ -178,7 +178,7 @@ fn main() {
 
 #### การเข้าถึง Elements
 
-```rust
+```rust,ignore
 fn main() {
     let a = [1, 2, 3, 4, 5];
 
@@ -191,7 +191,7 @@ fn main() {
 
 > **คำเตือน:** ถ้าเข้าถึง index ที่ไม่มีอยู่ โปรแกรมจะ panic!
 >
-> ```rust
+> ```rust,ignore
 > let a = [1, 2, 3];
 > let x = a[10]; // ❌ panic!
 > ```

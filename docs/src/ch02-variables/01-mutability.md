@@ -4,7 +4,7 @@
 
 ใน Rust เราใช้ `let` เพื่อประกาศตัวแปร:
 
-```rust
+```rust,ignore
 fn main() {
     let x = 5;
     println!("x = {}", x);
@@ -23,7 +23,7 @@ x = 5
 
 **ตัวแปรใน Rust เปลี่ยนค่าไม่ได้โดยปกติ!**
 
-```rust
+```rust,compile_fail
 fn main() {
     let x = 5;
     println!("x = {}", x);

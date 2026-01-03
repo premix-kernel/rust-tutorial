@@ -181,7 +181,7 @@ src/
 └── database/
     ├── connection.rs
     └── queries.rs
-```
+```text
 
 ```rust,ignore
 // src/database.rs
@@ -218,7 +218,7 @@ my_workspace/
 │   └── cli/
 │       ├── Cargo.toml
 │       └── src/main.rs
-```
+```text
 
 ```toml,ignore
 # Cargo.toml (workspace root)

@@ -32,7 +32,7 @@ code นี้ถูกหรือผิด?
 let s1 = String::from("hello");
 let s2 = s1;
 println!("{}", s1);
-```
+```text
 
 A. ถูก  
 B. ผิด - s1 ถูก move  
@@ -67,7 +67,7 @@ D. Move
 ```rust,ignore
 let s = String::from("hello");
 let r = &s; // borrow แบบ immutable
-```
+```text
 
 </details>
 

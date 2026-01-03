@@ -17,7 +17,7 @@ D. Error handler
 ```rust,ignore
 let x = 10;
 let add_x = |y| y + x; // capture x
-```
+```text
 
 </details>
 
@@ -39,7 +39,7 @@ D. กรอง items
 
 ```rust,ignore
 let v: Vec<i32> = (1..5).collect();
-```
+```text
 
 </details>
 
@@ -86,7 +86,7 @@ let doubled: Vec<i32> = vec![1, 2, 3]
     .iter()
     .map(|x| x * 2)
     .collect(); // [2, 4, 6]
-```
+```text
 
 </details>
 

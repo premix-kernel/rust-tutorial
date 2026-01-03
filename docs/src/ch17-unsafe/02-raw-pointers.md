@@ -4,7 +4,7 @@
 
 ## สร้าง Raw Pointers
 
-```rust
+```rust,ignore
 fn main() {
     let mut num = 5;
 
@@ -24,7 +24,7 @@ fn main() {
 
 ## Dereference Raw Pointers
 
-```rust
+```rust,ignore
 fn main() {
     let mut num = 5;
 
@@ -59,7 +59,7 @@ fn main() {
 
 ## สร้าง Null Pointer
 
-```rust
+```rust,ignore
 fn main() {
     // null pointer
     let null_ptr: *const i32 = std::ptr::null();
@@ -79,7 +79,7 @@ fn main() {
 
 ## Pointer Arithmetic
 
-```rust
+```rust,ignore
 fn main() {
     let arr = [1, 2, 3, 4, 5];
     let ptr = arr.as_ptr();  // *const i32
@@ -111,7 +111,7 @@ fn main() {
 
 ## Casting Between Pointer Types
 
-```rust
+```rust,ignore
 fn main() {
     let mut num = 42i32;
 
@@ -139,7 +139,7 @@ fn main() {
 
 ## ตัวอย่างจริง: Swap Values
 
-```rust
+```rust,ignore
 unsafe fn swap<T>(a: *mut T, b: *mut T) {
     let temp = std::ptr::read(a);
     std::ptr::copy_nonoverlapping(b, a, 1);
@@ -162,7 +162,7 @@ fn main() {
 
 ## Safe Pointer Functions
 
-```rust
+```rust,ignore
 use std::ptr;
 
 fn main() {

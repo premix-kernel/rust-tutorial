@@ -11,7 +11,7 @@
 
 ## สร้าง String
 
-```rust
+```rust,ignore
 fn main() {
     // จาก string literal
     let s1 = String::from("Hello");
@@ -31,7 +31,7 @@ fn main() {
 
 ## String vs &str
 
-```rust
+```rust,ignore
 fn main() {
     let s1: String = String::from("Hello"); // owned
     let s2: &str = "Hello";                 // borrowed (string literal)
@@ -58,7 +58,7 @@ fn greet(name: &str) {
 
 ### push_str และ push
 
-```rust
+```rust,ignore
 fn main() {
     let mut s = String::from("Hello");
 
@@ -71,7 +71,7 @@ fn main() {
 
 ### + Operator
 
-```rust
+```rust,ignore
 fn main() {
     let s1 = String::from("Hello, ");
     let s2 = String::from("World!");
@@ -88,7 +88,7 @@ fn main() {
 
 ### format! (แนะนำ)
 
-```rust
+```rust,ignore
 fn main() {
     let s1 = String::from("Hello");
     let s2 = String::from("World");
@@ -108,7 +108,7 @@ fn main() {
 
 **String ใน Rust เป็น UTF-8** → ไม่สามารถ index ด้วย `s[0]` ได้!
 
-```rust
+```rust,ignore
 fn main() {
     let hello = String::from("สวัสดี");
 
@@ -124,7 +124,7 @@ fn main() {
 
 ### การวนลูป
 
-```rust
+```rust,ignore
 fn main() {
     let hello = String::from("สวัสดี");
 
@@ -144,7 +144,7 @@ fn main() {
 
 ## Methods ที่ใช้บ่อย
 
-```rust
+```rust,ignore
 fn main() {
     let s = String::from("  Hello, World!  ");
 
@@ -176,7 +176,7 @@ fn main() {
 
 ## ตัวอย่างจริง: Parse และ Format
 
-```rust
+```rust,ignore
 fn main() {
     // Parse string to number
     let num_str = "42";

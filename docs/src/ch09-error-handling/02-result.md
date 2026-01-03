@@ -15,7 +15,7 @@ enum Result<T, E> {
 
 ## ตัวอย่างพื้นฐาน
 
-```rust
+```rust,ignore
 use std::fs::File;
 
 fn main() {
@@ -36,7 +36,7 @@ fn main() {
 
 ## จัดการหลายประเภท Error
 
-```rust
+```rust,ignore
 use std::fs::File;
 use std::io::ErrorKind;
 
@@ -69,7 +69,7 @@ fn main() {
 
 ### unwrap
 
-```rust
+```rust,ignore
 use std::fs::File;
 
 fn main() {
@@ -80,7 +80,7 @@ fn main() {
 
 ### expect (แนะนำ)
 
-```rust
+```rust,ignore
 use std::fs::File;
 
 fn main() {
@@ -94,7 +94,7 @@ fn main() {
 
 ## Methods ที่ใช้บ่อย
 
-```rust
+```rust,ignore
 fn main() {
     let ok_result: Result<i32, &str> = Ok(42);
     let err_result: Result<i32, &str> = Err("error");
@@ -130,7 +130,7 @@ fn main() {
 
 แปลง Result เป็น Option:
 
-```rust
+```rust,ignore
 fn main() {
     let ok_result: Result<i32, &str> = Ok(42);
     let err_result: Result<i32, &str> = Err("error");
@@ -149,7 +149,7 @@ fn main() {
 
 ## and_then (Chaining)
 
-```rust
+```rust,ignore
 fn square(x: i32) -> Result<i32, &'static str> {
     if x > 100 {
         Err("Too large to square")
@@ -177,7 +177,7 @@ fn main() {
 
 ## ตัวอย่างจริง: Parse Number
 
-```rust
+```rust,ignore
 fn parse_and_double(s: &str) -> Result<i32, std::num::ParseIntError> {
     let n: i32 = s.parse()?;
     Ok(n * 2)

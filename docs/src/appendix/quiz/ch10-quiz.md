@@ -16,7 +16,7 @@ D. Trait
 
 ```rust,ignore
 fn largest<T: PartialOrd>(list: &[T]) -> &T { ... }
-```
+```text
 
 </details>
 
@@ -38,7 +38,7 @@ D. กำหนด thread
 
 ```rust,ignore
 fn longest<'a>(x: &'a str, y: &'a str) -> &'a str
-```
+```text
 
 </details>
 

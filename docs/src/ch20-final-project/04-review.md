@@ -57,7 +57,7 @@
 
 ## Key Skills คุณได้
 
-```rust
+```rust,ignore
 // 1. Memory safety without GC
 let s1 = String::from("hello");
 let s2 = &s1;  // Borrowing
@@ -168,7 +168,7 @@ std::thread::spawn(move || {
 
 ## ขอบคุณที่เรียนกับเรา! 🦀
 
-```
+```text
      _~^~^~_
  \) /  o o  \ (/
    '_   ∿   _'

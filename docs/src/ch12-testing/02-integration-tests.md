@@ -15,7 +15,7 @@
 
 ## โครงสร้างโปรเจกต์
 
-```
+```text
 my_library/
 ├── Cargo.toml
 ├── src/
@@ -63,7 +63,7 @@ impl Calculator {
 
 ### tests/integration_test.rs
 
-```rust
+```rust,ignore
 use my_library::{add, multiply, Calculator};
 
 #[test]
@@ -98,7 +98,7 @@ fn test_calculator_workflow() {
 
 ### tests/common/mod.rs
 
-```rust
+```rust,ignore
 use my_library::Calculator;
 
 pub fn setup_calculator_with_value(value: i32) -> Calculator {
@@ -138,7 +138,7 @@ impl Drop for TestContext {
 
 ### ใช้ Shared Code
 
-```rust
+```rust,ignore
 // tests/integration_test.rs
 mod common;
 
@@ -179,7 +179,7 @@ cargo test --test '*'
 
 ถ้ามีแค่ `main.rs` (binary crate):
 
-```rust
+```rust,ignore
 // src/main.rs
 fn main() {
     let result = add(2, 3);
@@ -193,7 +193,7 @@ fn add(a: i32, b: i32) -> i32 {
 
 **ทางแก้:** แยก logic ไปไว้ใน `lib.rs`:
 
-```rust
+```rust,ignore
 // src/lib.rs
 pub fn add(a: i32, b: i32) -> i32 {
     a + b
@@ -211,7 +211,7 @@ fn main() {
 
 ## หลาย Test Files
 
-```rust
+```rust,ignore
 // tests/math_tests.rs
 use my_library::{add, multiply};
 
@@ -237,7 +237,7 @@ fn test_calculator_chain() {
 
 ## Async Integration Tests
 
-```rust
+```rust,ignore
 // tests/async_test.rs
 
 #[tokio::test]
@@ -268,7 +268,7 @@ async fn test_async_function() {
 
 ### File Structure
 
-```
+```text
 tests/
 ├── common/mod.rs     ← shared code (NOT a test)
 ├── test_a.rs         ← first test file

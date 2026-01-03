@@ -19,7 +19,7 @@ struct User {
 
 ## สร้าง Instance
 
-```rust
+```rust,ignore
 fn main() {
     let user1 = User {
         email: String::from("alice@example.com"),
@@ -44,7 +44,14 @@ struct User {
 
 ## เข้าถึงและแก้ไข Fields
 
-```rust
+```rust,ignore
+struct User {
+    username: String,
+    email: String,
+    sign_in_count: u64,
+    active: bool,
+}
+
 fn main() {
     let mut user1 = User {
         email: String::from("alice@example.com"),
@@ -71,7 +78,14 @@ fn main() {
 
 ถ้าชื่อ parameter ตรงกับ field ไม่ต้องเขียนซ้ำ:
 
-```rust
+```rust,ignore
+struct User {
+    username: String,
+    email: String,
+    sign_in_count: u64,
+    active: bool,
+}
+
 fn build_user(email: String, username: String) -> User {
     User {
         email,    // แทน email: email
@@ -88,7 +102,14 @@ fn build_user(email: String, username: String) -> User {
 
 สร้าง instance ใหม่จาก instance เดิม:
 
-```rust
+```rust,ignore
+struct User {
+    username: String,
+    email: String,
+    sign_in_count: u64,
+    active: bool,
+}
+
 fn main() {
     let user1 = User {
         email: String::from("alice@example.com"),
@@ -115,7 +136,7 @@ fn main() {
 
 Struct ที่ไม่มีชื่อ field:
 
-```rust
+```rust,ignore
 struct Color(i32, i32, i32);
 struct Point(i32, i32, i32);
 
@@ -136,7 +157,7 @@ fn main() {
 
 Struct ที่ไม่มี field:
 
-```rust
+```rust,ignore
 struct AlwaysEqual;
 
 fn main() {
@@ -152,7 +173,7 @@ fn main() {
 
 เพิ่ม `#[derive(Debug)]` เพื่อ print struct:
 
-```rust
+```rust,ignore
 #[derive(Debug)]
 struct Rectangle {
     width: u32,
@@ -172,7 +193,7 @@ fn main() {
 
 Output:
 
-```
+```text
 Rectangle { width: 30, height: 50 }
 Rectangle {
     width: 30,

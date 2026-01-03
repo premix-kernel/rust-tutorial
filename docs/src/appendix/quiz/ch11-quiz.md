@@ -17,7 +17,7 @@ D. import module
 ```rust,ignore
 pub fn public_function() { }
 fn private_function() { } // default private
-```
+```text
 
 </details>
 
@@ -65,7 +65,7 @@ src/
 └── my_module/
     ├── mod.rs      # entry point
     └── submodule.rs
-```
+```text
 
 </details>
 

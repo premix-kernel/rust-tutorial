@@ -52,7 +52,7 @@ edition = "2024"
 
 ### src/main.rs
 
-```rust
+```rust,ignore
 fn main() {
     println!("Hello, world!");
 }

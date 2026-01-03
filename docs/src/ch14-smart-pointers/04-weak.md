@@ -6,7 +6,7 @@
 
 เมื่อ Rc ชี้หากันเป็นวงกลม:
 
-```
+```text
    ┌──────────────────────────┐
    │                          │
    ▼                          │
@@ -27,7 +27,7 @@
 
 ## ทางออก: ใช้ Weak
 
-```rust
+```rust,ignore
 use std::rc::{Rc, Weak};
 
 // Weak ไม่นับ reference
@@ -39,7 +39,7 @@ use std::rc::{Rc, Weak};
 
 ## Rc::downgrade และ Weak::upgrade
 
-```rust
+```rust,ignore
 use std::rc::{Rc, Weak};
 
 fn main() {
@@ -69,7 +69,7 @@ fn main() {
 
 ## ตัวอย่าง: Tree Structure
 
-```rust
+```rust,ignore
 use std::rc::{Rc, Weak};
 use std::cell::RefCell;
 
@@ -114,7 +114,7 @@ fn main() {
 
 ### ทำไมถึงไม่ leak?
 
-```
+```text
               branch (strong=1, weak=1)
                 ▲ Weak
                 │
@@ -145,7 +145,7 @@ leaf ─────────┘ Strong (in children vec)
 
 ## ตัวอย่าง: Observer Pattern
 
-```rust
+```rust,ignore
 use std::rc::{Rc, Weak};
 use std::cell::RefCell;
 
@@ -235,7 +235,7 @@ fn main() {
 
 ### Patterns
 
-```rust
+```rust,ignore
 // Tree data structure
 struct Node {
     value: i32,

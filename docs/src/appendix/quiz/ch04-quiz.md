@@ -17,7 +17,7 @@ D. `0` หรือ `1`
 ```rust,ignore
 if true { }  // ✅
 if 1 { }     // ❌ Error
-```
+```text
 
 </details>
 
@@ -88,7 +88,7 @@ D. ได้ แต่ต้องเป็น `return`
 let result = loop {
     break 42;
 };
-```
+```text
 
 </details>
 

@@ -4,7 +4,7 @@
 
 โค้ดนี้มี error อะไร? แก้ไขให้ทำงานได้
 
-```rust
+```rust,compile_fail
 fn main() {
     let s1 = String::from("hello");
     let s2 = s1;
@@ -45,7 +45,7 @@ fn main() {
 
 โค้ดนี้มี error อะไร? แก้ไขให้ทำงานได้
 
-```rust
+```rust,compile_fail
 fn print_string(s: String) {
     println!("{}", s);
 }
@@ -110,7 +110,7 @@ fn main() {
 
 โค้ดนี้ถูกหรือผิด? อธิบาย
 
-```rust
+```rust,compile_fail
 fn main() {
     let mut s = String::from("hello");
 

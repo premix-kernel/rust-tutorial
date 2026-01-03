@@ -43,7 +43,7 @@ D. Reference
 ```rust,ignore
 let x = 5;
 let ptr: *const i32 = &x;
-```
+```text
 
 </details>
 

@@ -13,7 +13,7 @@
 
 **Package** = collection ของ crates พร้อม `Cargo.toml`
 
-```
+```text
 my-package/
 ├── Cargo.toml
 ├── src/

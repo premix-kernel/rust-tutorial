@@ -4,7 +4,7 @@
 
 ## ปัญหา: Match ยาวไป
 
-```rust
+```rust,ignore
 fn main() {
     let some_value: Option<i32> = Some(3);
 
@@ -18,7 +18,7 @@ fn main() {
 
 ## if let
 
-```rust
+```rust,ignore
 fn main() {
     let some_value: Option<i32> = Some(3);
 
@@ -33,7 +33,7 @@ fn main() {
 
 ## Syntax
 
-```rust
+```rust,ignore
 if let PATTERN = EXPRESSION {
     // ทำเมื่อ match
 }
@@ -41,7 +41,7 @@ if let PATTERN = EXPRESSION {
 
 หรือพร้อม else:
 
-```rust
+```rust,ignore
 if let PATTERN = EXPRESSION {
     // ทำเมื่อ match
 } else {
@@ -53,7 +53,7 @@ if let PATTERN = EXPRESSION {
 
 ## if let กับ else
 
-```rust
+```rust,ignore
 fn main() {
     let some_value: Option<i32> = None;
 
@@ -67,7 +67,7 @@ fn main() {
 
 เทียบเท่ากับ:
 
-```rust
+```rust,ignore
 match some_value {
     Some(value) => println!("Value: {}", value),
     _ => println!("No value!"),
@@ -78,7 +78,7 @@ match some_value {
 
 ## if let กับ Enum
 
-```rust
+```rust,ignore
 enum Message {
     Quit,
     Move { x: i32, y: i32 },
@@ -106,7 +106,7 @@ fn main() {
 
 ทำซ้ำตราบใดที่ pattern ยัง match:
 
-```rust
+```rust,ignore
 fn main() {
     let mut stack = Vec::new();
 
@@ -123,7 +123,7 @@ fn main() {
 
 Output:
 
-```
+```text
 3
 2
 1
@@ -133,7 +133,7 @@ Output:
 
 ## ตัวอย่าง: Iterator
 
-```rust
+```rust,ignore
 fn main() {
     let numbers = vec![1, 2, 3, 4, 5];
     let mut iter = numbers.iter();
@@ -150,7 +150,7 @@ fn main() {
 
 Unwrap หรือ return เร็ว:
 
-```rust
+```rust,ignore
 fn get_length(s: Option<String>) -> usize {
     let Some(text) = s else {
         return 0;  // ต้อง return, break, continue, panic
@@ -189,7 +189,7 @@ fn main() {
 
 ## ตัวอย่างจริง
 
-```rust
+```rust,ignore
 fn main() {
     let config_max: Option<u8> = Some(100);
 
@@ -210,7 +210,7 @@ fn main() {
 
 ## Chained if let
 
-```rust
+```rust,ignore
 fn main() {
     let maybe_number: Option<i32> = Some(42);
     let maybe_string: Option<&str> = Some("hello");
@@ -225,7 +225,7 @@ fn main() {
 
 หรือใช้ `&&` (Rust 1.53+):
 
-```rust
+```rust,ignore
 fn main() {
     let maybe_number: Option<i32> = Some(42);
     let maybe_string: Option<&str> = Some("hello");

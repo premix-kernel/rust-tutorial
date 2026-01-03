@@ -4,7 +4,7 @@
 
 ## นิยาม Method
 
-```rust
+```rust,ignore
 #[derive(Debug)]
 struct Rectangle {
     width: u32,
@@ -39,7 +39,13 @@ fn main() {
 | `&mut self` | ยืมแบบแก้ไขได้       |
 | `self`      | รับ ownership        |
 
-```rust
+```rust,ignore
+#[derive(Debug)]
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
+
 impl Rectangle {
     // อ่านค่าอย่างเดียว
     fn area(&self) -> u32 {
@@ -63,6 +69,12 @@ impl Rectangle {
 ## Methods ที่มี Parameters
 
 ```rust
+#[derive(Debug)]
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
+
 impl Rectangle {
     fn can_hold(&self, other: &Rectangle) -> bool {
         self.width > other.width && self.height > other.height
@@ -85,7 +97,12 @@ fn main() {
 
 สามารถแยก methods เป็นหลาย `impl` blocks ได้:
 
-```rust
+```rust,ignore
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
+
 impl Rectangle {
     fn area(&self) -> u32 {
         self.width * self.height
@@ -146,6 +163,17 @@ fn main() {
 Rust จะเพิ่ม `&`, `&mut`, หรือ `*` อัตโนมัติเมื่อเรียก method:
 
 ```rust
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
+
+impl Rectangle {
+    fn area(&self) -> u32 {
+        self.width * self.height
+    }
+}
+
 fn main() {
     let rect = Rectangle { width: 30, height: 50 };
 

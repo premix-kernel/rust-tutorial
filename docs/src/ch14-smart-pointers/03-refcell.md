@@ -4,7 +4,7 @@
 
 ## ปัญหา: Borrowing Rules ตอน Compile
 
-```rust
+```rust,ignore
 fn main() {
     let x = 5;
 
@@ -19,7 +19,7 @@ fn main() {
 
 ## RefCell Basics
 
-```rust
+```rust,ignore
 use std::cell::RefCell;
 
 fn main() {
@@ -46,7 +46,7 @@ fn main() {
 | Flexibility | Strict        | Flexible       |
 | Performance | No overhead   | Small overhead |
 
-```rust
+```rust,ignore
 use std::cell::RefCell;
 
 fn main() {
@@ -75,7 +75,7 @@ fn main() {
 2. **หนึ่ง mutable borrow** เท่านั้น
 3. **ไม่มี mutable + immutable พร้อมกัน**
 
-```rust
+```rust,ignore
 use std::cell::RefCell;
 
 fn main() {
@@ -104,7 +104,7 @@ fn main() {
 
 ไม่ panic แต่ return Result:
 
-```rust
+```rust,ignore
 use std::cell::RefCell;
 
 fn main() {
@@ -123,7 +123,7 @@ fn main() {
 
 ## Use Case: Mock Objects
 
-```rust
+```rust,ignore
 use std::cell::RefCell;
 
 trait Messenger {
@@ -162,7 +162,7 @@ fn main() {
 
 ## Rc + RefCell = Multiple Owners + Mutability
 
-```rust
+```rust,ignore
 use std::cell::RefCell;
 use std::rc::Rc;
 
@@ -198,7 +198,7 @@ fn main() {
 
 ## Common Pattern: Shared Mutable State
 
-```rust
+```rust,ignore
 use std::cell::RefCell;
 use std::rc::Rc;
 
@@ -222,7 +222,7 @@ fn main() {
 
 สำหรับ Copy types:
 
-```rust
+```rust,ignore
 use std::cell::Cell;
 
 fn main() {

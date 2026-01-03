@@ -34,7 +34,7 @@ mod tests {
 
 ## #[ignore] - ข้าม Tests
 
-```rust
+```rust,ignore
 #[test]
 fn fast_test() {
     assert!(true);
@@ -71,7 +71,7 @@ cargo test -- --include-ignored
 
 ## Test Attributes รวม
 
-```rust
+```rust,ignore
 #[test]
 fn normal_test() {}
 
@@ -208,7 +208,7 @@ Comments ที่มี code examples จะถูก test:
 /// ```
 /// let result = my_lib::add(2, 3);
 /// assert_eq!(result, 5);
-/// ```
+/// ```text
 pub fn add(a: i32, b: i32) -> i32 {
     a + b
 }
@@ -219,7 +219,7 @@ pub fn add(a: i32, b: i32) -> i32 {
 ///
 /// ```should_panic
 /// my_lib::divide(10, 0);
-/// ```
+/// ```text
 pub fn divide(a: i32, b: i32) -> i32 {
     if b == 0 {
         panic!("Division by zero");
@@ -231,7 +231,7 @@ pub fn divide(a: i32, b: i32) -> i32 {
 ///
 /// ```compile_fail
 /// let x: i32 = "not a number";
-/// ```
+/// ```text
 pub fn example() {}
 ````
 

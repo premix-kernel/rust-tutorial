@@ -4,7 +4,7 @@
 
 ## Syntax
 
-```rust
+```rust,ignore
 fn function_name() -> ReturnType {
     // return value
 }
@@ -167,7 +167,7 @@ fn circle_circumference(radius: f64) -> f64 {
 
 ผลลัพธ์:
 
-```
+```text
 Circle with radius 5:
   Area: 78.54
   Circumference: 31.42

@@ -7,7 +7,7 @@
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 fn main() {
     let add = |a, b| a + b;
 
@@ -30,7 +30,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 fn main() {
     let multiplier = 10;
 
@@ -64,7 +64,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 fn main() {
     let numbers = vec![1, 2, 3, 4, 5];
 
@@ -89,7 +89,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 fn main() {
     let numbers = vec![1, 2, 3, 4, 5];
 
@@ -114,7 +114,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 struct Counter {
     count: u32,
     max: u32,

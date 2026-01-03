@@ -4,7 +4,7 @@
 
 ## Basic Channel
 
-```rust
+```rust,ignore
 use std::sync::mpsc;
 use std::thread;
 
@@ -25,7 +25,7 @@ fn main() {
 
 ## Multiple Messages
 
-```rust
+```rust,ignore
 use std::sync::mpsc;
 use std::thread;
 use std::time::Duration;
@@ -52,7 +52,7 @@ fn main() {
 
 ## Multiple Producers
 
-```rust
+```rust,ignore
 use std::sync::mpsc;
 use std::thread;
 

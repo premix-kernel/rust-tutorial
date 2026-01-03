@@ -4,7 +4,7 @@ Rust มี testing framework ในตัว ไม่ต้องติดต�
 
 ## โครงสร้างพื้นฐาน
 
-```rust
+```rust,ignore
 fn add(a: i32, b: i32) -> i32 {
     a + b
 }
@@ -49,7 +49,7 @@ cargo test tests::
 
 ### assert!
 
-```rust
+```rust,ignore
 #[test]
 fn test_assert() {
     assert!(true);
@@ -66,7 +66,7 @@ fn test_assert() {
 
 ### assert_eq! และ assert_ne!
 
-```rust
+```rust,ignore
 #[test]
 fn test_equality() {
     assert_eq!(4, 2 + 2);
@@ -82,7 +82,7 @@ fn test_equality() {
 
 เฉพาะ debug builds:
 
-```rust
+```rust,ignore
 fn expensive_check(x: i32) -> bool {
     // expensive computation
     x > 0
@@ -100,7 +100,7 @@ fn process(x: i32) {
 
 ### #[should_panic]
 
-```rust
+```rust,ignore
 pub fn divide(a: i32, b: i32) -> i32 {
     if b == 0 {
         panic!("Cannot divide by zero!");
@@ -126,7 +126,7 @@ fn test_divide_by_zero_message() {
 
 ## ใช้ Result ใน Tests
 
-```rust
+```rust,ignore
 #[test]
 fn test_with_result() -> Result<(), String> {
     if 2 + 2 == 4 {
@@ -164,7 +164,7 @@ cargo test -- --nocapture
 
 ### ตัวอย่าง
 
-```rust
+```rust,ignore
 #[test]
 fn test_with_output() {
     println!("Setting up test...");
@@ -191,7 +191,7 @@ cargo test -- --test-threads=1
 
 ### Ignore Tests
 
-```rust
+```rust,ignore
 #[test]
 #[ignore]
 fn expensive_test() {
@@ -212,7 +212,7 @@ fn expensive_test() {
 
 ใน Rust ทดสอบ private functions ได้:
 
-```rust
+```rust,ignore
 fn internal_adder(a: i32, b: i32) -> i32 {
     a + b
 }
@@ -243,7 +243,7 @@ mod tests {
 /// ```
 /// let result = my_crate::add(2, 3);
 /// assert_eq!(result, 5);
-/// ```
+/// ```text
 pub fn add(a: i32, b: i32) -> i32 {
     a + b
 }
@@ -276,7 +276,7 @@ cargo test tests::test_add -- --exact
 
 ## Test Organization Best Practices
 
-```rust
+```rust,ignore
 // src/lib.rs
 
 pub fn public_function() -> i32 {

@@ -71,7 +71,7 @@ project/
 │   └── lib.rs
 └── tests/
     └── integration_test.rs
-```
+```text
 
 </details>
 
@@ -97,7 +97,7 @@ D. Mark as failed
 fn expensive_test() { ... }
 
 // รัน: cargo test -- --ignored
-```
+```text
 
 </details>
 

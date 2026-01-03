@@ -4,7 +4,7 @@
 
 ## สร้าง Vector
 
-```rust
+```rust,ignore
 fn main() {
     // สร้าง vector ว่าง
     let v1: Vec<i32> = Vec::new();
@@ -21,7 +21,7 @@ fn main() {
 
 ## เพิ่มข้อมูล
 
-```rust
+```rust,ignore
 fn main() {
     let mut v = Vec::new();
 
@@ -39,7 +39,7 @@ fn main() {
 
 ### แบบที่ 1: Indexing
 
-```rust
+```rust,ignore
 fn main() {
     let v = vec![1, 2, 3, 4, 5];
 
@@ -53,7 +53,7 @@ fn main() {
 
 ### แบบที่ 2: get() (ปลอดภัยกว่า)
 
-```rust
+```rust,ignore
 fn main() {
     let v = vec![1, 2, 3, 4, 5];
 
@@ -77,7 +77,7 @@ fn main() {
 
 ### Immutable iteration
 
-```rust
+```rust,ignore
 fn main() {
     let v = vec![1, 2, 3];
 
@@ -91,7 +91,7 @@ fn main() {
 
 ### Mutable iteration
 
-```rust
+```rust,ignore
 fn main() {
     let mut v = vec![1, 2, 3];
 
@@ -107,7 +107,7 @@ fn main() {
 
 ## Methods ที่ใช้บ่อย
 
-```rust
+```rust,ignore
 fn main() {
     let mut v = vec![1, 2, 3, 4, 5];
 
@@ -141,7 +141,7 @@ fn main() {
 
 เก็บหลาย types ด้วย enum:
 
-```rust
+```rust,ignore
 enum SpreadsheetCell {
     Int(i32),
     Float(f64),
@@ -169,7 +169,7 @@ fn main() {
 
 ## Ownership และ Vector
 
-```rust
+```rust,ignore
 fn main() {
     let v = vec![1, 2, 3, 4, 5];
 

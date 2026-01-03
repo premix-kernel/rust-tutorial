@@ -4,7 +4,7 @@
 
 ## String Slices
 
-```rust
+```rust,ignore
 fn main() {
     let s = String::from("Hello World");
 
@@ -17,7 +17,7 @@ fn main() {
 
 ### Syntax
 
-```
+```text
 &s[start..end]  // start ถึง end-1
 &s[start..]     // start ถึงท้าย
 &s[..end]       // ต้นถึง end-1
@@ -26,7 +26,7 @@ fn main() {
 
 ### ตัวอย่าง
 
-```rust
+```rust,ignore
 fn main() {
     let s = String::from("Hello World");
 
@@ -47,7 +47,7 @@ fn main() {
 
 `&str` คือ **string slice** - reference ไปยังส่วนหนึ่งของ String:
 
-```rust
+```rust,ignore
 fn main() {
     let s = String::from("Hello World");
 
@@ -59,7 +59,7 @@ fn main() {
 
 ### String Literals = &str
 
-```rust
+```rust,ignore
 fn main() {
     let s: &str = "Hello World"; // string literal
 
@@ -71,7 +71,7 @@ fn main() {
 
 ## ใช้ Slices กับ Functions
 
-```rust
+```rust,ignore
 fn main() {
     let sentence = String::from("Hello World");
 
@@ -96,7 +96,7 @@ fn first_word(s: &str) -> &str { // รับ &str แทน &String
 > **เคล็ดลับ:** ใช้ `&str` เป็น parameter ดีกว่า `&String`
 > เพราะรับได้ทั้ง `String` และ `&str`
 
-```rust
+```rust,ignore
 fn main() {
     let my_string = String::from("Hello World");
 
@@ -123,7 +123,7 @@ fn first_word(s: &str) -> &str {
 
 โดยไม่มี slices:
 
-```rust
+```rust,ignore
 fn first_word_index(s: &String) -> usize {
     let bytes = s.as_bytes();
     for (i, &item) in bytes.iter().enumerate() {
@@ -148,7 +148,7 @@ fn main() {
 
 ใช้ slices:
 
-```rust
+```rust,ignore
 fn first_word(s: &str) -> &str {
     let bytes = s.as_bytes();
     for (i, &item) in bytes.iter().enumerate() {
@@ -178,7 +178,7 @@ Rust ป้องกันไม่ให้แก้ไข `s` เพราะ�
 
 ใช้ได้กับ arrays ด้วย:
 
-```rust
+```rust,ignore
 fn main() {
     let a = [1, 2, 3, 4, 5];
 
@@ -192,7 +192,7 @@ fn main() {
 
 ## ตัวอย่างจริง
 
-```rust
+```rust,ignore
 fn main() {
     let text = "The quick brown fox jumps over the lazy dog";
 

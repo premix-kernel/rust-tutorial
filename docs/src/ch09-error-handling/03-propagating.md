@@ -4,7 +4,7 @@
 
 ## วิธีดั้งเดิม: match
 
-```rust
+```rust,ignore
 use std::fs::File;
 use std::io::{self, Read};
 
@@ -33,7 +33,7 @@ fn read_username_from_file() -> Result<String, io::Error> {
 
 `?` ทำให้โค้ดสั้นลง:
 
-```rust
+```rust,ignore
 use std::fs::File;
 use std::io::{self, Read};
 
@@ -49,13 +49,13 @@ fn read_username_from_file() -> Result<String, io::Error> {
 
 ## ? ทำงานอย่างไร
 
-```rust
+```rust,ignore
 let file = File::open("file.txt")?;
 ```
 
 เทียบเท่ากับ:
 
-```rust
+```rust,ignore
 let file = match File::open("file.txt") {
     Ok(f) => f,
     Err(e) => return Err(e.into()), // แปลง error type ด้วย
@@ -66,7 +66,7 @@ let file = match File::open("file.txt") {
 
 ## Chain ?
 
-```rust
+```rust,ignore
 use std::fs::File;
 use std::io::{self, Read};
 
@@ -81,7 +81,7 @@ fn read_username_from_file() -> Result<String, io::Error> {
 
 หรือสั้นกว่านี้:
 
-```rust
+```rust,ignore
 use std::fs;
 
 fn read_username_from_file() -> Result<String, String> {
@@ -96,7 +96,7 @@ fn read_username_from_file() -> Result<String, String> {
 
 ใช้ `?` กับ Option ได้ด้วย:
 
-```rust
+```rust,ignore
 fn last_char_of_first_line(text: &str) -> Option<char> {
     text.lines().next()?.chars().last()
 }
@@ -111,7 +111,7 @@ fn main() {
 
 ## ? ใน main()
 
-```rust
+```rust,ignore
 use std::fs::File;
 use std::io;
 
@@ -127,7 +127,7 @@ fn main() -> Result<(), io::Error> {
 
 `?` เรียก `From::from()` อัตโนมัติเพื่อแปลง error types:
 
-```rust
+```rust,ignore
 use std::fs::File;
 use std::io::{self, Read};
 
@@ -144,7 +144,7 @@ fn read_number_from_file() -> Result<i32, Box<dyn std::error::Error>> {
 
 ## ตัวอย่างจริง: API Call
 
-```rust
+```rust,ignore
 use std::fs;
 
 fn get_config_value(key: &str) -> Result<String, String> {
@@ -173,7 +173,7 @@ fn main() {
 
 ## Early Return Pattern
 
-```rust
+```rust,ignore
 fn process_data(data: &str) -> Result<String, &'static str> {
     if data.is_empty() {
         return Err("Data is empty");

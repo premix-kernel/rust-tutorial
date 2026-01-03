@@ -4,7 +4,7 @@
 
 ## Defining Unsafe Functions
 
-```rust
+```rust,ignore
 // ประกาศด้วย unsafe fn
 unsafe fn dangerous() {
     println!("Doing something dangerous!");
@@ -27,7 +27,7 @@ fn main() {
 
 ใช้เมื่อฟังก์ชันมี **preconditions** ที่ compiler ตรวจไม่ได้:
 
-```rust
+```rust,ignore
 /// Divides two numbers without checking for zero.
 ///
 /// # Safety

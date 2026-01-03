@@ -35,7 +35,7 @@ fn main() {
 
 ```bash
 RUST_BACKTRACE=1 cargo run
-```
+```text
 
 ```text
 thread 'main' panicked at 'index out of bounds: the len is 3 but the index is 99'
@@ -55,7 +55,7 @@ stack backtrace:
 
 1. **Prototyping** - ตัวอย่างโค้ด, ทดลอง
 
-```rust
+```rust,should_panic
 fn main() {
     // ยังไม่ได้ implement
     todo!("implement this later");
@@ -64,7 +64,7 @@ fn main() {
 
 2. **Tests** - เมื่อ test fail
 
-```rust
+```rust,ignore
 #[test]
 fn test_something() {
     assert_eq!(1, 2); // panic! ถ้าไม่เท่า
@@ -103,7 +103,7 @@ fn process_age(age: i32) {
 
 > 💡 **Best Practices: panic! vs Result**
 >
-> ```
+> ```text
 > ┌─────────────────────────────────────────────────────────┐
 > │                  เลือก Error Handling                   │
 > ├─────────────────────────────────────────────────────────┤

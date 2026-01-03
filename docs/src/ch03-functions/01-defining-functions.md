@@ -2,7 +2,7 @@
 
 ## Syntax พื้นฐาน
 
-```rust
+```rust,ignore
 fn function_name() {
     // body
 }
@@ -10,7 +10,7 @@ fn function_name() {
 
 ### ตัวอย่าง
 
-```rust
+```rust,ignore
 fn main() {
     println!("Hello from main!");
 
@@ -24,7 +24,7 @@ fn another_function() {
 
 ผลลัพธ์:
 
-```
+```text
 Hello from main!
 Hello from another function!
 ```
@@ -52,7 +52,7 @@ fn calculateArea() {} // camelCase
 
 ฟังก์ชันสามารถประกาศไว้ที่ไหนก็ได้ในไฟล์:
 
-```rust
+```rust,ignore
 fn main() {
     greet(); // เรียกฟังก์ชันที่อยู่ข้างล่าง ✅
 }
@@ -71,7 +71,7 @@ fn greet() {
 
 ใน Rust **ไม่สามารถ**ประกาศฟังก์ชันซ้อนในฟังก์ชันได้:
 
-```rust
+```rust,ignore
 // ❌ ไม่ได้
 fn outer() {
     fn inner() { // Error!
@@ -83,7 +83,7 @@ fn outer() {
 
 > **เคล็ดลับ:** ถ้าต้องการ nested function ใช้ **closure** แทน:
 
-```rust
+```rust,ignore
 fn main() {
     // ✅ ใช้ closure แทน nested function
     let greet = |name: &str| {
@@ -105,7 +105,7 @@ fn main() {
 
 ## ตัวอย่างจริง
 
-```rust
+```rust,ignore
 fn main() {
     print_welcome_message();
     print_separator();

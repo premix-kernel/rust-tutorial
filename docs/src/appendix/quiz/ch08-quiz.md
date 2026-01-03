@@ -18,7 +18,7 @@ D. HashMap
 let v: Vec<i32> = Vec::new();
 // หรือ
 let v = vec![1, 2, 3];
-```
+```text
 
 </details>
 
@@ -61,7 +61,7 @@ D. `&V`
 
 ```rust,ignore
 let value = map.get("key"); // Option<&V>
-```
+```text
 
 Return `Some(&value)` ถ้าพบ, `None` ถ้าไม่พบ
 
@@ -86,7 +86,7 @@ D. ลบตัวสุดท้าย
 ```rust,ignore
 let mut v = vec![1, 2, 3];
 v.push(4); // [1, 2, 3, 4]
-```
+```text
 
 </details>
 

@@ -89,7 +89,7 @@ D. `expect` return Option
 ```rust,ignore
 let x = some_option.unwrap();       // generic message
 let x = some_option.expect("msg"); // custom message
-```
+```text
 
 </details>
 

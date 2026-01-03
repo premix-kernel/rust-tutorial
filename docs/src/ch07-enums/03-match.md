@@ -4,7 +4,7 @@
 
 ## Syntax
 
-```rust
+```rust,ignore
 match value {
     pattern1 => expression1,
     pattern2 => expression2,
@@ -45,7 +45,7 @@ fn main() {
 
 `match` **ต้องครอบคลุมทุกกรณี**:
 
-```rust
+```rust,compile_fail
 enum Color {
     Red,
     Green,
@@ -64,6 +64,12 @@ fn describe(color: Color) {
 ### แก้ไข
 
 ```rust
+enum Color {
+    Red,
+    Green,
+    Blue,
+}
+
 fn describe(color: Color) {
     match color {
         Color::Red => println!("Red"),

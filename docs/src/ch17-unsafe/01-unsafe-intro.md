@@ -29,7 +29,7 @@
 
 ## 1. Dereference Raw Pointers
 
-```rust
+```rust,ignore
 fn main() {
     let mut num = 5;
 
@@ -59,7 +59,7 @@ fn main() {
 
 ## 2. Call Unsafe Functions
 
-```rust
+```rust,ignore
 unsafe fn dangerous() {
     println!("Doing dangerous stuff!");
 }

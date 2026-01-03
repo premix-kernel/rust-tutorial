@@ -4,7 +4,7 @@
 
 ## ปัญหา: ต้อง Return ค่ากลับ
 
-```rust
+```rust,ignore
 fn main() {
     let s1 = String::from("hello");
 
@@ -21,7 +21,7 @@ fn calculate_length(s: String) -> (String, usize) {
 
 ## ทางออก: ใช้ Reference
 
-```rust
+```rust,ignore
 fn main() {
     let s1 = String::from("hello");
 
@@ -41,7 +41,7 @@ fn calculate_length(s: &String) -> usize { // รับ reference
 
 Reference คือ pointer ที่ชี้ไปยังค่า โดยไม่เป็นเจ้าของ:
 
-```
+```text
 s1 ──────► "hello" (Heap)
            ▲
            │
@@ -68,7 +68,7 @@ s1 ──────► "hello" (Heap)
 
 สามารถมีหลาย immutable references พร้อมกันได้:
 
-```rust
+```rust,ignore
 fn main() {
     let s = String::from("hello");
 
@@ -82,7 +82,7 @@ fn main() {
 
 ### แต่ไม่สามารถแก้ไขได้
 
-```rust
+```rust,ignore
 fn main() {
     let s = String::from("hello");
 
@@ -98,7 +98,7 @@ fn main() {
 
 ใช้ `&mut` เมื่อต้องการแก้ไข:
 
-```rust
+```rust,ignore
 fn main() {
     let mut s = String::from("hello"); // ต้อง mut
 
@@ -114,7 +114,7 @@ fn change(s: &mut String) {
 
 ### มีได้แค่หนึ่ง mutable reference
 
-```rust
+```rust,ignore
 fn main() {
     let mut s = String::from("hello");
 
@@ -129,7 +129,7 @@ fn main() {
 
 ## ห้ามผสม Mutable และ Immutable
 
-```rust
+```rust,ignore
 fn main() {
     let mut s = String::from("hello");
 
@@ -143,7 +143,7 @@ fn main() {
 
 ### แต่ทำได้ถ้า scope ไม่ทับกัน
 
-```rust
+```rust,ignore
 fn main() {
     let mut s = String::from("hello");
 
@@ -163,7 +163,7 @@ fn main() {
 
 Rust ป้องกัน dangling references:
 
-```rust
+```rust,compile_fail
 fn main() {
     let reference_to_nothing = dangle();
 }

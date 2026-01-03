@@ -4,7 +4,7 @@
 
 เมื่อ assign ตัวแปร heap type ให้ตัวแปรอื่น ค่าจะถูก **move**:
 
-```rust
+```rust,ignore
 fn main() {
     let s1 = String::from("hello");
     let s2 = s1; // MOVE!
@@ -18,7 +18,7 @@ fn main() {
 
 ### แผนภาพ Move
 
-```
+```text
 ก่อน Move:
 s1 ──────► "hello" (Heap)
 
@@ -33,7 +33,7 @@ s2 ──────► "hello" (Heap)
 
 ถ้าต้องการ copy ข้อมูลจริงๆ ใช้ `.clone()`:
 
-```rust
+```rust,ignore
 fn main() {
     let s1 = String::from("hello");
     let s2 = s1.clone(); // CLONE - deep copy
@@ -45,7 +45,7 @@ fn main() {
 
 ### แผนภาพ Clone
 
-```
+```text
 หลัง Clone:
 s1 ──────► "hello" (Heap memory 1)
 s2 ──────► "hello" (Heap memory 2)
@@ -66,7 +66,7 @@ s2 ──────► "hello" (Heap memory 2)
 
 ### Copy (อัตโนมัติสำหรับ Stack types)
 
-```rust
+```rust,ignore
 fn main() {
     let x = 5;
     let y = x; // COPY (อัตโนมัติ)
@@ -81,7 +81,7 @@ fn main() {
 
 ### 1. ต้องการให้ทั้งสองตัวแปรใช้ข้อมูลเดียวกัน
 
-```rust
+```rust,ignore
 fn main() {
     let original = String::from("hello");
     let backup = original.clone();
@@ -94,7 +94,7 @@ fn main() {
 
 ### 2. ส่งค่าเข้า function แต่ยังต้องการใช้
 
-```rust
+```rust,ignore
 fn main() {
     let s = String::from("hello");
 
@@ -114,7 +114,7 @@ fn print_string(s: String) {
 
 ## Clone กับ Collections
 
-```rust
+```rust,ignore
 fn main() {
     let v1 = vec![1, 2, 3];
     let v2 = v1.clone();
@@ -133,7 +133,7 @@ fn main() {
 
 Types ที่มี **Copy trait** จะถูก copy อัตโนมัติ:
 
-```rust
+```rust,ignore
 fn main() {
     // ทั้งหมดนี้มี Copy
     let a: i32 = 5;
@@ -161,7 +161,7 @@ fn main() {
 
 ## สรุป: Move vs Clone vs Copy
 
-```rust
+```rust,ignore
 fn main() {
     // Copy - Stack types (อัตโนมัติ)
     let x = 5;

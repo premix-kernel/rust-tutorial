@@ -10,7 +10,7 @@
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 fn greet(name: &str) {
     println!("Hello, {}!", name);
 }
@@ -35,7 +35,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 fn add(a: i32, b: i32) -> i32 {
     a + b  // ไม่มี semicolon = return
 }
@@ -65,7 +65,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 fn calculate_rectangle_area(width: f64, height: f64) -> f64 {
     width * height
 }
@@ -90,7 +90,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 fn is_even(n: i32) -> bool {
     n % 2 == 0
 }
@@ -123,7 +123,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 fn min_max(a: i32, b: i32, c: i32) -> (i32, i32) {
     let min = a.min(b).min(c);
     let max = a.max(b).max(c);

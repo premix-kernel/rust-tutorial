@@ -4,7 +4,7 @@
 
 แก้ไขโค้ดนี้ให้ทำงานได้:
 
-```rust
+```rust,compile_fail
 fn main() {
     let x = 5;
     x = 10;
@@ -31,7 +31,7 @@ fn main() {
 
 เติม type ให้ถูกต้อง:
 
-```rust
+```rust,ignore
 fn main() {
     let a: ____ = 42;
     let b: ____ = 3.14;
@@ -77,7 +77,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```
+```text
 inner: 12
 outer: 6
 ```

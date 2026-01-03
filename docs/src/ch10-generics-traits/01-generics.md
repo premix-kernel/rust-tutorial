@@ -4,7 +4,7 @@
 
 ## ปัญหา: Code Duplication
 
-```rust
+```rust,ignore
 fn largest_i32(list: &[i32]) -> i32 {
     let mut largest = list[0];
     for &item in list {
@@ -32,7 +32,7 @@ fn largest_char(list: &[char]) -> char {
 
 ## Generic Functions
 
-```rust
+```rust,ignore
 fn largest<T: PartialOrd + Copy>(list: &[T]) -> T {
     let mut largest = list[0];
     for &item in list {
@@ -54,7 +54,7 @@ fn main() {
 
 ### Syntax
 
-```rust
+```rust,ignore
 fn function_name<T>(param: T) -> T {
     // ...
 }
@@ -69,7 +69,7 @@ fn pair<T, U>(first: T, second: U) -> (T, U) {
 
 ## Generic Structs
 
-```rust
+```rust,ignore
 struct Point<T> {
     x: T,
     y: T,
@@ -86,7 +86,7 @@ fn main() {
 
 ### หลาย Type Parameters
 
-```rust
+```rust,ignore
 struct Point<T, U> {
     x: T,
     y: U,
@@ -103,7 +103,7 @@ fn main() {
 
 ## Generic Methods
 
-```rust
+```rust,ignore
 struct Point<T> {
     x: T,
     y: T,
@@ -127,7 +127,7 @@ fn main() {
 
 ### Methods สำหรับ Specific Type
 
-```rust
+```rust,ignore
 impl Point<f32> {
     fn distance_from_origin(&self) -> f32 {
         (self.x.powi(2) + self.y.powi(2)).sqrt()
@@ -145,7 +145,7 @@ fn main() {
 
 ### Mix Type Parameters
 
-```rust
+```rust,ignore
 struct Point<X1, Y1> {
     x: X1,
     y: Y1,
@@ -191,7 +191,7 @@ enum Result<T, E> {
 
 ### สร้าง Generic Enum เอง
 
-```rust
+```rust,ignore
 enum Either<L, R> {
     Left(L),
     Right(R),
@@ -209,7 +209,7 @@ fn main() {
 
 Rust compiles generics เป็น specific types ตอน compile time:
 
-```rust
+```rust,ignore
 // เราเขียน:
 fn id<T>(x: T) -> T { x }
 
@@ -229,7 +229,7 @@ fn id_str(x: &str) -> &str { x }
 
 ## ตัวอย่างจริง: Container
 
-```rust
+```rust,ignore
 struct Stack<T> {
     items: Vec<T>,
 }

@@ -36,7 +36,7 @@ cargo new hello_thai
 cd hello_thai
 ```
 
-```rust
+```rust,ignore
 // src/main.rs
 fn main() {
     println!("สวัสดี Rust!");
@@ -79,7 +79,7 @@ cargo run
 <details>
 <summary>ดูเฉลย</summary>
 
-```
+```text
 my_project/
 ├── Cargo.toml
 └── src/

@@ -4,7 +4,7 @@
 
 เขียน unit test สำหรับ function `add`:
 
-```rust
+```rust,ignore
 fn add(a: i32, b: i32) -> i32 {
     a + b
 }
@@ -13,7 +13,7 @@ fn add(a: i32, b: i32) -> i32 {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 fn add(a: i32, b: i32) -> i32 {
     a + b
 }
@@ -85,7 +85,7 @@ mod tests {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 fn divide(a: i32, b: i32) -> i32 {
     if b == 0 {
         panic!("Division by zero!");

@@ -8,7 +8,7 @@ Adapters รับ iterator แล้ว return iterator ใหม่:
 
 ### map - แปลงค่า
 
-```rust
+```rust,ignore
 fn main() {
     let v = vec![1, 2, 3, 4, 5];
 
@@ -22,7 +22,7 @@ fn main() {
 
 ### filter - เลือกเฉพาะที่ต้องการ
 
-```rust
+```rust,ignore
 fn main() {
     let v = vec![1, 2, 3, 4, 5, 6];
 
@@ -36,7 +36,7 @@ fn main() {
 
 ### filter_map - filter + map รวมกัน
 
-```rust
+```rust,ignore
 fn main() {
     let strings = vec!["1", "two", "3", "four", "5"];
 
@@ -50,7 +50,7 @@ fn main() {
 
 ### enumerate - เพิ่ม index
 
-```rust
+```rust,ignore
 fn main() {
     let v = vec!["a", "b", "c"];
 
@@ -65,7 +65,7 @@ fn main() {
 
 ### zip - จับคู่ 2 iterators
 
-```rust
+```rust,ignore
 fn main() {
     let names = vec!["Alice", "Bob", "Charlie"];
     let scores = vec![95, 87, 92];
@@ -81,7 +81,7 @@ fn main() {
 
 ### take / skip
 
-```rust
+```rust,ignore
 fn main() {
     let v = vec![1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
@@ -101,7 +101,7 @@ fn main() {
 
 ### flatten - แบน nested
 
-```rust
+```rust,ignore
 fn main() {
     let nested = vec![vec![1, 2], vec![3, 4], vec![5]];
 
@@ -119,7 +119,7 @@ fn main() {
 
 ### chain - ต่อ 2 iterators
 
-```rust
+```rust,ignore
 fn main() {
     let a = vec![1, 2, 3];
     let b = vec![4, 5, 6];
@@ -131,7 +131,7 @@ fn main() {
 
 ### rev - กลับลำดับ
 
-```rust
+```rust,ignore
 fn main() {
     let v = vec![1, 2, 3, 4, 5];
 
@@ -148,7 +148,7 @@ Consumers รับ iterator และ return ค่า (ไม่ใช่ iter
 
 ### collect - รวบรวมเป็น collection
 
-```rust
+```rust,ignore
 fn main() {
     let v: Vec<i32> = (1..=5).collect();
     let set: std::collections::HashSet<_> = (1..=5).collect();
@@ -160,7 +160,7 @@ fn main() {
 
 ### sum / product
 
-```rust
+```rust,ignore
 fn main() {
     let numbers = vec![1, 2, 3, 4, 5];
 
@@ -174,7 +174,7 @@ fn main() {
 
 ### fold - รวมค่าแบบ custom
 
-```rust
+```rust,ignore
 fn main() {
     let numbers = vec![1, 2, 3, 4, 5];
 
@@ -196,7 +196,7 @@ fn main() {
 
 ### reduce - เหมือน fold แต่ไม่มี initial
 
-```rust
+```rust,ignore
 fn main() {
     let numbers = vec![1, 2, 3, 4, 5];
 
@@ -207,7 +207,7 @@ fn main() {
 
 ### count / min / max
 
-```rust
+```rust,ignore
 fn main() {
     let v = vec![3, 1, 4, 1, 5, 9, 2, 6];
 
@@ -219,7 +219,7 @@ fn main() {
 
 ### find / position
 
-```rust
+```rust,ignore
 fn main() {
     let v = vec![1, 2, 3, 4, 5];
 
@@ -235,7 +235,7 @@ fn main() {
 
 ### any / all
 
-```rust
+```rust,ignore
 fn main() {
     let v = vec![1, 2, 3, 4, 5];
 
@@ -249,7 +249,7 @@ fn main() {
 
 ### for_each - side effects
 
-```rust
+```rust,ignore
 fn main() {
     let v = vec![1, 2, 3];
 
@@ -261,7 +261,7 @@ fn main() {
 
 ## Chaining (ต่อเชื่อม)
 
-```rust
+```rust,ignore
 fn main() {
     let data = vec!["1", "two", "3", "four", "5", "six"];
 

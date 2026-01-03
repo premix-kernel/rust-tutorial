@@ -4,7 +4,7 @@
 
 ## นิยาม Trait
 
-```rust
+```rust,ignore
 trait Summary {
     fn summarize(&self) -> String;
 }
@@ -14,7 +14,7 @@ trait Summary {
 
 ## Implement Trait
 
-```rust
+```rust,ignore
 trait Summary {
     fn summarize(&self) -> String;
 }
@@ -57,7 +57,7 @@ fn main() {
 
 ## Default Implementation
 
-```rust
+```rust,ignore
 trait Summary {
     fn summarize(&self) -> String {
         String::from("(Read more...)")
@@ -80,7 +80,7 @@ fn main() {
 
 ## Traits as Parameters
 
-```rust
+```rust,ignore
 fn notify(item: &impl Summary) {
     println!("Breaking news! {}", item.summarize());
 }
@@ -95,7 +95,7 @@ fn notify2<T: Summary>(item: &T) {
 
 ## Derive Attribute
 
-```rust
+```rust,ignore
 #[derive(Debug, Clone, PartialEq)]
 struct Point {
     x: i32,

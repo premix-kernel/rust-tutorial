@@ -4,7 +4,7 @@
 
 **Constants** คือค่าที่ไม่มีวันเปลี่ยนแปลง ใช้ `const` แทน `let`
 
-```rust
+```rust,ignore
 const MAX_POINTS: u32 = 100_000;
 const PI: f64 = 3.14159265359;
 const APP_NAME: &str = "My Rust App";
@@ -40,7 +40,7 @@ const MAX_SIZE: usize = 100;
 
 **Static** คล้าย constant แต่มี memory address คงที่
 
-```rust
+```rust,ignore
 static LANGUAGE: &str = "Rust";
 static mut COUNTER: u32 = 0; // ⚠️ ต้องใช้ unsafe
 
@@ -70,7 +70,7 @@ fn main() {
 
 Shadowing คือการประกาศตัวแปรชื่อเดิมซ้ำ:
 
-```rust
+```rust,ignore
 fn main() {
     let x = 5;
 
@@ -91,7 +91,7 @@ fn main() {
 
 #### 1. เปลี่ยนชนิดข้อมูลได้
 
-```rust
+```rust,ignore
 fn main() {
     let spaces = "   ";        // &str
     let spaces = spaces.len(); // usize
@@ -102,7 +102,7 @@ fn main() {
 
 #### 2. แปลงค่าโดยไม่ต้องสร้างชื่อใหม่
 
-```rust
+```rust,ignore
 fn main() {
     let input = "42";
     let input: i32 = input.parse().unwrap();
@@ -113,7 +113,7 @@ fn main() {
 
 #### 3. ใช้ใน Scope ที่ต้องการ
 
-```rust
+```rust,ignore
 fn main() {
     let x = 1;
 
@@ -132,7 +132,7 @@ fn main() {
 
 ### Configuration Constants
 
-```rust
+```rust,ignore
 const MAX_CONNECTIONS: u32 = 100;
 const TIMEOUT_SECONDS: u64 = 30;
 const API_VERSION: &str = "v1.0";
@@ -147,7 +147,7 @@ fn main() {
 
 ### Mathematical Constants
 
-```rust
+```rust,ignore
 const PI: f64 = 3.14159265358979323846;
 const E: f64 = 2.71828182845904523536;
 

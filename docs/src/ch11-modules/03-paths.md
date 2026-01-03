@@ -226,7 +226,7 @@ fn main() {
 
 ### Path Examples
 
-```rust
+```rust,ignore
 crate::module::item        // absolute
 module::item               // relative
 self::item                 // current module

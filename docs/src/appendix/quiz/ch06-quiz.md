@@ -90,7 +90,7 @@ D. Struct ที่มี method
 struct Color(u8, u8, u8);
 let red = Color(255, 0, 0);
 println!("{}", red.0); // access by index
-```
+```text
 
 </details>
 

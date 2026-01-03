@@ -18,7 +18,7 @@ D. Lock thread
 let handle = thread::spawn(|| {
     // code ที่รันใน thread ใหม่
 });
-```
+```text
 
 </details>
 
@@ -83,7 +83,7 @@ D. File
 let (tx, rx) = mpsc::channel();
 // tx = transmitter/sender
 // rx = receiver
-```
+```text
 
 </details>
 

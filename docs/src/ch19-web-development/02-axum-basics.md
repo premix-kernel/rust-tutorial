@@ -46,7 +46,7 @@ async fn hello() -> &'static str {
 
 ```bash
 cargo run
-```
+```text
 
 เปิดเบราว์เซอร์ไปที่ http://localhost:3000
 

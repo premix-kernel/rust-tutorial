@@ -43,7 +43,7 @@ D. Compression
 ```rust,ignore
 #[derive(Serialize, Deserialize)]
 struct Data { /* ... */ }
-```
+```text
 
 </details>
 

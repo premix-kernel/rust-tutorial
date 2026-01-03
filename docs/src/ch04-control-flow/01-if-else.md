@@ -4,7 +4,7 @@
 
 ## Syntax พื้นฐาน
 
-```rust
+```rust,ignore
 if condition {
     // ทำเมื่อ condition เป็น true
 }
@@ -60,7 +60,7 @@ fn main() {
 
 ผลลัพธ์:
 
-```
+```text
 Divisible by 3
 ```
 

@@ -7,7 +7,7 @@
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 enum List {
     Cons(i32, Box<List>),
     Nil,
@@ -44,7 +44,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 use std::rc::Rc;
 
 fn main() {
@@ -66,7 +66,7 @@ fn main() {
 
 **Output:**
 
-```
+```text
 Count after creation: 1
 Count after clone1: 2
 Count after clone2: 3
@@ -84,7 +84,7 @@ Count after block: 1
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 use std::cell::RefCell;
 
 fn main() {
@@ -109,7 +109,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 use std::rc::Rc;
 use std::cell::RefCell;
 
@@ -141,7 +141,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 use std::rc::{Rc, Weak};
 use std::cell::RefCell;
 

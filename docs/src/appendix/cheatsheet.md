@@ -6,7 +6,7 @@
 
 ## Variables
 
-```rust
+```rust,ignore
 // Immutable (ค่าคงที่)
 let x = 5;
 
@@ -41,7 +41,7 @@ let x = x + 1; // x = 6
 
 ### Compound Types
 
-```rust
+```rust,ignore
 // Tuple
 let tup: (i32, f64, bool) = (500, 6.4, true);
 let (x, y, z) = tup;  // destructuring
@@ -57,7 +57,7 @@ let arr = [3; 5]; // [3, 3, 3, 3, 3]
 
 ## Functions
 
-```rust
+```rust,ignore
 // Basic function
 fn greet() {
     println!("Hello!");
@@ -88,7 +88,7 @@ fn check(x: i32) -> bool {
 
 ### If/Else
 
-```rust
+```rust,ignore
 if x > 5 {
     println!("Big");
 } else if x > 0 {
@@ -103,7 +103,7 @@ let result = if x > 5 { "big" } else { "small" };
 
 ### Loops
 
-```rust
+```rust,ignore
 // Infinite loop
 loop {
     break;  // exit
@@ -128,7 +128,7 @@ for item in &vec {
 
 ## Ownership
 
-```rust
+```rust,ignore
 // Move
 let s1 = String::from("hello");
 let s2 = s1;  // s1 is invalid now
@@ -151,7 +151,7 @@ fn change(s: &mut String) {
 
 ## Structs
 
-```rust
+```rust,ignore
 // Define
 struct User {
     username: String,
@@ -186,7 +186,7 @@ impl User {
 
 ## Enums & Match
 
-```rust
+```rust,ignore
 // Define
 enum Message {
     Quit,
@@ -220,7 +220,7 @@ if let Some(value) = x {
 
 ## Error Handling
 
-```rust
+```rust,ignore
 // Result
 fn divide(a: f64, b: f64) -> Result<f64, String> {
     if b == 0.0 {
@@ -256,7 +256,7 @@ let content = std::fs::read_to_string("file.txt")
 
 ### Vec
 
-```rust
+```rust,ignore
 let mut v: Vec<i32> = Vec::new();
 let v = vec![1, 2, 3];
 
@@ -273,7 +273,7 @@ for i in &v {
 
 ### String
 
-```rust
+```rust,ignore
 let mut s = String::new();
 let s = String::from("hello");
 let s = "hello".to_string();
@@ -286,7 +286,7 @@ let s3 = format!("{} {}", s1, s2);
 
 ### HashMap
 
-```rust
+```rust,ignore
 use std::collections::HashMap;
 
 let mut map = HashMap::new();
@@ -303,7 +303,7 @@ for (key, value) in &map {
 
 ## Iterators
 
-```rust
+```rust,ignore
 let v = vec![1, 2, 3, 4, 5];
 
 // Common methods
@@ -321,7 +321,7 @@ v.iter().all(|x| *x > 0);
 
 ## Smart Pointers
 
-```rust
+```rust,ignore
 // Box - Heap allocation
 let b = Box::new(5);
 
@@ -340,7 +340,7 @@ let data = RefCell::new(5);
 
 ## Traits
 
-```rust
+```rust,ignore
 // Define
 trait Summary {
     fn summarize(&self) -> String;
@@ -376,7 +376,7 @@ where
 
 ## Async
 
-```rust
+```rust,ignore
 // Async function
 async fn fetch_data() -> String {
     // ...

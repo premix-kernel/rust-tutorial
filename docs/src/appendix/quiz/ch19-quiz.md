@@ -36,7 +36,7 @@ D. Handle cookies
 
 ```rust,ignore
 async fn handler(Json(payload): Json<MyStruct>) { }
-```
+```text
 
 </details>
 
@@ -59,7 +59,7 @@ D. Navigate to path
 ```rust,ignore
 async fn user(Path(id): Path<u32>) { }
 // GET /users/123 -> id = 123
-```
+```text
 
 </details>
 
@@ -83,7 +83,7 @@ D. ปิด connection
 Router::new()
     .route("/", get(handler))
     .route("/users", post(create_user))
-```
+```text
 
 </details>
 

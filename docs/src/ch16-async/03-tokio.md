@@ -8,7 +8,7 @@
 # Cargo.toml
 [dependencies]
 tokio = { version = "1", features = ["full"] }
-```
+```text
 
 Features ที่มี:
 

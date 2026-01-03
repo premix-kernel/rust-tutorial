@@ -22,7 +22,7 @@ fn main() {
 }
 ```
 
-```
+```text
 ┌─────────────────────────────────────────────────────────┐
 │                 Dangling Reference                       │
 ├─────────────────────────────────────────────────────────┤
@@ -48,7 +48,7 @@ Rust compiler จะ reject โค้ดนี้เพราะ `x` ไม่�
 &i32        // reference
 &'a i32     // reference with explicit lifetime 'a
 &'a mut i32 // mutable reference with lifetime 'a
-```
+```text
 
 `'a` (อ่านว่า "tick a") คือ **lifetime parameter** บอกว่า reference มีอายุเท่าไหร่
 
@@ -125,7 +125,7 @@ Compiler มีกฎ 3 ข้อที่เดา lifetime ให้อัต�
 
 แต่ละ reference parameter ได้ lifetime ของตัวเอง:
 
-```rust
+```rust,ignore
 fn foo(x: &i32)                    // -> fn foo<'a>(x: &'a i32)
 fn foo(x: &i32, y: &i32)           // -> fn foo<'a, 'b>(x: &'a i32, y: &'b i32)
 ```
@@ -134,7 +134,7 @@ fn foo(x: &i32, y: &i32)           // -> fn foo<'a, 'b>(x: &'a i32, y: &'b i32)
 
 ถ้ามี input lifetime เดียว ใช้กับ output ทั้งหมด:
 
-```rust
+```rust,ignore
 fn foo(x: &i32) -> &i32            // -> fn foo<'a>(x: &'a i32) -> &'a i32
 ```
 
@@ -142,7 +142,7 @@ fn foo(x: &i32) -> &i32            // -> fn foo<'a>(x: &'a i32) -> &'a i32
 
 ถ้ามี `&self` หรือ `&mut self` ใช้ lifetime ของ self กับ output:
 
-```rust
+```rust,ignore
 impl Foo {
     fn bar(&self, x: &str) -> &str // -> fn bar<'a, 'b>(&'a self, x: &'b str) -> &'a str
 }
@@ -198,7 +198,7 @@ fn main() {
 
 ### Methods on Structs with Lifetimes
 
-```rust
+```rust,ignore
 impl<'a> ImportantExcerpt<'a> {
     fn level(&self) -> i32 {
         3

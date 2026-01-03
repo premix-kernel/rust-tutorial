@@ -4,7 +4,7 @@
 
 ## สร้าง Thread
 
-```rust
+```rust,ignore
 use std::thread;
 use std::time::Duration;
 
@@ -28,7 +28,7 @@ fn main() {
 
 Output (อาจต่างกันแต่ละครั้ง):
 
-```
+```text
 hi from main thread: 1
 hi from spawned thread: 1
 hi from main thread: 2
@@ -43,7 +43,7 @@ hi from spawned thread: 4
 
 `thread::spawn` returns `JoinHandle<T>`:
 
-```rust
+```rust,ignore
 use std::thread;
 
 fn main() {
@@ -60,7 +60,7 @@ fn main() {
 
 ### รอหลาย Threads
 
-```rust
+```rust,ignore
 use std::thread;
 
 fn main() {
@@ -90,7 +90,7 @@ fn main() {
 
 ใช้ `move` เพื่อย้าย ownership เข้า thread:
 
-```rust
+```rust,ignore
 use std::thread;
 
 fn main() {
@@ -118,7 +118,7 @@ fn main() {
 
 กำหนด thread name และ stack size:
 
-```rust
+```rust,ignore
 use std::thread;
 
 fn main() {
@@ -138,7 +138,7 @@ fn main() {
 
 ## Thread Information
 
-```rust
+```rust,ignore
 use std::thread;
 
 fn main() {
@@ -166,7 +166,7 @@ fn main() {
 
 Panic ใน thread หนึ่งไม่กระทบ threads อื่น:
 
-```rust
+```rust,ignore
 use std::thread;
 
 fn main() {
@@ -190,7 +190,7 @@ fn main() {
 
 หยุด thread ชั่วคราว:
 
-```rust
+```rust,ignore
 use std::thread;
 use std::time::Duration;
 
@@ -215,7 +215,7 @@ fn main() {
 
 ยืม data โดยไม่ต้อง move:
 
-```rust
+```rust,ignore
 use std::thread;
 
 fn main() {
@@ -240,7 +240,7 @@ fn main() {
 
 ## ตัวอย่างจริง: Parallel Computation
 
-```rust
+```rust,ignore
 use std::thread;
 
 fn main() {

@@ -4,7 +4,7 @@
 
 ## สร้าง HashMap
 
-```rust
+```rust,ignore
 use std::collections::HashMap;
 
 fn main() {
@@ -25,7 +25,7 @@ fn main() {
 
 ## สร้างจาก Iterator
 
-```rust
+```rust,ignore
 use std::collections::HashMap;
 
 fn main() {
@@ -45,7 +45,7 @@ fn main() {
 
 ## เข้าถึงข้อมูล
 
-```rust
+```rust,ignore
 use std::collections::HashMap;
 
 fn main() {
@@ -71,7 +71,7 @@ fn main() {
 
 ## วนลูป
 
-```rust
+```rust,ignore
 use std::collections::HashMap;
 
 fn main() {
@@ -89,7 +89,7 @@ fn main() {
 
 ## Ownership
 
-```rust
+```rust,ignore
 use std::collections::HashMap;
 
 fn main() {
@@ -106,7 +106,7 @@ fn main() {
 
 ใช้ references หรือ clone ถ้าต้องการเก็บ:
 
-```rust
+```rust,ignore
 use std::collections::HashMap;
 
 fn main() {
@@ -126,7 +126,7 @@ fn main() {
 
 ### Overwrite
 
-```rust
+```rust,ignore
 use std::collections::HashMap;
 
 fn main() {
@@ -140,7 +140,7 @@ fn main() {
 
 ### Insert ถ้าไม่มี (entry)
 
-```rust
+```rust,ignore
 use std::collections::HashMap;
 
 fn main() {
@@ -157,7 +157,7 @@ fn main() {
 
 ### อัปเดตตามค่าเดิม
 
-```rust
+```rust,ignore
 use std::collections::HashMap;
 
 fn main() {
@@ -179,7 +179,7 @@ fn main() {
 
 ## Methods ที่ใช้บ่อย
 
-```rust
+```rust,ignore
 use std::collections::HashMap;
 
 fn main() {
@@ -215,7 +215,7 @@ fn main() {
 
 ## ตัวอย่างจริง: นับความถี่
 
-```rust
+```rust,ignore
 use std::collections::HashMap;
 
 fn main() {

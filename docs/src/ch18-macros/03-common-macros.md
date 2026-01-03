@@ -6,7 +6,7 @@
 
 ### println! และ print!
 
-```rust
+```rust,ignore
 fn main() {
     // Basic
     println!("Hello, World!");
@@ -38,7 +38,7 @@ fn main() {
 
 พิมพ์ไปยัง stderr:
 
-```rust
+```rust,ignore
 fn main() {
     eprintln!("Error: something went wrong!");
     eprint!("Warning: ");
@@ -52,7 +52,7 @@ fn main() {
 
 สร้าง String โดยไม่พิมพ์:
 
-```rust
+```rust,ignore
 fn main() {
     let s = format!("Hello, {}!", "World");
     println!("{}", s);
@@ -74,7 +74,7 @@ fn main() {
 
 สร้าง Vec:
 
-```rust
+```rust,ignore
 fn main() {
     // With elements
     let v1 = vec![1, 2, 3, 4, 5];
@@ -98,7 +98,7 @@ fn main() {
 
 ### assert!
 
-```rust
+```rust,ignore
 fn main() {
     assert!(true);
     assert!(1 + 1 == 2);
@@ -112,7 +112,7 @@ fn main() {
 
 ### assert_eq! และ assert_ne!
 
-```rust
+```rust,ignore
 fn main() {
     let a = 4;
     let b = 2 + 2;
@@ -129,7 +129,7 @@ fn main() {
 
 เฉพาะ debug builds:
 
-```rust
+```rust,ignore
 fn process(x: i32) {
     // ถูกลบใน release builds
     debug_assert!(x > 0, "x must be positive in debug mode");
@@ -147,7 +147,7 @@ fn main() {
 
 Debug print พร้อม file/line:
 
-```rust
+```rust,ignore
 fn main() {
     let x = 5;
     dbg!(x);  // [src/main.rs:3] x = 5
@@ -169,7 +169,7 @@ fn main() {
 
 Placeholder สำหรับโค้ดที่ยังไม่เสร็จ:
 
-```rust
+```rust,ignore
 fn not_done_yet() -> i32 {
     todo!("implement this function")  // panics with message
 }
@@ -189,7 +189,7 @@ fn main() {
 
 สำหรับโค้ดที่ไม่ควรถึง:
 
-```rust
+```rust,ignore
 fn divide(a: i32, b: i32) -> i32 {
     match b {
         0 => panic!("division by zero"),

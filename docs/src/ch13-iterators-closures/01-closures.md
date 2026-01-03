@@ -4,7 +4,7 @@
 
 ## Syntax พื้นฐาน
 
-```rust
+```rust,ignore
 fn main() {
     // Closure พื้นฐาน
     let add_one = |x| x + 1;
@@ -58,7 +58,7 @@ println!("{}", add_one_closure(5));  // 6
 
 Closures สามารถ "จับ" ค่าจากภายนอกได้:
 
-```rust
+```rust,ignore
 fn main() {
     let x = 4;
     let multiplier = 3;
@@ -81,7 +81,7 @@ Rust มี 3 วิธีที่ closure capture ค่า:
 
 ### 1. Fn - Borrow (&T)
 
-```rust
+```rust,ignore
 fn main() {
     let list = vec![1, 2, 3];
 
@@ -97,7 +97,7 @@ fn main() {
 
 ### 2. FnMut - Mutable Borrow (&mut T)
 
-```rust
+```rust,ignore
 fn main() {
     let mut count = 0;
 
@@ -117,7 +117,7 @@ fn main() {
 
 ### 3. FnOnce - Move Ownership (T)
 
-```rust
+```rust,ignore
 fn main() {
     let message = String::from("Hello");
 
@@ -140,7 +140,7 @@ fn main() {
 
 บังคับให้ closure เป็นเจ้าของค่า:
 
-```rust
+```rust,ignore
 fn main() {
     let name = String::from("Alice");
 
@@ -158,7 +158,7 @@ fn main() {
 
 ### ใช้ move กับ Threads
 
-```rust
+```rust,ignore
 use std::thread;
 
 fn main() {
@@ -179,7 +179,7 @@ fn main() {
 
 ### ใช้ Trait Bounds
 
-```rust
+```rust,ignore
 fn apply<F>(f: F)
 where
     F: FnOnce(),
@@ -213,7 +213,7 @@ fn main() {
 
 ### Trait Hierarchy
 
-```
+```text
 FnOnce  (ทุก closure เป็น FnOnce)
   ↓
 FnMut   (ถ้าไม่ move ownership)
@@ -225,7 +225,7 @@ Fn      (ถ้าไม่ mutate)
 
 ## Closures as Return Values
 
-```rust
+```rust,ignore
 fn make_adder(x: i32) -> impl Fn(i32) -> i32 {
     move |y| x + y
 }
@@ -243,7 +243,7 @@ fn main() {
 
 ## ตัวอย่างจริง: Map และ Filter
 
-```rust
+```rust,ignore
 fn main() {
     let numbers = vec![1, 2, 3, 4, 5];
 

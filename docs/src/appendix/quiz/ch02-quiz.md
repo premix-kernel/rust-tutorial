@@ -18,7 +18,7 @@ D. ขึ้นอยู่กับ scope
 
 ```rust,ignore
 let mut x = 5;
-```
+```text
 
 </details>
 
@@ -40,7 +40,7 @@ D. `i64`
 
 ```rust,ignore
 let x = 42; // i32 by default
-```
+```text
 
 </details>
 
@@ -63,7 +63,7 @@ D. การสร้าง reference
 ```rust,ignore
 let x = 5;
 let x = x + 1; // shadow
-```
+```text
 
 </details>
 
@@ -86,7 +86,7 @@ D. ไม่มีความแตกต่าง
 ```rust,ignore
 const MAX: u32 = 100; // ต้องระบุ type
 let x = 100;          // type inference ได้
-```
+```text
 
 </details>
 

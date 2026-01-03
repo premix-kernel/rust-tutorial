@@ -7,7 +7,7 @@
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 fn largest<T: PartialOrd>(list: &[T]) -> &T {
     let mut largest = &list[0];
 
@@ -40,7 +40,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 struct Pair<T> {
     first: T,
     second: T,
@@ -72,7 +72,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 trait Describable {
     fn describe(&self) -> String;
 }
@@ -119,7 +119,7 @@ fn main() {
 <details>
 <summary>ดูเฉลย</summary>
 
-```rust
+```rust,ignore
 use std::fmt::Display;
 
 fn print_and_clone<T: Display + Clone>(item: T) -> T {
@@ -142,7 +142,7 @@ fn main() {
 
 แก้ไขให้ compile ได้:
 
-```rust
+```rust,compile_fail
 fn longest(x: &str, y: &str) -> &str {
     if x.len() > y.len() {
         x

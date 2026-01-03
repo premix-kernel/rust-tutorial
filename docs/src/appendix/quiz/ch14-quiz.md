@@ -16,7 +16,7 @@ D. Register
 
 ```rust,ignore
 let b = Box::new(5); // เก็บ 5 บน heap
-```
+```text
 
 </details>
 

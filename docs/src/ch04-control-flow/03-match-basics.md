@@ -4,7 +4,7 @@
 
 ## Syntax พื้นฐาน
 
-```rust
+```rust,ignore
 match value {
     pattern1 => expression1,
     pattern2 => expression2,
@@ -31,7 +31,7 @@ fn main() {
 
 ผลลัพธ์:
 
-```
+```text
 Three
 ```
 

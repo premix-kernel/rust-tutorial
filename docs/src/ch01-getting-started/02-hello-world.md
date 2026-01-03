@@ -13,7 +13,7 @@ cd hello_world
 
 2. สร้างไฟล์ `main.rs`:
 
-```rust
+```rust,ignore
 fn main() {
     println!("Hello, World!");
 }
@@ -43,7 +43,7 @@ Hello, World!
 
 มาวิเคราะห์โค้ดทีละบรรทัด:
 
-```rust
+```rust,ignore
 fn main() {
     println!("Hello, World!");
 }
@@ -53,7 +53,7 @@ fn main() {
 
 ```rust,ignore
 fn main() {
-```
+```text
 
 - `fn` - คำสั่งสำหรับประกาศ **function** (ฟังก์ชัน)
 - `main` - ชื่อฟังก์ชัน พิเศษเพราะเป็นจุดเริ่มต้นของโปรแกรม
@@ -66,7 +66,7 @@ fn main() {
 
 ```rust,ignore
 println!("Hello, World!");
-```
+```text
 
 - `println!` - เป็น **macro** (สังเกตเครื่องหมาย `!`) ใช้พิมพ์ข้อความออกหน้าจอ
 - `"Hello, World!"` - **string** (ข้อความ) ที่จะพิมพ์
