@@ -35,9 +35,18 @@ document.addEventListener('DOMContentLoaded', function () {
     // 3. Dynamic Footer
     const pageContent = document.querySelector('.page-content');
     if (pageContent) {
+        const currentUrl = encodeURIComponent(window.location.href);
+        const title = encodeURIComponent(document.title);
+
         const footer = document.createElement('footer');
         footer.innerHTML = `
             <div style="margin-top: 50px; border-top: 1px solid var(--table-border-color); padding-top: 20px; text-align: center; color: var(--fg); opacity: 0.8;">
+                <div style="margin-bottom: 15px;">
+                    <span style="font-size: 0.9em; margin-right: 10px; font-weight: bold;">Share this page:</span>
+                    <a href="https://twitter.com/intent/tweet?url=${currentUrl}&text=${title}" target="_blank" style="text-decoration: none; margin-right: 10px; color: var(--fg);">𝕏 (Twitter)</a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=${currentUrl}" target="_blank" style="text-decoration: none; margin-right: 10px; color: var(--fg);">📘 Facebook</a>
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&url=${currentUrl}&title=${title}" target="_blank" style="text-decoration: none; color: var(--fg);">💼 LinkedIn</a>
+                </div>
                 <p>Created with ❤️ by <strong>Rust Tutorial Team</strong></p>
                 <p style="font-size: 0.9em;">
                     <a href="https://github.com/premix-kernel/rust-tutorial" target="_blank" style="text-decoration: none;">GitHub Repository</a>
