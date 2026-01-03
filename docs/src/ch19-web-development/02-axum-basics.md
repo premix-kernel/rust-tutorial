@@ -408,33 +408,33 @@ async fn main() {
 ### 🚀 Deployment Checklist
 
 ```text
-┌─────────────────────────────────────────────────────────────────────┐
-│                    Production Deployment                             │
-├─────────────────────────────────────────────────────────────────────┤
-│                                                                       │
-│   1. Build Release                                                   │
-│      cargo build --release                                           │
-│                                                                       │
-│   2. Dockerfile                                                      │
-│      FROM rust:1.75 as builder                                       │
-│      WORKDIR /app                                                    │
-│      COPY . .                                                        │
-│      RUN cargo build --release                                       │
-│                                                                       │
-│      FROM debian:bookworm-slim                                       │
-│      COPY --from=builder /app/target/release/myapp /usr/local/bin   │
-│      CMD ["myapp"]                                                   │
-│                                                                       │
-│   3. Environment Variables                                           │
-│      DATABASE_URL=postgres://...                                     │
-│      PORT=3000                                                       │
-│                                                                       │
-│   4. Deploy Options                                                  │
-│      • Docker → AWS ECS / Google Cloud Run                          │
-│      • Binary → VPS (DigitalOcean, Linode)                          │
-│      • Serverless → AWS Lambda + cargo-lambda                       │
-│                                                                       │
-└─────────────────────────────────────────────────────────────────────┘
++-------------------------------------------------------------------+
+|                    Production Deployment                          |
++-------------------------------------------------------------------+
+|                                                                   |
+|   1. Build Release                                                |
+|      cargo build --release                                        |
+|                                                                   |
+|   2. Dockerfile                                                   |
+|      FROM rust:1.75 as builder                                    |
+|      WORKDIR /app                                                 |
+|      COPY . .                                                     |
+|      RUN cargo build --release                                    |
+|                                                                   |
+|      FROM debian:bookworm-slim                                    |
+|      COPY --from=builder /app/target/release/myapp /usr/local/bin |
+|      CMD ["myapp"]                                                |
+|                                                                   |
+|   3. Environment Variables                                        |
+|      DATABASE_URL=postgres://...                                  |
+|      PORT=3000                                                    |
+|                                                                   |
+|   4. Deploy Options                                               |
+|      * Docker -> AWS ECS / Google Cloud Run                       |
+|      * Binary -> VPS (DigitalOcean, Linode)                       |
+|      * Serverless -> AWS Lambda + cargo-lambda                    |
+|                                                                   |
++-------------------------------------------------------------------+
 ```
 
 ---

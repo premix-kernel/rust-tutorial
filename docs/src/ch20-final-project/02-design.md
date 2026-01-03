@@ -41,29 +41,29 @@ todo-cli/
 ## Architecture Diagram
 
 ```text
-┌─────────────────────────────────────────────┐
-│                   main.rs                    │
-│   - Parse CLI arguments                      │
-│   - Create Command enum                      │
-│   - Call lib::run()                         │
-└────────────────────┬────────────────────────┘
-                     │
-                     ▼
-┌─────────────────────────────────────────────┐
-│                   lib.rs                     │
-│   - Application logic                        │
-│   - Handle Commands                          │
-│   - Orchestrate todo + storage              │
-└────────────────────┬────────────────────────┘
-                     │
-         ┌───────────┴───────────┐
-         ▼                       ▼
-┌─────────────────┐     ┌─────────────────┐
-│    todo.rs      │     │   storage.rs    │
-│   - Todo struct │     │   - load()      │
-│   - new()       │     │   - save()      │
-│   - toggle()    │     │   - JSON I/O    │
-└─────────────────┘     └─────────────────┘
++---------------------------------------------+
+|                   main.rs                   |
+|   - Parse CLI arguments                     |
+|   - Create Command enum                     |
+|   - Call lib::run()                         |
++----------------------+----------------------+
+                       |
+                       v
++---------------------------------------------+
+|                   lib.rs                    |
+|   - Application logic                       |
+|   - Handle Commands                         |
+|   - Orchestrate todo + storage              |
++----------------------+----------------------+
+                       |
+         +-------------+-------------+
+         v                           v
++-----------------+         +-----------------+
+|    todo.rs      |         |   storage.rs    |
+|   - Todo struct |         |   - load()      |
+|   - new()       |         |   - save()      |
+|   - toggle()    |         |   - JSON I/O    |
++-----------------+         +-----------------+
 ```
 
 ---

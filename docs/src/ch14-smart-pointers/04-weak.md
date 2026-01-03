@@ -7,20 +7,20 @@
 เมื่อ Rc ชี้หากันเป็นวงกลม:
 
 ```text
-   ┌──────────────────────────┐
-   │                          │
-   ▼                          │
-┌──────┐    strong    ┌──────┐│
-│ Node │◄────────────►│ Node ││
-│  A   │              │  B   ││
-└──────┘              └──────┘│
-   │                          │
-   └──────────────────────────┘
+   +--------------------------+
+   |                          |
+   v                          |
++------+    strong    +------+|
+| Node |<------------>| Node ||
+|  A   |              |  B   ||
++------+              +------+|
+   |                          |
+   +--------------------------+
 
-เมื่อ A และ B ออกจาก scope:
-- A มี strong reference จาก B → ยังไม่ drop
-- B มี strong reference จาก A → ยังไม่ drop
-→ Memory leak! 💥
+When A and B go out of scope:
+- A has strong reference from B -> not dropped
+- B has strong reference from A -> not dropped
+-> Memory leak!
 ```
 
 ---
@@ -116,16 +116,16 @@ fn main() {
 
 ```text
               branch (strong=1, weak=1)
-                ▲ Weak
-                │
-              ┌─┘
-              │
-leaf ─────────┘ Strong (in children vec)
+                ^ Weak
+                |
+              +-+
+              |
+leaf ---------+ Strong (in children vec)
 
-เมื่อ branch ออกจาก scope:
-1. branch's strong=0 → branch ถูก drop
+When branch goes out of scope:
+1. branch's strong=0 -> branch is dropped
 2. leaf's strong -1 (from branch's children)
-3. leaf's strong=1 → ยังอยู่
+3. leaf's strong=1 -> still alive
 4. leaf's parent.upgrade() = None
 ```
 
