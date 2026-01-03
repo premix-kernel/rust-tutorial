@@ -42,6 +42,10 @@ create-missing = true
 # [output.html] - การตั้งค่า HTML Output
 # ------------------------------------------
 [output.html]
+# เพิ่มไฟล์ CSS และ JS ที่เราจะสร้าง
+additional-css = ["theme/custom.css"]
+additional-js = ["theme/custom.js"]
+
 # Theme เริ่มต้น: light, rust, coal, navy, ayu
 default-theme = "rust"
 
