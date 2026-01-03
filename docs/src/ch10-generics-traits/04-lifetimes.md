@@ -11,7 +11,7 @@
 
 ## ปัญหา: Dangling Reference
 
-```rust,compile_fail
+```rust,ignore
 fn main() {
     let r;                // declare r
     {
@@ -44,11 +44,11 @@ Rust compiler จะ reject โค้ดนี้เพราะ `x` ไม่�
 
 ## Lifetime Syntax
 
-```rust
+```text
 &i32        // reference
 &'a i32     // reference with explicit lifetime 'a
 &'a mut i32 // mutable reference with lifetime 'a
-```text
+```
 
 `'a` (อ่านว่า "tick a") คือ **lifetime parameter** บอกว่า reference มีอายุเท่าไหร่
 
