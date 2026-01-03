@@ -303,6 +303,142 @@ let app = Router::new()
 
 ---
 
+## 🌍 Complete CRUD API Example
+
+ตัวอย่าง Todo API แบบครบ:
+
+```rust,ignore
+use axum::{
+    extract::{Path, State},
+    http::StatusCode,
+    routing::{get, post, put, delete},
+    Json, Router,
+};
+use serde::{Deserialize, Serialize};
+use std::sync::{Arc, RwLock};
+
+// Data models
+#[derive(Clone, Serialize, Deserialize)]
+struct Todo {
+    id: u32,
+    title: String,
+    completed: bool,
+}
+
+#[derive(Deserialize)]
+struct CreateTodo {
+    title: String,
+}
+
+type Db = Arc<RwLock<Vec<Todo>>>;
+
+// Handlers
+async fn list_todos(State(db): State<Db>) -> Json<Vec<Todo>> {
+    let todos = db.read().unwrap().clone();
+    Json(todos)
+}
+
+async fn create_todo(
+    State(db): State<Db>,
+    Json(input): Json<CreateTodo>,
+) -> (StatusCode, Json<Todo>) {
+    let mut todos = db.write().unwrap();
+    let id = todos.len() as u32 + 1;
+    let todo = Todo {
+        id,
+        title: input.title,
+        completed: false,
+    };
+    todos.push(todo.clone());
+    (StatusCode::CREATED, Json(todo))
+}
+
+async fn get_todo(
+    State(db): State<Db>,
+    Path(id): Path<u32>,
+) -> Result<Json<Todo>, StatusCode> {
+    let todos = db.read().unwrap();
+    todos
+        .iter()
+        .find(|t| t.id == id)
+        .cloned()
+        .map(Json)
+        .ok_or(StatusCode::NOT_FOUND)
+}
+
+async fn delete_todo(
+    State(db): State<Db>,
+    Path(id): Path<u32>,
+) -> StatusCode {
+    let mut todos = db.write().unwrap();
+    if let Some(pos) = todos.iter().position(|t| t.id == id) {
+        todos.remove(pos);
+        StatusCode::NO_CONTENT
+    } else {
+        StatusCode::NOT_FOUND
+    }
+}
+
+#[tokio::main]
+async fn main() {
+    let db: Db = Arc::new(RwLock::new(vec![]));
+
+    let app = Router::new()
+        .route("/todos", get(list_todos).post(create_todo))
+        .route("/todos/:id", get(get_todo).delete(delete_todo))
+        .with_state(db);
+
+    let listener = tokio::net::TcpListener::bind("0.0.0.0:3000")
+        .await
+        .unwrap();
+    println!("🚀 Server running at http://localhost:3000");
+    axum::serve(listener, app).await.unwrap();
+}
+```
+
+### 📋 API Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/todos` | List all todos |
+| POST | `/todos` | Create new todo |
+| GET | `/todos/:id` | Get todo by ID |
+| DELETE | `/todos/:id` | Delete todo |
+
+### 🚀 Deployment Checklist
+
+```text
+┌─────────────────────────────────────────────────────────────────────┐
+│                    Production Deployment                             │
+├─────────────────────────────────────────────────────────────────────┤
+│                                                                       │
+│   1. Build Release                                                   │
+│      cargo build --release                                           │
+│                                                                       │
+│   2. Dockerfile                                                      │
+│      FROM rust:1.75 as builder                                       │
+│      WORKDIR /app                                                    │
+│      COPY . .                                                        │
+│      RUN cargo build --release                                       │
+│                                                                       │
+│      FROM debian:bookworm-slim                                       │
+│      COPY --from=builder /app/target/release/myapp /usr/local/bin   │
+│      CMD ["myapp"]                                                   │
+│                                                                       │
+│   3. Environment Variables                                           │
+│      DATABASE_URL=postgres://...                                     │
+│      PORT=3000                                                       │
+│                                                                       │
+│   4. Deploy Options                                                  │
+│      • Docker → AWS ECS / Google Cloud Run                          │
+│      • Binary → VPS (DigitalOcean, Linode)                          │
+│      • Serverless → AWS Lambda + cargo-lambda                       │
+│                                                                       │
+└─────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
 ## สรุป
 
 | Concept | Example                         |

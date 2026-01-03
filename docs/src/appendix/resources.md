@@ -110,6 +110,36 @@
 | [Ryan Levick](https://www.youtube.com/@RyanLevicksVideos) | Microsoft Rust |
 | [Rust](https://www.youtube.com/@RustVideos)               | Official       |
 
+### 🎬 Recommended Videos by Topic
+
+| หัวข้อ | Video แนะนำ |
+|--------|-------------|
+| **Ownership** | [Visualizing Rust Ownership](https://www.youtube.com/watch?v=8M0QfLUDaaA) - Let's Get Rusty |
+| **Lifetimes** | [Rust Lifetimes Finally Explained](https://www.youtube.com/watch?v=juIINGuZyBc) - Let's Get Rusty |
+| **Async** | [Async Rust Explained](https://www.youtube.com/watch?v=K8LNPYNvT-U) - Jon Gjengset |
+| **Smart Pointers** | [Box, Rc, Arc Explained](https://www.youtube.com/watch?v=CTTiaOo4cbY) - Let's Get Rusty |
+| **Error Handling** | [Error Handling in Rust](https://www.youtube.com/watch?v=wM6o70NAWUI) - Let's Get Rusty |
+
+---
+
+## 🎮 Interactive Practice
+
+| Resource | คำอธิบาย |
+|----------|----------|
+| [Rust Playground](https://play.rust-lang.org/) | ทดลองโค้ดออนไลน์ |
+| [Rust Explorer](https://www.rustexplorer.com/) | ดู Assembly output |
+| [Godbolt](https://godbolt.org/) | Compiler Explorer |
+| [Rustlings](https://github.com/rust-lang/rustlings) | 100+ exercises |
+| [Exercism Rust](https://exercism.org/tracks/rust) | Mentored exercises |
+
+### 🔗 Quick Playground Links
+
+เปิด Rust Playground พร้อมโค้ดตัวอย่าง:
+
+- [Ownership Demo](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=example1) 
+- [Lifetime Example](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021)
+- [Async/Await](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021)
+
 ---
 
 ## 📖 Books

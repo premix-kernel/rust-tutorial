@@ -303,6 +303,105 @@ fn main() {
 2. ใช้ thread::scope เพื่อ borrow data
 3. จัดการ panic ใน thread ด้วย join()
 
+### 💪 Advanced Exercises
+
+**Exercise 1: Parallel Sum**
+```rust,ignore
+// เขียน function ที่คำนวณ sum ของ vector โดยแบ่งงานให้ 4 threads
+fn parallel_sum(numbers: Vec<i32>) -> i32 {
+    // TODO: แบ่ง vector เป็น 4 ส่วน
+    // TODO: สร้าง 4 threads คำนวณ sum แต่ละส่วน  
+    // TODO: รวมผลลัพธ์
+    todo!()
+}
+```
+
+<details>
+<summary>ดูเฉลย</summary>
+
+```rust,ignore
+use std::thread;
+
+fn parallel_sum(numbers: Vec<i32>) -> i32 {
+    let chunk_size = numbers.len() / 4;
+    let chunks: Vec<Vec<i32>> = numbers
+        .chunks(chunk_size)
+        .map(|c| c.to_vec())
+        .collect();
+    
+    let handles: Vec<_> = chunks
+        .into_iter()
+        .map(|chunk| {
+            thread::spawn(move || chunk.iter().sum::<i32>())
+        })
+        .collect();
+    
+    handles.into_iter().map(|h| h.join().unwrap()).sum()
+}
+```
+
+</details>
+
+**Exercise 2: Thread-Safe Counter**
+```rust,ignore
+// สร้าง counter ที่หลาย threads เพิ่มค่าพร้อมกันได้
+// Hint: ใช้ Arc<Mutex<i32>>
+```
+
+<details>
+<summary>ดูเฉลย</summary>
+
+```rust,ignore
+use std::sync::{Arc, Mutex};
+use std::thread;
+
+fn main() {
+    let counter = Arc::new(Mutex::new(0));
+    let mut handles = vec![];
+    
+    for _ in 0..10 {
+        let counter = Arc::clone(&counter);
+        handles.push(thread::spawn(move || {
+            let mut num = counter.lock().unwrap();
+            *num += 1;
+        }));
+    }
+    
+    for handle in handles {
+        handle.join().unwrap();
+    }
+    
+    println!("Result: {}", *counter.lock().unwrap()); // 10
+}
+```
+
+</details>
+
+---
+
+### 📝 ทดสอบความเข้าใจ
+
+<details>
+<summary>Q1: ทำไมต้องใช้ move กับ closure ใน thread::spawn?</summary>
+
+**A:** เพราะ thread อาจอยู่นานกว่า scope ที่สร้างมัน ดังนั้นต้อง move ownership ของ captured variables เข้าไปใน thread เพื่อป้องกัน dangling references
+
+</details>
+
+<details>
+<summary>Q2: thread::scope ต่างจาก thread::spawn อย่างไร?</summary>
+
+**A:** `thread::scope` รับประกันว่า threads ทั้งหมดจะจบก่อนออกจาก scope ทำให้สามารถ borrow data จาก parent scope ได้โดยไม่ต้อง move
+
+</details>
+
+<details>
+<summary>Q3: จะจัดการ panic ใน thread อย่างไร?</summary>
+
+**A:** ใช้ `handle.join()` ที่ return `Result<T, Box<dyn Any>>` หาก thread panic จะได้ `Err` ที่มีข้อมูล panic แทน
+
+</details>
+
 ---
 
 ## สรุป

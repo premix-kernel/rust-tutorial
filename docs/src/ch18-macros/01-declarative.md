@@ -259,6 +259,51 @@ fn main() {
 
 ---
 
+## 🌍 Real-World Example: Hashmap Literal Macro
+
+สร้าง HashMap แบบสั้นๆ เหมือน `vec!`:
+
+```rust
+macro_rules! hashmap {
+    // Empty hashmap
+    () => {
+        std::collections::HashMap::new()
+    };
+    
+    // With key-value pairs
+    ($($key:expr => $value:expr),+ $(,)?) => {{
+        let mut map = std::collections::HashMap::new();
+        $(
+            map.insert($key, $value);
+        )+
+        map
+    }};
+}
+
+fn main() {
+    // ใช้งาน macro
+    let scores = hashmap! {
+        "Alice" => 100,
+        "Bob" => 85,
+        "Charlie" => 92,
+    };
+    
+    println!("{:?}", scores);
+    // {"Alice": 100, "Bob": 85, "Charlie": 92}
+}
+```
+
+### 📋 Common Macro Patterns
+
+| Pattern | Use Case | Example |
+|---------|----------|---------|
+| **Literal** | สร้าง collection | `vec!`, `hashmap!` |
+| **DSL** | Domain-specific syntax | `html!`, `sql!` |
+| **Code Gen** | สร้าง boilerplate | `#[derive(...)]` |
+| **Assertion** | Testing | `assert!`, `assert_eq!` |
+
+---
+
 ## เปรียบเทียบ Macros vs Functions
 
 | Aspect     | Macros       | Functions |
