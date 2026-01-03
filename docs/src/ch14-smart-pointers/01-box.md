@@ -11,32 +11,7 @@
 
 ### 📦 Smart Pointer Comparison
 
-```text
-+-------------------------------------------------------------------+
-|                    Smart Pointer Cheat Sheet                      |
-+-------------------------------------------------------------------+
-|                                                                   |
-|   Pointer     | Ownership | Mutability | Thread-Safe | Use Case   |
-|   ----------- | --------- | ---------- | ----------- | ---------- |
-|   Box<T>      | Single    | Inherited  | Yes*        | Heap alloc |
-|   Rc<T>       | Shared    | Immutable  | No          | Multi-owner|
-|   Arc<T>      | Shared    | Immutable  | Yes         | Multi-thrd |
-|   RefCell<T>  | Single    | Runtime    | No          | Interior   |
-|   Mutex<T>    | Shared    | Exclusive  | Yes         | Thread mut |
-|                                                                   |
-|   *Box is thread-safe if T is Send                                |
-|                                                                   |
-+-------------------------------------------------------------------+
-|   How to choose?                                                  |
-|                                                                   |
-|   Need heap allocation only? --> Box<T>                           |
-|   Need multiple owners (single thread)? --> Rc<T>                 |
-|   Need multiple owners (multi thread)? --> Arc<T>                 |
-|   Need mutate through immutable ref? --> RefCell<T>               |
-|   Need mutate across threads? --> Arc<Mutex<T>>                   |
-|                                                                   |
-+-------------------------------------------------------------------+
-```
+![Smart Pointers Diagram](../images/smart_pointers.png)
 
 ---
 

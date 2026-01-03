@@ -4,29 +4,7 @@ Asynchronous programming ใน Rust ช่วยจัดการ I/O-bound ta
 
 ### ⚡ Async vs Sync Visualization
 
-```text
-+-------------------------------------------------------------------+
-|               Synchronous vs Asynchronous Execution               |
-+-------------------------------------------------------------------+
-|                                                                   |
-|   SYNC (Blocking)             ASYNC (Non-blocking)                |
-|   ---------------             --------------------                |
-|                                                                   |
-|   Time                        Time                                |
-|   |                           |                                   |
-|   v fetch_1()                 v fetch_1() ----+                   |
-|   ############## (2s)           |             | (run together)    |
-|   v fetch_2()                   | fetch_2() --+                   |
-|   ############## (2s)           |             |                   |
-|   v Done!                       v Done! <-----+                   |
-|                                                                   |
-|   Total: 4 seconds            Total: ~2 seconds                   |
-|                                                                   |
-+-------------------------------------------------------------------+
-|   Key: # = Waiting/Blocking                                       |
-|        Async allows multiple tasks to run concurrently            |
-+-------------------------------------------------------------------+
-```
+![Async State Machine Diagram](../images/async_state.png)
 
 ## Sync vs Async
 

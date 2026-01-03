@@ -4,6 +4,9 @@
 
 ## String Slices
 
+![String vs Slice Diagram](../images/string_slice.png)
+
+
 ```rust,ignore
 fn main() {
     let s = String::from("Hello World");
