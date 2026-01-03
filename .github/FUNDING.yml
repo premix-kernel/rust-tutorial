@@ -1,0 +1,13 @@
+# These are supported funding model platforms
+
+github: # [string] Replace with up to 4 GitHub Sponsors-supported usernames e.g., [user1, user2]
+patreon: # [string] Replace with a single Patreon username
+open_collective: # [string] Replace with a single Open Collective username
+ko_fi: # [string] Replace with a single Ko-fi username
+tidelift: # [string] Replace with a single Tidelift platform-name/package-name e.g., npm/babel
+community_bridge: # [string] Replace with a single Community Bridge project-name e.g., cloud-foundry
+liberapay: # [string] Replace with a single Liberapay username
+issuehunt: # [string] Replace with a single IssueHunt username
+otechie: # [string] Replace with a single Otechie username
+lfx_crowdfunding: # [string] Replace with a single LFX Crowdfunding project-name e.g., cloud-foundry
+custom: ['buymeacoffee.com/arrkpong'] # [list] Replace with up to 4 custom sponsorship URLs e.g., ['link1', 'link2']

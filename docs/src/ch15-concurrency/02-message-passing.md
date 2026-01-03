@@ -4,6 +4,9 @@
 
 ## Basic Channel
 
+![Message Passing Channels Diagram](../images/channels.png)
+
+
 ```rust,ignore
 use std::sync::mpsc;
 use std::thread;

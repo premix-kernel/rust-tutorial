@@ -21,23 +21,7 @@
 
 ### 🧠 Mental Model
 
-```text
-+---------------------------------------------------------------+
-|                    Lifetime = Time Period                     |
-+---------------------------------------------------------------+
-|                                                               |
-|   fn longest<'a>(x: &'a str, y: &'a str) -> &'a str           |
-|                    ^          ^              ^                |
-|                    |          |              |                |
-|                    +----------+--------------+                |
-|                              |                                |
-|                    "All share the same lifetime"              |
-|                                                               |
-|   Rule: Return value lives as long as the                     |
-|         shortest-lived input between x and y                  |
-|                                                               |
-+---------------------------------------------------------------+
-```
+![Lifetime Scopes Diagram](../images/lifetime_scopes.png)
 
 ### 🔧 Common Patterns
 

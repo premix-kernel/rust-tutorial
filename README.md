@@ -5,6 +5,7 @@
 [![Language: Thai](https://img.shields.io/badge/Language-Thai%20🇹🇭-blue.svg)](https://premix-kernel.github.io/rust-tutorial)
 [![Rust](https://img.shields.io/badge/Rust-1.83+-orange.svg)](https://www.rust-lang.org/)
 [![mdBook](https://img.shields.io/badge/Made%20with-mdBook-blue.svg)](https://rust-lang.github.io/mdBook/)
+[![Sponsor](https://img.shields.io/badge/Sponsor-%E2%9D%A4-pink)](https://github.com/sponsors/premix-kernel)
 
 > 🦀 เอกสารสอนภาษา Rust สำหรับผู้เริ่มต้น | คำอธิบายภาษาไทย | โค้ดภาษาอังกฤษ
 

@@ -6,18 +6,7 @@
 
 โปรเจกต์ Rust มีโครงสร้างเป็น tree:
 
-```text
-crate (root)
-├── front_of_house
-│   ├── hosting
-│   │   ├── add_to_waitlist
-│   │   └── seat_at_table
-│   └── serving
-│       ├── take_order
-│       └── serve_order
-└── back_of_house
-    └── cook_order
-```
+![Module Tree Diagram](../images/module_tree.png)
 
 ---
 
