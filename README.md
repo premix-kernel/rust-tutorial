@@ -149,10 +149,11 @@ cargo run --example web_server       # บทที่ 19 (http://localhost:3000
 
 ## 🛠️ เครื่องมือที่แนะนำ
 
-| Tool                                                                                                                                     | คำอธิบาย                  |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------- |
-| [VS Code](https://code.visualstudio.com/) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer) | Editor ยอดนิยม            |
-| [RustRover](https://www.jetbrains.com/rust/)                                                                                             | JetBrains IDE สำหรับ Rust |
+| เครื่องมือ | คำอธิบาย |
+|------------|----------|
+| [VS Code](https://code.visualstudio.com/) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer) | Editor ยอดนิยม พร้อม auto-complete |
+| [RustRover](https://www.jetbrains.com/rust/) | JetBrains IDE สำหรับ Rust |
+| [Rust Playground](https://play.rust-lang.org/) | ทดสอบโค้ดออนไลน์ |
 
 ---
 
